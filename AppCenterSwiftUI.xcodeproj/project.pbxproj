@@ -17,8 +17,8 @@
 		E7254C2D235261AA001D7FDB /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7254C2C235261AA001D7FDB /* LoginView.swift */; };
 		E7531F0A2356494600AE68BE /* FTAPIKit in Frameworks */ = {isa = PBXBuildFile; productRef = E7531F092356494600AE68BE /* FTAPIKit */; };
 		E765EC3A23574F1F00345023 /* CGFloat+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = E765EC3823572E2600345023 /* CGFloat+Style.swift */; };
-		E765EC3C235752E500345023 /* LiftOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E765EC3B235752E500345023 /* LiftOperator.swift */; };
 		E765EC3F2357538F00345023 /* Id.swift in Sources */ = {isa = PBXBuildFile; fileRef = E765EC3E2357538F00345023 /* Id.swift */; };
+		E765EC4123575BFB00345023 /* LiftOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E765EC4023575BFB00345023 /* LiftOperator.swift */; };
 		E76B6F702353A5FC007DD31D /* Elementary in Frameworks */ = {isa = PBXBuildFile; productRef = E76B6F6F2353A5FC007DD31D /* Elementary */; };
 		E76B6F722353A756007DD31D /* ObservableStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76B6F712353A756007DD31D /* ObservableStore.swift */; };
 		E76B6F742353B149007DD31D /* AppAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76B6F732353B149007DD31D /* AppAction.swift */; };
@@ -40,8 +40,8 @@
 		E7254C2623526149001D7FDB /* AppCenterSwiftUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppCenterSwiftUI.entitlements; sourceTree = "<group>"; };
 		E7254C2C235261AA001D7FDB /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		E765EC3823572E2600345023 /* CGFloat+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Style.swift"; sourceTree = "<group>"; };
-		E765EC3B235752E500345023 /* LiftOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftOperator.swift; sourceTree = "<group>"; };
 		E765EC3E2357538F00345023 /* Id.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Id.swift; sourceTree = "<group>"; };
+		E765EC4023575BFB00345023 /* LiftOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftOperator.swift; sourceTree = "<group>"; };
 		E76B6F6B2353A330007DD31D /* Elementary */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Elementary; path = ../../Elementary; sourceTree = "<group>"; };
 		E76B6F712353A756007DD31D /* ObservableStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableStore.swift; sourceTree = "<group>"; };
 		E76B6F732353B149007DD31D /* AppAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAction.swift; sourceTree = "<group>"; };
@@ -128,8 +128,8 @@
 		E765EC3D2357537D00345023 /* Functional programming */ = {
 			isa = PBXGroup;
 			children = (
-				E765EC3B235752E500345023 /* LiftOperator.swift */,
 				E765EC3E2357538F00345023 /* Id.swift */,
+				E765EC4023575BFB00345023 /* LiftOperator.swift */,
 			);
 			path = "Functional programming";
 			sourceTree = "<group>";
@@ -232,10 +232,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E765EC3C235752E500345023 /* LiftOperator.swift in Sources */,
 				E76B6F7B2353B2D2007DD31D /* AppEffect.swift in Sources */,
 				E76B6F742353B149007DD31D /* AppAction.swift in Sources */,
 				E76B6F722353A756007DD31D /* ObservableStore.swift in Sources */,
+				E765EC4123575BFB00345023 /* LiftOperator.swift in Sources */,
 				E7254C2D235261AA001D7FDB /* LoginView.swift in Sources */,
 				E76B6F772353B1FF007DD31D /* AppState.swift in Sources */,
 				E70071652354C7680050DA3D /* StringPasteButton.swift in Sources */,

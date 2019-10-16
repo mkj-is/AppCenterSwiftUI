@@ -6,8 +6,9 @@
 //  Copyright © 2019 FUNTASTY Digital s.r.o. All rights reserved.
 //
 
+
 prefix operator ^
 
-prefix func ^ <T>(_ value: T) -> () -> T {
-    { value }
+prefix func ^ <T>(_ value: @autoclosure @escaping () -> T) -> () -> T {
+    value
 }
