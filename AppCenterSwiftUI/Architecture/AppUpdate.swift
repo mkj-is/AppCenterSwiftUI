@@ -8,6 +8,13 @@
 
 import Foundation
 
-func appUpdate(state: AppState, action: AppAction) -> AppState {
-    return state
+func appUpdate(state: inout AppState, action: AppAction) {
+    switch action {
+    case .goBack:
+        state.loginBrowserOpened = false
+    case .update(let token):
+        state.apiToken = token
+    case .openAuthentication:
+        state.loginBrowserOpened = true
+    }
 }

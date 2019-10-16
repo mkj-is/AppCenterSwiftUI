@@ -2,22 +2,24 @@ import SwiftUI
 import Combine
 import Elementary
 
-final class ObservableStore<State, Action>: ObservableObject {
+public final class ObservableStore<State, Action>: ObservableObject {
+    @Published private(set) var state: State
 
-    private let store: Store<State, Action>
-    let objectWillChange: PassthroughSubject<State, Never>
+    private let update: Update<State, Action>
+    private let effect: Effect<State, Action>?
 
-    init(state: State, update: @escaping Update<State, Action>, effect: @escaping Effect<State, Action>) {
-        let subject = PassthroughSubject<State, Never>()
-
-        self.store = Store(state: state, update: update) { state, action, dispatch in
-            subject.send(state())
-            effect(state, action, dispatch)
-        }
-        self.objectWillChange = subject
+    public init(
+        state: State,
+        update: @escaping Update<State, Action>,
+        effect: Effect<State, Action>? = nil
+    ) {
+        self.state = state
+        self.update = update
+        self.effect = effect
     }
 
-    func dispatch(_ action: Action) {
-        store.dispatch(action)
+    public func dispatch(_ action: Action) {
+        update(&state, action)
+        effect?({ self.state }, action, dispatch)
     }
 }

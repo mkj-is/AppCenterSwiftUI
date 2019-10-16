@@ -1,8 +1,4 @@
 struct AppState {
-    let authentication = Authentication()
-}
-
-
-struct Authentication {
-    let step = 0
+    var loginBrowserOpened = false
+    var apiToken: String?
 }
