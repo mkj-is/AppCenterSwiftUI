@@ -12,7 +12,7 @@ struct AppView: View {
     @ObservedObject var store = ObservableStore<AppState, AppAction>(state: AppState(), update: appUpdate, effect: appEffect)
 
     var body: some View {
-        LoginView(openAuthentication: { self.store.dispatch(.openAuthentication) }, authenticate: { self.store.dispatch(.update(token: $0))})
+        LoginView(openAuthentication: ^store.dispatch(.openAuthentication), authenticate: { self.store.dispatch(.update(token: $0))})
     }
 }
 

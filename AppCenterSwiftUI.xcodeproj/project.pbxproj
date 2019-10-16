@@ -17,6 +17,8 @@
 		E7254C2D235261AA001D7FDB /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7254C2C235261AA001D7FDB /* LoginView.swift */; };
 		E7531F0A2356494600AE68BE /* FTAPIKit in Frameworks */ = {isa = PBXBuildFile; productRef = E7531F092356494600AE68BE /* FTAPIKit */; };
 		E765EC3A23574F1F00345023 /* CGFloat+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = E765EC3823572E2600345023 /* CGFloat+Style.swift */; };
+		E765EC3C235752E500345023 /* LiftOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E765EC3B235752E500345023 /* LiftOperator.swift */; };
+		E765EC3F2357538F00345023 /* Id.swift in Sources */ = {isa = PBXBuildFile; fileRef = E765EC3E2357538F00345023 /* Id.swift */; };
 		E76B6F702353A5FC007DD31D /* Elementary in Frameworks */ = {isa = PBXBuildFile; productRef = E76B6F6F2353A5FC007DD31D /* Elementary */; };
 		E76B6F722353A756007DD31D /* ObservableStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76B6F712353A756007DD31D /* ObservableStore.swift */; };
 		E76B6F742353B149007DD31D /* AppAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76B6F732353B149007DD31D /* AppAction.swift */; };
@@ -38,6 +40,8 @@
 		E7254C2623526149001D7FDB /* AppCenterSwiftUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppCenterSwiftUI.entitlements; sourceTree = "<group>"; };
 		E7254C2C235261AA001D7FDB /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		E765EC3823572E2600345023 /* CGFloat+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Style.swift"; sourceTree = "<group>"; };
+		E765EC3B235752E500345023 /* LiftOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftOperator.swift; sourceTree = "<group>"; };
+		E765EC3E2357538F00345023 /* Id.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Id.swift; sourceTree = "<group>"; };
 		E76B6F6B2353A330007DD31D /* Elementary */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Elementary; path = ../../Elementary; sourceTree = "<group>"; };
 		E76B6F712353A756007DD31D /* ObservableStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableStore.swift; sourceTree = "<group>"; };
 		E76B6F732353B149007DD31D /* AppAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAction.swift; sourceTree = "<group>"; };
@@ -98,6 +102,7 @@
 		E7254C1823526148001D7FDB /* AppCenterSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				E765EC3D2357537D00345023 /* Functional programming */,
 				E7254C1923526148001D7FDB /* AppDelegate.swift */,
 				E70071692354EA190050DA3D /* Views */,
 				E76B6F752353B1E4007DD31D /* Architecture */,
@@ -118,6 +123,15 @@
 				E7254C2023526149001D7FDB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E765EC3D2357537D00345023 /* Functional programming */ = {
+			isa = PBXGroup;
+			children = (
+				E765EC3B235752E500345023 /* LiftOperator.swift */,
+				E765EC3E2357538F00345023 /* Id.swift */,
+			);
+			path = "Functional programming";
 			sourceTree = "<group>";
 		};
 		E76B6F6E2353A5FC007DD31D /* Frameworks */ = {
@@ -218,6 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E765EC3C235752E500345023 /* LiftOperator.swift in Sources */,
 				E76B6F7B2353B2D2007DD31D /* AppEffect.swift in Sources */,
 				E76B6F742353B149007DD31D /* AppAction.swift in Sources */,
 				E76B6F722353A756007DD31D /* ObservableStore.swift in Sources */,
@@ -227,6 +242,7 @@
 				E7254C1C23526148001D7FDB /* AppView.swift in Sources */,
 				E7254C1A23526148001D7FDB /* AppDelegate.swift in Sources */,
 				E765EC3A23574F1F00345023 /* CGFloat+Style.swift in Sources */,
+				E765EC3F2357538F00345023 /* Id.swift in Sources */,
 				E76B6F792353B27F007DD31D /* AppUpdate.swift in Sources */,
 				E70071682354E84C0050DA3D /* Color+Static.swift in Sources */,
 			);

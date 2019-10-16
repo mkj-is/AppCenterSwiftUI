@@ -28,17 +28,12 @@ struct LoginView: View {
                     .font(.largeTitle)
                     .foregroundColor(.appPrimary)
                 Text("Open following address, login if needed and copy the API token:")
-                Button(action: openAuthentication, label: {
-                    Text("https://appcenter.ms/cli-login?hostname=AppCenter-macOS.local")
-                        .underline()
-                }).buttonStyle(LinkButtonStyle())
+                Button(action: openAuthentication, label: ^Text("Login using browser"))
                 HStack {
                     TextField("API token", text: $token)
                     StringPasteButton { self.token = $0 }
                 }
-                Button(action: { self.authenticate(self.token) }, label: {
-                    Text("Authenticate")
-                })
+                Button(action: ^authenticate(token), label: ^Text("Authenticate"))
             }
         }.padding(.standardSpacing)
     }
