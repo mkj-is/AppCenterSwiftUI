@@ -31,11 +31,25 @@ func createNetworkEffect() -> Effect<AppState, AppAction> {
         case .authenticate(let token):
             delegate.token = token
             adapter.request(response: UserEndpoint()) { result in
-                switch result {
-                case .success(let user):
-                    print(user)
-                case .failure(let error):
-                    print(error)
+                DispatchQueue.main.async {
+                    switch result {
+                    case .success(let user):
+                        dispatch(.authenticated(user: user))
+                        dispatch(.loadApps)
+                    case .failure(let error):
+                        dispatch(.authenticationFailed(error))
+                    }
+                }
+            }
+        case .loadApps:
+            adapter.request(response: AppsEndpoint()) { result in
+                DispatchQueue.main.async {
+                    switch result {
+                    case .success(let apps):
+                        dispatch(.appsLoaded(apps))
+                    case .failure(let error):
+                        dispatch(.authenticationFailed(error))
+                    }
                 }
             }
         default:

@@ -33,6 +33,8 @@
 		E770C922235B9CC300535F3D /* APIServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E770C921235B9CC300535F3D /* APIServer.swift */; };
 		E770C924235BAA1900535F3D /* AppListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E770C923235BAA1900535F3D /* AppListView.swift */; };
 		E770C927235BAAB600535F3D /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E770C926235BAAB600535F3D /* App.swift */; };
+		E7F3D0F8235BB12000FE212F /* Enumerations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F3D0F7235BB12000FE212F /* Enumerations.swift */; };
+		E7F3D0FA235BB30100FE212F /* AppsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F3D0F9235BB30100FE212F /* AppsEndpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +66,8 @@
 		E770C921235B9CC300535F3D /* APIServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServer.swift; sourceTree = "<group>"; };
 		E770C923235BAA1900535F3D /* AppListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppListView.swift; sourceTree = "<group>"; };
 		E770C926235BAAB600535F3D /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		E7F3D0F7235BB12000FE212F /* Enumerations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enumerations.swift; sourceTree = "<group>"; };
+		E7F3D0F9235BB30100FE212F /* AppsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsEndpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				E770C91F235B9B5000535F3D /* UserEndpoint.swift */,
+				E7F3D0F9235BB30100FE212F /* AppsEndpoint.swift */,
 			);
 			path = Endpoints;
 			sourceTree = "<group>";
@@ -197,6 +202,7 @@
 			children = (
 				E765EC4523576CA200345023 /* User.swift */,
 				E770C926235BAAB600535F3D /* App.swift */,
+				E7F3D0F7235BB12000FE212F /* Enumerations.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -283,6 +289,7 @@
 				E76B6F7B2353B2D2007DD31D /* AppEffect.swift in Sources */,
 				E76B6F742353B149007DD31D /* AppAction.swift in Sources */,
 				E76B6F722353A756007DD31D /* ObservableStore.swift in Sources */,
+				E7F3D0FA235BB30100FE212F /* AppsEndpoint.swift in Sources */,
 				E770C920235B9B5000535F3D /* UserEndpoint.swift in Sources */,
 				E770C924235BAA1900535F3D /* AppListView.swift in Sources */,
 				E765EC4123575BFB00345023 /* LiftOperator.swift in Sources */,
@@ -301,6 +308,7 @@
 				E76B6F792353B27F007DD31D /* AppUpdate.swift in Sources */,
 				E70071682354E84C0050DA3D /* Color+Static.swift in Sources */,
 				E765EC4423576BC300345023 /* APIError.swift in Sources */,
+				E7F3D0F8235BB12000FE212F /* Enumerations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

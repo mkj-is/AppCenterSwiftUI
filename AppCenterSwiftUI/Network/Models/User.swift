@@ -6,4 +6,5 @@ struct User: Decodable {
     let canChangePassword: Bool
     let displayName, email, name: String
     let origin: String
+    let permissions: Set<Permission>?
 }
