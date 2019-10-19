@@ -1,5 +1,7 @@
 enum AppAction {
     case openAuthentication
     case goBack
-    case update(token: String)
+    case authenticate(token: String)
+    case authenticated(user: User)
+    case authenticationFailed(Error)
 }

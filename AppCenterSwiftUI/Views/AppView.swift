@@ -9,15 +9,21 @@
 import SwiftUI
 
 struct AppView: View {
-    @ObservedObject var store = ObservableStore<AppState, AppAction>(state: AppState(), update: appUpdate, effect: appEffect)
+    @ObservedObject var store = ObservableStore<AppState, AppAction>(state: AppState(), update: appUpdate, effect: createAppEffect())
 
     var body: some View {
-        LoginView(
-            showSecondStep: store.state.loginBrowserOpened,
-            openAuthentication: ^self.store.dispatch(.openAuthentication),
-            goBack: ^self.store.dispatch(.goBack),
-            authenticate: { self.store.dispatch(.update(token: $0))}
-        )
+        ZStack {
+            if store.state.user != nil {
+                AppListView(apps: store.state.apps)
+            } else {
+                LoginView(
+                    showSecondStep: store.state.loginBrowserOpened,
+                    openAuthentication: ^self.store.dispatch(.openAuthentication),
+                    goBack: ^self.store.dispatch(.goBack),
+                    authenticate: { self.store.dispatch(.authenticate(token: $0))}
+                )
+            }
+        }
     }
 }
 

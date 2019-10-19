@@ -19,12 +19,20 @@
 		E765EC3A23574F1F00345023 /* CGFloat+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = E765EC3823572E2600345023 /* CGFloat+Style.swift */; };
 		E765EC3F2357538F00345023 /* Id.swift in Sources */ = {isa = PBXBuildFile; fileRef = E765EC3E2357538F00345023 /* Id.swift */; };
 		E765EC4123575BFB00345023 /* LiftOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E765EC4023575BFB00345023 /* LiftOperator.swift */; };
+		E765EC4423576BC300345023 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E765EC4323576BC300345023 /* APIError.swift */; };
+		E765EC4623576CA200345023 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E765EC4523576CA200345023 /* User.swift */; };
+		E765EC482357709A00345023 /* NetworkEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = E765EC472357709A00345023 /* NetworkEffect.swift */; };
+		E765EC4A235771F800345023 /* AppCenterServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E765EC49235771F800345023 /* AppCenterServer.swift */; };
 		E76B6F702353A5FC007DD31D /* Elementary in Frameworks */ = {isa = PBXBuildFile; productRef = E76B6F6F2353A5FC007DD31D /* Elementary */; };
 		E76B6F722353A756007DD31D /* ObservableStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76B6F712353A756007DD31D /* ObservableStore.swift */; };
 		E76B6F742353B149007DD31D /* AppAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76B6F732353B149007DD31D /* AppAction.swift */; };
 		E76B6F772353B1FF007DD31D /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76B6F762353B1FF007DD31D /* AppState.swift */; };
 		E76B6F792353B27F007DD31D /* AppUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76B6F782353B27F007DD31D /* AppUpdate.swift */; };
 		E76B6F7B2353B2D2007DD31D /* AppEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76B6F7A2353B2D2007DD31D /* AppEffect.swift */; };
+		E770C920235B9B5000535F3D /* UserEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E770C91F235B9B5000535F3D /* UserEndpoint.swift */; };
+		E770C922235B9CC300535F3D /* APIServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E770C921235B9CC300535F3D /* APIServer.swift */; };
+		E770C924235BAA1900535F3D /* AppListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E770C923235BAA1900535F3D /* AppListView.swift */; };
+		E770C927235BAAB600535F3D /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E770C926235BAAB600535F3D /* App.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,12 +50,20 @@
 		E765EC3823572E2600345023 /* CGFloat+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Style.swift"; sourceTree = "<group>"; };
 		E765EC3E2357538F00345023 /* Id.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Id.swift; sourceTree = "<group>"; };
 		E765EC4023575BFB00345023 /* LiftOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftOperator.swift; sourceTree = "<group>"; };
+		E765EC4323576BC300345023 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		E765EC4523576CA200345023 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E765EC472357709A00345023 /* NetworkEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEffect.swift; sourceTree = "<group>"; };
+		E765EC49235771F800345023 /* AppCenterServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCenterServer.swift; sourceTree = "<group>"; };
 		E76B6F6B2353A330007DD31D /* Elementary */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Elementary; path = ../../Elementary; sourceTree = "<group>"; };
 		E76B6F712353A756007DD31D /* ObservableStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableStore.swift; sourceTree = "<group>"; };
 		E76B6F732353B149007DD31D /* AppAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAction.swift; sourceTree = "<group>"; };
 		E76B6F762353B1FF007DD31D /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		E76B6F782353B27F007DD31D /* AppUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUpdate.swift; sourceTree = "<group>"; };
 		E76B6F7A2353B2D2007DD31D /* AppEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEffect.swift; sourceTree = "<group>"; };
+		E770C91F235B9B5000535F3D /* UserEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEndpoint.swift; sourceTree = "<group>"; };
+		E770C921235B9CC300535F3D /* APIServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServer.swift; sourceTree = "<group>"; };
+		E770C923235BAA1900535F3D /* AppListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppListView.swift; sourceTree = "<group>"; };
+		E770C926235BAAB600535F3D /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +94,7 @@
 				E7254C1B23526148001D7FDB /* AppView.swift */,
 				E70071642354C7680050DA3D /* StringPasteButton.swift */,
 				E7254C2C235261AA001D7FDB /* LoginView.swift */,
+				E770C923235BAA1900535F3D /* AppListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -102,8 +119,9 @@
 		E7254C1823526148001D7FDB /* AppCenterSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				E765EC3D2357537D00345023 /* Functional programming */,
 				E7254C1923526148001D7FDB /* AppDelegate.swift */,
+				E765EC4223576B8400345023 /* Network */,
+				E765EC3D2357537D00345023 /* Functional programming */,
 				E70071692354EA190050DA3D /* Views */,
 				E76B6F752353B1E4007DD31D /* Architecture */,
 				E70071662354E8220050DA3D /* Style */,
@@ -134,6 +152,19 @@
 			path = "Functional programming";
 			sourceTree = "<group>";
 		};
+		E765EC4223576B8400345023 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E770C925235BAAA700535F3D /* Models */,
+				E770C91E235B9B3D00535F3D /* Endpoints */,
+				E765EC4323576BC300345023 /* APIError.swift */,
+				E770C921235B9CC300535F3D /* APIServer.swift */,
+				E765EC472357709A00345023 /* NetworkEffect.swift */,
+				E765EC49235771F800345023 /* AppCenterServer.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		E76B6F6E2353A5FC007DD31D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +182,23 @@
 				E76B6F7A2353B2D2007DD31D /* AppEffect.swift */,
 			);
 			path = Architecture;
+			sourceTree = "<group>";
+		};
+		E770C91E235B9B3D00535F3D /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				E770C91F235B9B5000535F3D /* UserEndpoint.swift */,
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		E770C925235BAAA700535F3D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E765EC4523576CA200345023 /* User.swift */,
+				E770C926235BAAB600535F3D /* App.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,16 +283,24 @@
 				E76B6F7B2353B2D2007DD31D /* AppEffect.swift in Sources */,
 				E76B6F742353B149007DD31D /* AppAction.swift in Sources */,
 				E76B6F722353A756007DD31D /* ObservableStore.swift in Sources */,
+				E770C920235B9B5000535F3D /* UserEndpoint.swift in Sources */,
+				E770C924235BAA1900535F3D /* AppListView.swift in Sources */,
 				E765EC4123575BFB00345023 /* LiftOperator.swift in Sources */,
 				E7254C2D235261AA001D7FDB /* LoginView.swift in Sources */,
+				E765EC4A235771F800345023 /* AppCenterServer.swift in Sources */,
+				E765EC482357709A00345023 /* NetworkEffect.swift in Sources */,
 				E76B6F772353B1FF007DD31D /* AppState.swift in Sources */,
 				E70071652354C7680050DA3D /* StringPasteButton.swift in Sources */,
 				E7254C1C23526148001D7FDB /* AppView.swift in Sources */,
+				E770C927235BAAB600535F3D /* App.swift in Sources */,
+				E765EC4623576CA200345023 /* User.swift in Sources */,
+				E770C922235B9CC300535F3D /* APIServer.swift in Sources */,
 				E7254C1A23526148001D7FDB /* AppDelegate.swift in Sources */,
 				E765EC3A23574F1F00345023 /* CGFloat+Style.swift in Sources */,
 				E765EC3F2357538F00345023 /* Id.swift in Sources */,
 				E76B6F792353B27F007DD31D /* AppUpdate.swift in Sources */,
 				E70071682354E84C0050DA3D /* Color+Static.swift in Sources */,
+				E765EC4423576BC300345023 /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,9 +443,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = AppCenterSwiftUI/AppCenterSwiftUI.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"AppCenterSwiftUI/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = AppCenterSwiftUI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -399,6 +456,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = com.thefuntasty.AppCenterSwiftUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -408,9 +466,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = AppCenterSwiftUI/AppCenterSwiftUI.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"AppCenterSwiftUI/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = AppCenterSwiftUI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -420,6 +479,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = com.thefuntasty.AppCenterSwiftUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;

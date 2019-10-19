@@ -9,12 +9,13 @@
 import AppKit
 import Elementary
 
-func appEffect(
-    state: () -> AppState,
-    action: AppAction,
-    dispatch: @escaping Dispatch<AppAction>
-) {
-    if case .openAuthentication = action {
-        NSWorkspace.shared.open(URL(string: "https://appcenter.ms/cli-login?hostname=AppCenter-macOS.local")!)
+func createAppEffect() -> Effect<AppState, AppAction> {
+    let networkEffect = createNetworkEffect()
+    return { state, action, dispatch in
+        networkEffect(state, action, dispatch)
+
+        if case .openAuthentication = action {
+            NSWorkspace.shared.open(URL(string: "https://appcenter.ms/cli-login?hostname=AppCenter-macOS.local")!)
+        }
     }
 }
