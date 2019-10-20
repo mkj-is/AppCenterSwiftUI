@@ -17,13 +17,20 @@ struct ReleaseListView: View {
                 LoadingView()
             } else {
                 List(releases ?? []) { release in
-                    HStack {
-                        Text("􀐛")
-                            .font(.title)
-                            .foregroundColor(.appPrimary)
-                        Text("\(release.id)")
-                        Text(release.shortVersion)
-                        Text(release.version)
+                    VStack(alignment: .center, spacing: .smallPadding) {
+                        HStack(alignment: .center, spacing: .smallPadding) {
+                            Text("􀐛")
+                                .font(.title)
+                                .foregroundColor(.appPrimary)
+                            Text("\(release.id)")
+                            Spacer()
+                            Text(release.version)
+                            Spacer()
+                            Text(release.shortVersion)
+                            Spacer()
+                            Text(DateFormatter.standard.string(from: release.uploadedAt))
+                        }
+                        Divider()
                     }
                 }
             }

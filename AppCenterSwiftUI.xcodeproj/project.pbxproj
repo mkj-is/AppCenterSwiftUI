@@ -35,6 +35,7 @@
 		E770C927235BAAB600535F3D /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E770C926235BAAB600535F3D /* App.swift */; };
 		E7B8A1CF235CB26B0050495A /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B8A1CE235CB26B0050495A /* DashboardView.swift */; };
 		E7B8A1D1235CB4140050495A /* ReleaseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B8A1D0235CB4140050495A /* ReleaseListView.swift */; };
+		E7B8A1D3235CE0B50050495A /* DateFormatter+Static.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B8A1D2235CE0B50050495A /* DateFormatter+Static.swift */; };
 		E7F3D0F8235BB12000FE212F /* Enumerations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F3D0F7235BB12000FE212F /* Enumerations.swift */; };
 		E7F3D0FA235BB30100FE212F /* AppsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F3D0F9235BB30100FE212F /* AppsEndpoint.swift */; };
 		E7F3D100235C53A200FE212F /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F3D0FF235C53A200FE212F /* LoadingView.swift */; };
@@ -73,6 +74,7 @@
 		E770C926235BAAB600535F3D /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		E7B8A1CE235CB26B0050495A /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		E7B8A1D0235CB4140050495A /* ReleaseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReleaseListView.swift; sourceTree = "<group>"; };
+		E7B8A1D2235CE0B50050495A /* DateFormatter+Static.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Static.swift"; sourceTree = "<group>"; };
 		E7F3D0F7235BB12000FE212F /* Enumerations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enumerations.swift; sourceTree = "<group>"; };
 		E7F3D0F9235BB30100FE212F /* AppsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsEndpoint.swift; sourceTree = "<group>"; };
 		E7F3D0FF235C53A200FE212F /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			children = (
 				E70071672354E84C0050DA3D /* Color+Static.swift */,
 				E765EC3823572E2600345023 /* CGFloat+Style.swift */,
+				E7B8A1D2235CE0B50050495A /* DateFormatter+Static.swift */,
 			);
 			path = Style;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				E7254C2D235261AA001D7FDB /* LoginView.swift in Sources */,
 				E765EC4A235771F800345023 /* AppCenterServer.swift in Sources */,
 				E765EC482357709A00345023 /* NetworkEffect.swift in Sources */,
+				E7B8A1D3235CE0B50050495A /* DateFormatter+Static.swift in Sources */,
 				E7F3D102235C571500FE212F /* Release.swift in Sources */,
 				E76B6F772353B1FF007DD31D /* AppState.swift in Sources */,
 				E70071652354C7680050DA3D /* StringPasteButton.swift in Sources */,
