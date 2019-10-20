@@ -38,3 +38,11 @@ enum OwnerType: String, Decodable {
     case user
     case organization = "org"
 }
+
+enum DestinationType: String, Decodable {
+    case group, store, tester
+}
+
+enum DistributionStore: String, Decodable {
+    case intune, googleplay, apple, none
+}

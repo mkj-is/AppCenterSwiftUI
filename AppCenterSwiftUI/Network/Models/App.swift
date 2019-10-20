@@ -1,6 +1,6 @@
 import Foundation
 
-struct App: Decodable, Identifiable {
+struct App: Decodable, Identifiable, Hashable {
     let id: UUID
     let description, releaseType, iconSource: String?
     let displayName, name: String
@@ -13,6 +13,14 @@ struct App: Decodable, Identifiable {
     let origin: Origin
     //let createdAt, updatedAt: Date?
     let memberPermissions: Set<Permission>?
+
+    static func == (lhs: App, rhs: App) -> Bool {
+        lhs.id == rhs.id
+    }
+
+    func hash(into hasher: inout Hasher) {
+        id.hash(into: &hasher)
+    }
 }
 
 struct AzureSubscription: Decodable {

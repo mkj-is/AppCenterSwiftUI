@@ -1,0 +1,28 @@
+//
+//  DashboardView.swift
+//  AppCenterSwiftUI
+//
+//  Created by Matěj Kašpar Jirásek on 20/10/2019.
+//  Copyright © 2019 FUNTASTY Digital s.r.o. All rights reserved.
+//
+
+import SwiftUI
+
+struct DashboardView: View {
+    let apps: [App]
+    let releases: [Release]?
+    let appSelected: (App) -> Void
+
+    var body: some View {
+        HSplitView {
+            AppListView(apps: apps, appSelected: appSelected)
+            ReleaseListView(releases: releases)
+        }
+    }
+}
+
+struct DashboardView_Previews: PreviewProvider {
+    static var previews: some View {
+        DashboardView(apps: [], releases: nil, appSelected: { print($0) })
+    }
+}

@@ -33,9 +33,13 @@
 		E770C922235B9CC300535F3D /* APIServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E770C921235B9CC300535F3D /* APIServer.swift */; };
 		E770C924235BAA1900535F3D /* AppListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E770C923235BAA1900535F3D /* AppListView.swift */; };
 		E770C927235BAAB600535F3D /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E770C926235BAAB600535F3D /* App.swift */; };
+		E7B8A1CF235CB26B0050495A /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B8A1CE235CB26B0050495A /* DashboardView.swift */; };
+		E7B8A1D1235CB4140050495A /* ReleaseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B8A1D0235CB4140050495A /* ReleaseListView.swift */; };
 		E7F3D0F8235BB12000FE212F /* Enumerations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F3D0F7235BB12000FE212F /* Enumerations.swift */; };
 		E7F3D0FA235BB30100FE212F /* AppsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F3D0F9235BB30100FE212F /* AppsEndpoint.swift */; };
 		E7F3D100235C53A200FE212F /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F3D0FF235C53A200FE212F /* LoadingView.swift */; };
+		E7F3D102235C571500FE212F /* Release.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F3D101235C571500FE212F /* Release.swift */; };
+		E7F3D104235C5A5E00FE212F /* ReleasesEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F3D103235C5A5E00FE212F /* ReleasesEndpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,9 +71,13 @@
 		E770C921235B9CC300535F3D /* APIServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServer.swift; sourceTree = "<group>"; };
 		E770C923235BAA1900535F3D /* AppListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppListView.swift; sourceTree = "<group>"; };
 		E770C926235BAAB600535F3D /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		E7B8A1CE235CB26B0050495A /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		E7B8A1D0235CB4140050495A /* ReleaseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReleaseListView.swift; sourceTree = "<group>"; };
 		E7F3D0F7235BB12000FE212F /* Enumerations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enumerations.swift; sourceTree = "<group>"; };
 		E7F3D0F9235BB30100FE212F /* AppsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsEndpoint.swift; sourceTree = "<group>"; };
 		E7F3D0FF235C53A200FE212F /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		E7F3D101235C571500FE212F /* Release.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Release.swift; sourceTree = "<group>"; };
+		E7F3D103235C5A5E00FE212F /* ReleasesEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReleasesEndpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,11 +105,13 @@
 		E70071692354EA190050DA3D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E7B8A1CE235CB26B0050495A /* DashboardView.swift */,
 				E7254C1B23526148001D7FDB /* AppView.swift */,
 				E70071642354C7680050DA3D /* StringPasteButton.swift */,
 				E7254C2C235261AA001D7FDB /* LoginView.swift */,
 				E770C923235BAA1900535F3D /* AppListView.swift */,
 				E7F3D0FF235C53A200FE212F /* LoadingView.swift */,
+				E7B8A1D0235CB4140050495A /* ReleaseListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -182,10 +192,10 @@
 		E76B6F752353B1E4007DD31D /* Architecture */ = {
 			isa = PBXGroup;
 			children = (
-				E76B6F782353B27F007DD31D /* AppUpdate.swift */,
 				E76B6F712353A756007DD31D /* ObservableStore.swift */,
-				E76B6F732353B149007DD31D /* AppAction.swift */,
 				E76B6F762353B1FF007DD31D /* AppState.swift */,
+				E76B6F732353B149007DD31D /* AppAction.swift */,
+				E76B6F782353B27F007DD31D /* AppUpdate.swift */,
 				E76B6F7A2353B2D2007DD31D /* AppEffect.swift */,
 			);
 			path = Architecture;
@@ -196,6 +206,7 @@
 			children = (
 				E770C91F235B9B5000535F3D /* UserEndpoint.swift */,
 				E7F3D0F9235BB30100FE212F /* AppsEndpoint.swift */,
+				E7F3D103235C5A5E00FE212F /* ReleasesEndpoint.swift */,
 			);
 			path = Endpoints;
 			sourceTree = "<group>";
@@ -203,6 +214,7 @@
 		E770C925235BAAA700535F3D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E7F3D101235C571500FE212F /* Release.swift */,
 				E765EC4523576CA200345023 /* User.swift */,
 				E770C926235BAAB600535F3D /* App.swift */,
 				E7F3D0F7235BB12000FE212F /* Enumerations.swift */,
@@ -289,6 +301,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7B8A1D1235CB4140050495A /* ReleaseListView.swift in Sources */,
 				E76B6F7B2353B2D2007DD31D /* AppEffect.swift in Sources */,
 				E76B6F742353B149007DD31D /* AppAction.swift in Sources */,
 				E76B6F722353A756007DD31D /* ObservableStore.swift in Sources */,
@@ -300,6 +313,7 @@
 				E7254C2D235261AA001D7FDB /* LoginView.swift in Sources */,
 				E765EC4A235771F800345023 /* AppCenterServer.swift in Sources */,
 				E765EC482357709A00345023 /* NetworkEffect.swift in Sources */,
+				E7F3D102235C571500FE212F /* Release.swift in Sources */,
 				E76B6F772353B1FF007DD31D /* AppState.swift in Sources */,
 				E70071652354C7680050DA3D /* StringPasteButton.swift in Sources */,
 				E7254C1C23526148001D7FDB /* AppView.swift in Sources */,
@@ -310,6 +324,8 @@
 				E765EC3A23574F1F00345023 /* CGFloat+Style.swift in Sources */,
 				E765EC3F2357538F00345023 /* Id.swift in Sources */,
 				E76B6F792353B27F007DD31D /* AppUpdate.swift in Sources */,
+				E7B8A1CF235CB26B0050495A /* DashboardView.swift in Sources */,
+				E7F3D104235C5A5E00FE212F /* ReleasesEndpoint.swift in Sources */,
 				E70071682354E84C0050DA3D /* Color+Static.swift in Sources */,
 				E765EC4423576BC300345023 /* APIError.swift in Sources */,
 				E7F3D0F8235BB12000FE212F /* Enumerations.swift in Sources */,

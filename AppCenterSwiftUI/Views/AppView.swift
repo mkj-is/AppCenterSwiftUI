@@ -14,7 +14,11 @@ struct AppView: View {
     var body: some View {
         ZStack {
             if store.state.user != nil {
-                AppListView(apps: store.state.apps)
+                DashboardView(
+                    apps: store.state.apps,
+                    releases: store.state.selectedApp.flatMap { store.state.releases[$0] },
+                    appSelected: { self.store.dispatch(.appSelected($0)) }
+                )
             } else {
                 LoginView(
                     showSecondStep: store.state.loginBrowserOpened,

@@ -15,7 +15,11 @@ func appUpdate(state: inout AppState, action: AppAction) {
         state.loginBrowserOpened = true
     case .appsLoaded(let apps):
         state.apps = apps
-    case .loadApps, .appsLoadingFailed:
+    case .appSelected(let app):
+        state.selectedApp = app
+    case let .releasesLoaded(app, releases):
+        state.releases[app] = releases
+    case .loadApps, .appsLoadingFailed, .releasesLoadingFailed:
         break
     }
 }

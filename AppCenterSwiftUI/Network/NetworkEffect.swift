@@ -47,8 +47,23 @@ func createNetworkEffect() -> Effect<AppState, AppAction> {
                     switch result {
                     case .success(let apps):
                         dispatch(.appsLoaded(apps))
+                        let currentState = state()
+                        if currentState.selectedApp == nil, let firstApp = apps.first {
+                            dispatch(.appSelected(firstApp))
+                        }
                     case .failure(let error):
-                        dispatch(.authenticationFailed(error))
+                        dispatch(.appsLoadingFailed(error))
+                    }
+                }
+            }
+        case .appSelected(let app):
+            adapter.request(response: ReleasesEnpoint(ownerName: app.owner.name, appName: app.name)) { result in
+                DispatchQueue.main.async {
+                    switch result {
+                    case .success(let releases):
+                        dispatch(.releasesLoaded(app, releases))
+                    case .failure(let error):
+                        dispatch(.releasesLoadingFailed(app, error))
                     }
                 }
             }

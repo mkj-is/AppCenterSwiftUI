@@ -2,21 +2,24 @@ import SwiftUI
 
 struct AppListView: View {
     let apps: [App]
+    let appSelected: (App) -> Void
 
     var body: some View {
         List(apps) { app in
-            VStack {
-                HStack(alignment: .center, spacing: .standardSpacing) {
-                    Text(app.displayName)
-                    Spacer()
-                    Text(app.os.rawValue)
-                        .foregroundColor(.white)
-                        .padding(.smallPadding)
-                        .background(Capsule().foregroundColor(.secondary))
-                }.padding(.standardPadding)
-                Divider()
-            }
-        }
+            Button(action: { self.appSelected(app) }) {
+                VStack {
+                    HStack(alignment: .center, spacing: .standardSpacing) {
+                        Text(app.displayName)
+                        Spacer()
+                        Text(app.os.rawValue)
+                            .foregroundColor(.white)
+                            .padding(.smallPadding)
+                            .background(Capsule().foregroundColor(.secondary))
+                    }.padding(.standardPadding)
+                    Divider()
+                }
+            }.buttonStyle(PlainButtonStyle())
+        }.frame(minWidth: 200, idealWidth: 250, maxWidth: 400, minHeight: 300, idealHeight: 400)
     }
 }
 
@@ -24,6 +27,6 @@ struct AppListView_Previews: PreviewProvider {
     static var previews: some View {
         AppListView(apps: (0...40).map { _ in
             App(id: UUID(), description: nil, releaseType: nil, iconSource: nil, displayName: "ABC", name: "abc", os: .iOS, iconUrl: nil, owner: Owner(id: UUID(), avatarUrl: nil, name: "mkj", displayName: "Matěj Kašpar Jirásek", email: nil, type: .user), appSecret: "somesecret", azureSubscription: nil, platform: .apple, origin: .appcenter, memberPermissions: nil)
-        })
+        }, appSelected: { print($0) })
     }
 }

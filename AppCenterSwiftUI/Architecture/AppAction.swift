@@ -7,4 +7,7 @@ enum AppAction {
     case loadApps
     case appsLoaded([App])
     case appsLoadingFailed(Error)
+    case appSelected(App)
+    case releasesLoaded(App, [Release])
+    case releasesLoadingFailed(App, Error)
 }
