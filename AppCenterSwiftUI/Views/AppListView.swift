@@ -10,6 +10,9 @@ struct AppListView: View {
                     Text(app.displayName)
                     Spacer()
                     Text(app.os.rawValue)
+                        .foregroundColor(.white)
+                        .padding(.smallPadding)
+                        .background(Capsule().foregroundColor(.secondary))
                 }.padding(.standardPadding)
                 Divider()
             }
