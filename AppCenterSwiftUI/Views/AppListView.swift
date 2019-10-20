@@ -26,7 +26,7 @@ struct AppListView: View {
 struct AppListView_Previews: PreviewProvider {
     static var previews: some View {
         AppListView(apps: (0...40).map { _ in
-            App(id: UUID(), description: nil, releaseType: nil, iconSource: nil, displayName: "ABC", name: "abc", os: .iOS, iconUrl: nil, owner: Owner(id: UUID(), avatarUrl: nil, name: "mkj", displayName: "Matěj Kašpar Jirásek", email: nil, type: .user), appSecret: "somesecret", azureSubscription: nil, platform: .apple, origin: .appcenter, memberPermissions: nil)
+            App(id: UUID(), description: nil, releaseType: nil, iconSource: nil, displayName: "ABC", name: "abc", os: .iOS, iconUrl: nil, owner: Owner(id: UUID(), avatarUrl: nil, name: "mkj", displayName: "Matěj Kašpar Jirásek", email: nil, type: .user), appSecret: "somesecret", azureSubscription: nil, platform: .apple, origin: .appcenter, createdAt: Date(), updatedAt: Date(), memberPermissions: nil)
         }, appSelected: { print($0) })
     }
 }

@@ -11,7 +11,7 @@ struct App: Decodable, Identifiable, Hashable {
     let azureSubscription: AzureSubscription?
     let platform: Platform
     let origin: Origin
-    //let createdAt, updatedAt: Date?
+    let createdAt, updatedAt: Date?
     let memberPermissions: Set<Permission>?
 
     static func == (lhs: App, rhs: App) -> Bool {

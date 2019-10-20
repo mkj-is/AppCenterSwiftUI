@@ -4,7 +4,7 @@ struct Release: Decodable, Identifiable {
     let origin: Origin?
     let id: UInt
     let shortVersion, version: String
-    //let uploadedAt: Date
+    let uploadedAt: Date
     let enabled: Bool
     let destinations: [Destination]?
     let build: Build?

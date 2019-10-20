@@ -8,16 +8,23 @@ struct AppCenterServer: APIServer {
     let jsonDecoder: JSONDecoder = {
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
-        decoder.dateDecodingStrategy = .iso8601
+        decoder.dateDecodingStrategy = .formatted(dateFormatter())
         return decoder
     }()
 
     let jsonEncoder: JSONEncoder = {
         let encoder = JSONEncoder()
         encoder.keyEncodingStrategy = .convertToSnakeCase
-        encoder.dateEncodingStrategy = .iso8601
+        encoder.dateEncodingStrategy = .formatted(dateFormatter())
         return encoder
     }()
 
     let errorType: APIError.Type = APIErrorCapsule.self
+
+    private static func dateFormatter() -> DateFormatter {
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "en_US_POSIX")
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+        return formatter
+    }
 }
