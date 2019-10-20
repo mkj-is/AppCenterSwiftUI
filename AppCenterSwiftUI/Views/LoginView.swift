@@ -10,7 +10,7 @@ import SwiftUI
 import Elementary
 
 struct LoginView: View {
-    let showSecondStep: Bool
+    let showSecondStep, isLoading: Bool
     let openAuthentication, goBack: Call
     let authenticate: (String) -> Void
 
@@ -24,7 +24,9 @@ struct LoginView: View {
                     .font(.headline)
                     .foregroundColor(.appPrimary)
 
-                if showSecondStep {
+                if isLoading {
+                    LoadingView()
+                } else if showSecondStep {
                     TokenInputView(goBack: goBack, authenticate: authenticate)
                 } else {
                     BrowserView(openAuthentication: openAuthentication)
@@ -77,6 +79,7 @@ struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
         LoginView(
             showSecondStep: false,
+            isLoading: false,
             openAuthentication: { print("Open authentication called") },
             goBack: { print("Go back called") },
             authenticate: { print($0) }

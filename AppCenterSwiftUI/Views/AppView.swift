@@ -18,6 +18,7 @@ struct AppView: View {
             } else {
                 LoginView(
                     showSecondStep: store.state.loginBrowserOpened,
+                    isLoading: store.state.user == nil && store.state.apiToken != nil,
                     openAuthentication: ^self.store.dispatch(.openAuthentication),
                     goBack: ^self.store.dispatch(.goBack),
                     authenticate: { self.store.dispatch(.authenticate(token: $0))}
