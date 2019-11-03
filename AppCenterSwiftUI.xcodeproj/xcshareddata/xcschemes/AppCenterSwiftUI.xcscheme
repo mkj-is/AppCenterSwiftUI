@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E7254C1523526148001D7FDB"
-               BuildableName = "AppCenterSwiftUI.app"
-               BlueprintName = "AppCenterSwiftUI"
+               BuildableName = "AppCenterMac.app"
+               BlueprintName = "AppCenterMac"
                ReferencedContainer = "container:AppCenterSwiftUI.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -55,8 +55,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E7254C1523526148001D7FDB"
-            BuildableName = "AppCenterSwiftUI.app"
-            BlueprintName = "AppCenterSwiftUI"
+            BuildableName = "AppCenterMac.app"
+            BlueprintName = "AppCenterMac"
             ReferencedContainer = "container:AppCenterSwiftUI.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -72,8 +72,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E7254C1523526148001D7FDB"
-            BuildableName = "AppCenterSwiftUI.app"
-            BlueprintName = "AppCenterSwiftUI"
+            BuildableName = "AppCenterMac.app"
+            BlueprintName = "AppCenterMac"
             ReferencedContainer = "container:AppCenterSwiftUI.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

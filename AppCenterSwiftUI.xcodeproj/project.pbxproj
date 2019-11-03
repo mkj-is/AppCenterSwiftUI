@@ -46,7 +46,7 @@
 /* Begin PBXFileReference section */
 		E70071642354C7680050DA3D /* StringPasteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringPasteButton.swift; sourceTree = "<group>"; };
 		E70071672354E84C0050DA3D /* Color+Static.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Static.swift"; sourceTree = "<group>"; };
-		E7254C1623526148001D7FDB /* AppCenterSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppCenterSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7254C1623526148001D7FDB /* AppCenterMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppCenterMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7254C1923526148001D7FDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7254C1B23526148001D7FDB /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		E7254C1D23526149001D7FDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -122,7 +122,7 @@
 		E7254C0D23526148001D7FDB = {
 			isa = PBXGroup;
 			children = (
-				E7254C1823526148001D7FDB /* AppCenterSwiftUI */,
+				E7254C1823526148001D7FDB /* AppCenterMac */,
 				E7254C1723526148001D7FDB /* Products */,
 				E76B6F6E2353A5FC007DD31D /* Frameworks */,
 			);
@@ -131,12 +131,12 @@
 		E7254C1723526148001D7FDB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E7254C1623526148001D7FDB /* AppCenterSwiftUI.app */,
+				E7254C1623526148001D7FDB /* AppCenterMac.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E7254C1823526148001D7FDB /* AppCenterSwiftUI */ = {
+		E7254C1823526148001D7FDB /* AppCenterMac */ = {
 			isa = PBXGroup;
 			children = (
 				E7254C1923526148001D7FDB /* AppDelegate.swift */,
@@ -152,7 +152,7 @@
 				E7254C2623526149001D7FDB /* AppCenterSwiftUI.entitlements */,
 				E7254C1F23526149001D7FDB /* Preview Content */,
 			);
-			path = AppCenterSwiftUI;
+			path = AppCenterMac;
 			sourceTree = "<group>";
 		};
 		E7254C1F23526149001D7FDB /* Preview Content */ = {
@@ -228,9 +228,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E7254C1523526148001D7FDB /* AppCenterSwiftUI */ = {
+		E7254C1523526148001D7FDB /* AppCenterMac */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E7254C2923526149001D7FDB /* Build configuration list for PBXNativeTarget "AppCenterSwiftUI" */;
+			buildConfigurationList = E7254C2923526149001D7FDB /* Build configuration list for PBXNativeTarget "AppCenterMac" */;
 			buildPhases = (
 				E7254C1223526148001D7FDB /* Sources */,
 				E7254C1323526148001D7FDB /* Frameworks */,
@@ -241,13 +241,13 @@
 			dependencies = (
 				E76B6F6D2353A5F7007DD31D /* PBXTargetDependency */,
 			);
-			name = AppCenterSwiftUI;
+			name = AppCenterMac;
 			packageProductDependencies = (
 				E76B6F6F2353A5FC007DD31D /* Elementary */,
 				E7531F092356494600AE68BE /* FTAPIKit */,
 			);
 			productName = AppCenterSwiftUI;
-			productReference = E7254C1623526148001D7FDB /* AppCenterSwiftUI.app */;
+			productReference = E7254C1623526148001D7FDB /* AppCenterMac.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -281,7 +281,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E7254C1523526148001D7FDB /* AppCenterSwiftUI */,
+				E7254C1523526148001D7FDB /* AppCenterMac */,
 			);
 		};
 /* End PBXProject section */
@@ -528,7 +528,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E7254C2923526149001D7FDB /* Build configuration list for PBXNativeTarget "AppCenterSwiftUI" */ = {
+		E7254C2923526149001D7FDB /* Build configuration list for PBXNativeTarget "AppCenterMac" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E7254C2A23526149001D7FDB /* Debug */,
