@@ -16,6 +16,7 @@ struct AppView: View {
             if store.state.user != nil {
                 DashboardView(
                     apps: store.state.apps,
+                    selectedApp: store.state.selectedApp,
                     releases: store.state.selectedApp.flatMap { store.state.releases[$0] },
                     appSelected: { self.store.dispatch(.appSelected($0)) }
                 )

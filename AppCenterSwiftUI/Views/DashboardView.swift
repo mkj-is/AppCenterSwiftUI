@@ -10,12 +10,13 @@ import SwiftUI
 
 struct DashboardView: View {
     let apps: [App]
+    let selectedApp: App?
     let releases: [Release]?
     let appSelected: (App) -> Void
 
     var body: some View {
         HSplitView {
-            AppListView(apps: apps, appSelected: appSelected)
+            AppListView(apps: apps, selectedApp: selectedApp, appSelected: appSelected)
             ReleaseListView(releases: releases)
         }
     }
@@ -23,6 +24,6 @@ struct DashboardView: View {
 
 struct DashboardView_Previews: PreviewProvider {
     static var previews: some View {
-        DashboardView(apps: [], releases: nil, appSelected: { print($0) })
+        DashboardView(apps: [], selectedApp: nil, releases: nil, appSelected: { print($0) })
     }
 }
