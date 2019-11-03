@@ -9,7 +9,12 @@
 import SwiftUI
 
 struct AppView: View {
-    @ObservedObject var store = ObservableStore<AppState, AppAction>(state: AppState(), update: appUpdate, effect: createAppEffect())
+    @ObservedObject var store = ObservableStore<AppState, AppAction>(
+        state: AppState(),
+        update: appUpdate,
+        effect: createAppEffect(),
+        initialAction: .appStarted
+    )
 
     var body: some View {
         ZStack {

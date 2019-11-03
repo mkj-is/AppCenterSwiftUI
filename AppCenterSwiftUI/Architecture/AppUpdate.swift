@@ -19,7 +19,7 @@ func appUpdate(state: inout AppState, action: AppAction) {
         state.selectedApp = app
     case let .releasesLoaded(app, releases):
         state.releases[app] = releases
-    case .loadApps, .appsLoadingFailed, .releasesLoadingFailed:
+    case .appStarted, .loadApps, .appsLoadingFailed, .releasesLoadingFailed:
         break
     }
 }

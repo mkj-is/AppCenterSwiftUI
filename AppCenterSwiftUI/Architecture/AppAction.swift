@@ -1,4 +1,5 @@
 enum AppAction {
+    case appStarted
     case openAuthentication
     case goBack
     case authenticate(token: String)
