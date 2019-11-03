@@ -2,11 +2,12 @@ import SwiftUI
 import Combine
 import Elementary
 
-public final class ObservableStore<State, Action>: ObservableObject {
-    @Published private(set) var state: State
+final class ObservableStore<State, Action>: ObservableObject {
 
-    private let update: Update<State, Action>
-    private let effect: Effect<State, Action>?
+    var objectWillChange: PassthroughSubject<State, Never>
+    var state: State { baseStore.state }
+
+    private let baseStore: Store<State, Action>
 
     public init(
         state: State,
@@ -14,15 +15,23 @@ public final class ObservableStore<State, Action>: ObservableObject {
         effect: Effect<State, Action>? = nil,
         initialAction: Action? = nil
     ) {
-        self.state = state
-        self.update = update
-        self.effect = effect
+        let passthroughSubject = PassthroughSubject<State, Never>()
+        let passthroughEffect: Effect<State, Action> = { state, _, _ in
+            passthroughSubject.send(state())
+        }
 
-        initialAction.flatMap(dispatch)
+        let combinedEffect = effect.flatMap { combine(effects: $0, passthroughEffect) } ?? passthroughEffect
+
+        self.objectWillChange = passthroughSubject
+        self.baseStore = Store<State, Action>(
+            state: state,
+            update: update,
+            effect: combinedEffect,
+            initialAction: initialAction
+        )
     }
 
     public func dispatch(_ action: Action) {
-        update(&state, action)
-        effect?({ self.state }, action, dispatch)
+        baseStore.dispatch(action)
     }
 }
