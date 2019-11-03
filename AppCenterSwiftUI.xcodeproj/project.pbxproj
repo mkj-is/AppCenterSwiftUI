@@ -7,79 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E70071652354C7680050DA3D /* StringPasteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70071642354C7680050DA3D /* StringPasteButton.swift */; };
-		E70071682354E84C0050DA3D /* Color+Static.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70071672354E84C0050DA3D /* Color+Static.swift */; };
 		E7254C1A23526148001D7FDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7254C1923526148001D7FDB /* AppDelegate.swift */; };
-		E7254C1C23526148001D7FDB /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7254C1B23526148001D7FDB /* AppView.swift */; };
 		E7254C1E23526149001D7FDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7254C1D23526149001D7FDB /* Assets.xcassets */; };
 		E7254C2123526149001D7FDB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7254C2023526149001D7FDB /* Preview Assets.xcassets */; };
 		E7254C2423526149001D7FDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7254C2223526149001D7FDB /* Main.storyboard */; };
-		E7254C2D235261AA001D7FDB /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7254C2C235261AA001D7FDB /* LoginView.swift */; };
-		E7531F0A2356494600AE68BE /* FTAPIKit in Frameworks */ = {isa = PBXBuildFile; productRef = E7531F092356494600AE68BE /* FTAPIKit */; };
-		E765EC3A23574F1F00345023 /* CGFloat+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = E765EC3823572E2600345023 /* CGFloat+Style.swift */; };
-		E765EC3F2357538F00345023 /* Id.swift in Sources */ = {isa = PBXBuildFile; fileRef = E765EC3E2357538F00345023 /* Id.swift */; };
-		E765EC4123575BFB00345023 /* LiftOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E765EC4023575BFB00345023 /* LiftOperator.swift */; };
-		E765EC4423576BC300345023 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E765EC4323576BC300345023 /* APIError.swift */; };
-		E765EC4623576CA200345023 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E765EC4523576CA200345023 /* User.swift */; };
-		E765EC482357709A00345023 /* NetworkEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = E765EC472357709A00345023 /* NetworkEffect.swift */; };
-		E765EC4A235771F800345023 /* AppCenterServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E765EC49235771F800345023 /* AppCenterServer.swift */; };
-		E76B6F702353A5FC007DD31D /* Elementary in Frameworks */ = {isa = PBXBuildFile; productRef = E76B6F6F2353A5FC007DD31D /* Elementary */; };
-		E76B6F722353A756007DD31D /* ObservableStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76B6F712353A756007DD31D /* ObservableStore.swift */; };
-		E76B6F742353B149007DD31D /* AppAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76B6F732353B149007DD31D /* AppAction.swift */; };
-		E76B6F772353B1FF007DD31D /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76B6F762353B1FF007DD31D /* AppState.swift */; };
-		E76B6F792353B27F007DD31D /* AppUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76B6F782353B27F007DD31D /* AppUpdate.swift */; };
-		E76B6F7B2353B2D2007DD31D /* AppEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76B6F7A2353B2D2007DD31D /* AppEffect.swift */; };
-		E770C920235B9B5000535F3D /* UserEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E770C91F235B9B5000535F3D /* UserEndpoint.swift */; };
-		E770C922235B9CC300535F3D /* APIServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E770C921235B9CC300535F3D /* APIServer.swift */; };
-		E770C924235BAA1900535F3D /* AppListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E770C923235BAA1900535F3D /* AppListView.swift */; };
-		E770C927235BAAB600535F3D /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E770C926235BAAB600535F3D /* App.swift */; };
-		E7B8A1CF235CB26B0050495A /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B8A1CE235CB26B0050495A /* DashboardView.swift */; };
-		E7B8A1D1235CB4140050495A /* ReleaseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B8A1D0235CB4140050495A /* ReleaseListView.swift */; };
-		E7B8A1D3235CE0B50050495A /* DateFormatter+Static.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B8A1D2235CE0B50050495A /* DateFormatter+Static.swift */; };
-		E7F3D0F8235BB12000FE212F /* Enumerations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F3D0F7235BB12000FE212F /* Enumerations.swift */; };
-		E7F3D0FA235BB30100FE212F /* AppsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F3D0F9235BB30100FE212F /* AppsEndpoint.swift */; };
-		E7F3D100235C53A200FE212F /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F3D0FF235C53A200FE212F /* LoadingView.swift */; };
-		E7F3D102235C571500FE212F /* Release.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F3D101235C571500FE212F /* Release.swift */; };
-		E7F3D104235C5A5E00FE212F /* ReleasesEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F3D103235C5A5E00FE212F /* ReleasesEndpoint.swift */; };
+		E728C0A2236F83D50065449C /* AppCenterSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = E728C0A1236F83D50065449C /* AppCenterSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E70071642354C7680050DA3D /* StringPasteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringPasteButton.swift; sourceTree = "<group>"; };
-		E70071672354E84C0050DA3D /* Color+Static.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Static.swift"; sourceTree = "<group>"; };
 		E7254C1623526148001D7FDB /* AppCenterMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppCenterMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7254C1923526148001D7FDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E7254C1B23526148001D7FDB /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		E7254C1D23526149001D7FDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E7254C2023526149001D7FDB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E7254C2323526149001D7FDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E7254C2523526149001D7FDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E7254C2623526149001D7FDB /* AppCenterSwiftUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppCenterSwiftUI.entitlements; sourceTree = "<group>"; };
-		E7254C2C235261AA001D7FDB /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		E765EC3823572E2600345023 /* CGFloat+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Style.swift"; sourceTree = "<group>"; };
-		E765EC3E2357538F00345023 /* Id.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Id.swift; sourceTree = "<group>"; };
-		E765EC4023575BFB00345023 /* LiftOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftOperator.swift; sourceTree = "<group>"; };
-		E765EC4323576BC300345023 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
-		E765EC4523576CA200345023 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		E765EC472357709A00345023 /* NetworkEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEffect.swift; sourceTree = "<group>"; };
-		E765EC49235771F800345023 /* AppCenterServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCenterServer.swift; sourceTree = "<group>"; };
-		E76B6F6B2353A330007DD31D /* Elementary */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Elementary; path = ../../Elementary; sourceTree = "<group>"; };
-		E76B6F712353A756007DD31D /* ObservableStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableStore.swift; sourceTree = "<group>"; };
-		E76B6F732353B149007DD31D /* AppAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAction.swift; sourceTree = "<group>"; };
-		E76B6F762353B1FF007DD31D /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
-		E76B6F782353B27F007DD31D /* AppUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUpdate.swift; sourceTree = "<group>"; };
-		E76B6F7A2353B2D2007DD31D /* AppEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEffect.swift; sourceTree = "<group>"; };
-		E770C91F235B9B5000535F3D /* UserEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEndpoint.swift; sourceTree = "<group>"; };
-		E770C921235B9CC300535F3D /* APIServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServer.swift; sourceTree = "<group>"; };
-		E770C923235BAA1900535F3D /* AppListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppListView.swift; sourceTree = "<group>"; };
-		E770C926235BAAB600535F3D /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
-		E7B8A1CE235CB26B0050495A /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
-		E7B8A1D0235CB4140050495A /* ReleaseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReleaseListView.swift; sourceTree = "<group>"; };
-		E7B8A1D2235CE0B50050495A /* DateFormatter+Static.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Static.swift"; sourceTree = "<group>"; };
-		E7F3D0F7235BB12000FE212F /* Enumerations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enumerations.swift; sourceTree = "<group>"; };
-		E7F3D0F9235BB30100FE212F /* AppsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsEndpoint.swift; sourceTree = "<group>"; };
-		E7F3D0FF235C53A200FE212F /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
-		E7F3D101235C571500FE212F /* Release.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Release.swift; sourceTree = "<group>"; };
-		E7F3D103235C5A5E00FE212F /* ReleasesEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReleasesEndpoint.swift; sourceTree = "<group>"; };
+		E7254C2623526149001D7FDB /* AppCenterMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppCenterMac.entitlements; sourceTree = "<group>"; };
+		E728C09E236F7FCA0065449C /* AppCenterSwiftUI */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AppCenterSwiftUI; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,41 +30,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7531F0A2356494600AE68BE /* FTAPIKit in Frameworks */,
-				E76B6F702353A5FC007DD31D /* Elementary in Frameworks */,
+				E728C0A2236F83D50065449C /* AppCenterSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E70071662354E8220050DA3D /* Style */ = {
-			isa = PBXGroup;
-			children = (
-				E70071672354E84C0050DA3D /* Color+Static.swift */,
-				E765EC3823572E2600345023 /* CGFloat+Style.swift */,
-				E7B8A1D2235CE0B50050495A /* DateFormatter+Static.swift */,
-			);
-			path = Style;
-			sourceTree = "<group>";
-		};
-		E70071692354EA190050DA3D /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				E7B8A1CE235CB26B0050495A /* DashboardView.swift */,
-				E7254C1B23526148001D7FDB /* AppView.swift */,
-				E70071642354C7680050DA3D /* StringPasteButton.swift */,
-				E7254C2C235261AA001D7FDB /* LoginView.swift */,
-				E770C923235BAA1900535F3D /* AppListView.swift */,
-				E7F3D0FF235C53A200FE212F /* LoadingView.swift */,
-				E7B8A1D0235CB4140050495A /* ReleaseListView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		E7254C0D23526148001D7FDB = {
 			isa = PBXGroup;
 			children = (
+				E728C09E236F7FCA0065449C /* AppCenterSwiftUI */,
 				E7254C1823526148001D7FDB /* AppCenterMac */,
 				E7254C1723526148001D7FDB /* Products */,
 				E76B6F6E2353A5FC007DD31D /* Frameworks */,
@@ -140,16 +59,10 @@
 			isa = PBXGroup;
 			children = (
 				E7254C1923526148001D7FDB /* AppDelegate.swift */,
-				E765EC4223576B8400345023 /* Network */,
-				E765EC3D2357537D00345023 /* Functional programming */,
-				E70071692354EA190050DA3D /* Views */,
-				E76B6F752353B1E4007DD31D /* Architecture */,
-				E70071662354E8220050DA3D /* Style */,
-				E76B6F6B2353A330007DD31D /* Elementary */,
 				E7254C1D23526149001D7FDB /* Assets.xcassets */,
 				E7254C2223526149001D7FDB /* Main.storyboard */,
 				E7254C2523526149001D7FDB /* Info.plist */,
-				E7254C2623526149001D7FDB /* AppCenterSwiftUI.entitlements */,
+				E7254C2623526149001D7FDB /* AppCenterMac.entitlements */,
 				E7254C1F23526149001D7FDB /* Preview Content */,
 			);
 			path = AppCenterMac;
@@ -163,66 +76,11 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		E765EC3D2357537D00345023 /* Functional programming */ = {
-			isa = PBXGroup;
-			children = (
-				E765EC3E2357538F00345023 /* Id.swift */,
-				E765EC4023575BFB00345023 /* LiftOperator.swift */,
-			);
-			path = "Functional programming";
-			sourceTree = "<group>";
-		};
-		E765EC4223576B8400345023 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				E770C925235BAAA700535F3D /* Models */,
-				E770C91E235B9B3D00535F3D /* Endpoints */,
-				E765EC4323576BC300345023 /* APIError.swift */,
-				E770C921235B9CC300535F3D /* APIServer.swift */,
-				E765EC472357709A00345023 /* NetworkEffect.swift */,
-				E765EC49235771F800345023 /* AppCenterServer.swift */,
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
 		E76B6F6E2353A5FC007DD31D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		E76B6F752353B1E4007DD31D /* Architecture */ = {
-			isa = PBXGroup;
-			children = (
-				E76B6F712353A756007DD31D /* ObservableStore.swift */,
-				E76B6F762353B1FF007DD31D /* AppState.swift */,
-				E76B6F732353B149007DD31D /* AppAction.swift */,
-				E76B6F782353B27F007DD31D /* AppUpdate.swift */,
-				E76B6F7A2353B2D2007DD31D /* AppEffect.swift */,
-			);
-			path = Architecture;
-			sourceTree = "<group>";
-		};
-		E770C91E235B9B3D00535F3D /* Endpoints */ = {
-			isa = PBXGroup;
-			children = (
-				E770C91F235B9B5000535F3D /* UserEndpoint.swift */,
-				E7F3D0F9235BB30100FE212F /* AppsEndpoint.swift */,
-				E7F3D103235C5A5E00FE212F /* ReleasesEndpoint.swift */,
-			);
-			path = Endpoints;
-			sourceTree = "<group>";
-		};
-		E770C925235BAAA700535F3D /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				E7F3D101235C571500FE212F /* Release.swift */,
-				E765EC4523576CA200345023 /* User.swift */,
-				E770C926235BAAB600535F3D /* App.swift */,
-				E7F3D0F7235BB12000FE212F /* Enumerations.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,12 +97,11 @@
 			buildRules = (
 			);
 			dependencies = (
-				E76B6F6D2353A5F7007DD31D /* PBXTargetDependency */,
+				E728C0A0236F83440065449C /* PBXTargetDependency */,
 			);
 			name = AppCenterMac;
 			packageProductDependencies = (
-				E76B6F6F2353A5FC007DD31D /* Elementary */,
-				E7531F092356494600AE68BE /* FTAPIKit */,
+				E728C0A1236F83D50065449C /* AppCenterSwiftUI */,
 			);
 			productName = AppCenterSwiftUI;
 			productReference = E7254C1623526148001D7FDB /* AppCenterMac.app */;
@@ -257,7 +114,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1110;
-				LastUpgradeCheck = 1110;
+				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = "FUNTASTY Digital s.r.o.";
 				TargetAttributes = {
 					E7254C1523526148001D7FDB = {
@@ -275,7 +132,6 @@
 			);
 			mainGroup = E7254C0D23526148001D7FDB;
 			packageReferences = (
-				E7531F082356494600AE68BE /* XCRemoteSwiftPackageReference "FTAPIKit" */,
 			);
 			productRefGroup = E7254C1723526148001D7FDB /* Products */;
 			projectDirPath = "";
@@ -304,44 +160,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7B8A1D1235CB4140050495A /* ReleaseListView.swift in Sources */,
-				E76B6F7B2353B2D2007DD31D /* AppEffect.swift in Sources */,
-				E76B6F742353B149007DD31D /* AppAction.swift in Sources */,
-				E76B6F722353A756007DD31D /* ObservableStore.swift in Sources */,
-				E7F3D0FA235BB30100FE212F /* AppsEndpoint.swift in Sources */,
-				E770C920235B9B5000535F3D /* UserEndpoint.swift in Sources */,
-				E7F3D100235C53A200FE212F /* LoadingView.swift in Sources */,
-				E770C924235BAA1900535F3D /* AppListView.swift in Sources */,
-				E765EC4123575BFB00345023 /* LiftOperator.swift in Sources */,
-				E7254C2D235261AA001D7FDB /* LoginView.swift in Sources */,
-				E765EC4A235771F800345023 /* AppCenterServer.swift in Sources */,
-				E765EC482357709A00345023 /* NetworkEffect.swift in Sources */,
-				E7B8A1D3235CE0B50050495A /* DateFormatter+Static.swift in Sources */,
-				E7F3D102235C571500FE212F /* Release.swift in Sources */,
-				E76B6F772353B1FF007DD31D /* AppState.swift in Sources */,
-				E70071652354C7680050DA3D /* StringPasteButton.swift in Sources */,
-				E7254C1C23526148001D7FDB /* AppView.swift in Sources */,
-				E770C927235BAAB600535F3D /* App.swift in Sources */,
-				E765EC4623576CA200345023 /* User.swift in Sources */,
-				E770C922235B9CC300535F3D /* APIServer.swift in Sources */,
 				E7254C1A23526148001D7FDB /* AppDelegate.swift in Sources */,
-				E765EC3A23574F1F00345023 /* CGFloat+Style.swift in Sources */,
-				E765EC3F2357538F00345023 /* Id.swift in Sources */,
-				E76B6F792353B27F007DD31D /* AppUpdate.swift in Sources */,
-				E7B8A1CF235CB26B0050495A /* DashboardView.swift in Sources */,
-				E7F3D104235C5A5E00FE212F /* ReleasesEndpoint.swift in Sources */,
-				E70071682354E84C0050DA3D /* Color+Static.swift in Sources */,
-				E765EC4423576BC300345023 /* APIError.swift in Sources */,
-				E7F3D0F8235BB12000FE212F /* Enumerations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		E76B6F6D2353A5F7007DD31D /* PBXTargetDependency */ = {
+		E728C0A0236F83440065449C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = E76B6F6C2353A5F7007DD31D /* Elementary */;
+			productRef = E728C09F236F83440065449C /* AppCenterSwiftUI */;
 		};
 /* End PBXTargetDependency section */
 
@@ -474,13 +302,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = AppCenterSwiftUI/AppCenterSwiftUI.entitlements;
+				CODE_SIGN_ENTITLEMENTS = AppCenterMac/AppCenterMac.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"AppCenterSwiftUI/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"AppCenterMac/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = AppCenterSwiftUI/Info.plist;
+				INFOPLIST_FILE = AppCenterMac/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -497,13 +326,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = AppCenterSwiftUI/AppCenterSwiftUI.entitlements;
+				CODE_SIGN_ENTITLEMENTS = AppCenterMac/AppCenterMac.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"AppCenterSwiftUI/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"AppCenterMac/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = AppCenterSwiftUI/Info.plist;
+				INFOPLIST_FILE = AppCenterMac/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -539,30 +369,14 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		E7531F082356494600AE68BE /* XCRemoteSwiftPackageReference "FTAPIKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/thefuntasty/FTAPIKit.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.5.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
 /* Begin XCSwiftPackageProductDependency section */
-		E7531F092356494600AE68BE /* FTAPIKit */ = {
+		E728C09F236F83440065449C /* AppCenterSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = E7531F082356494600AE68BE /* XCRemoteSwiftPackageReference "FTAPIKit" */;
-			productName = FTAPIKit;
+			productName = AppCenterSwiftUI;
 		};
-		E76B6F6C2353A5F7007DD31D /* Elementary */ = {
+		E728C0A1236F83D50065449C /* AppCenterSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = Elementary;
-		};
-		E76B6F6F2353A5FC007DD31D /* Elementary */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Elementary;
+			productName = AppCenterSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

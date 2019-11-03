@@ -8,6 +8,7 @@
 
 import Cocoa
 import SwiftUI
+import AppCenterSwiftUI
 
 @NSApplicationMain
 final class AppDelegate: NSObject, NSApplicationDelegate {

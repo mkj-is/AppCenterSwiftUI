@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct AppView: View {
+public struct AppView: View {
     @ObservedObject var store = ObservableStore<AppState, AppAction>(
         state: AppState(),
         update: appUpdate,
@@ -16,7 +16,9 @@ struct AppView: View {
         initialAction: .appStarted
     )
 
-    var body: some View {
+    public init() {}
+
+    public var body: some View {
         ZStack {
             if store.state.user != nil {
                 DashboardView(
