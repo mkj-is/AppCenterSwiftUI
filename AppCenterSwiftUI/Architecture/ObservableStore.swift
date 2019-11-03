@@ -11,11 +11,14 @@ public final class ObservableStore<State, Action>: ObservableObject {
     public init(
         state: State,
         update: @escaping Update<State, Action>,
-        effect: Effect<State, Action>? = nil
+        effect: Effect<State, Action>? = nil,
+        initialAction: Action? = nil
     ) {
         self.state = state
         self.update = update
         self.effect = effect
+
+        initialAction.flatMap(dispatch)
     }
 
     public func dispatch(_ action: Action) {
