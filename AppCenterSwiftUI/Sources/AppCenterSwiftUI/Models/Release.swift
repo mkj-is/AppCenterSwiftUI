@@ -1,6 +1,6 @@
 import Foundation
 
-struct Release: Decodable, Identifiable {
+struct Release: Decodable, Identifiable, Equatable {
     let origin: Origin?
     let id: UInt
     let shortVersion, version: String
@@ -8,6 +8,10 @@ struct Release: Decodable, Identifiable {
     let enabled: Bool
     let destinations: [Destination]?
     let build: Build?
+
+    static func == (lhs: Release, rhs: Release) -> Bool {
+        lhs.id == rhs.id
+    }
 }
 
 struct Destination: Decodable {

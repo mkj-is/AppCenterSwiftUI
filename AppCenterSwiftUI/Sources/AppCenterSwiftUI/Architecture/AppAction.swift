@@ -1,14 +1,20 @@
-enum AppAction {
+enum AppAction: Equatable {
     case appStarted
     case openAuthentication
     case goBack
     case authenticate(token: String)
     case authenticated(user: User)
-    case authenticationFailed(Error)
+    case authenticationFailed(AppError)
     case loadApps
     case appsLoaded([App])
-    case appsLoadingFailed(Error)
+    case appsLoadingFailed(AppError)
     case appSelected(App)
     case releasesLoaded(App, [Release])
-    case releasesLoadingFailed(App, Error)
+    case releasesLoadingFailed(App, AppError)
+}
+
+struct AppError: Equatable {
+    let error: Error
+
+    static func == (lhs: AppError, rhs: AppError) -> Bool { true }
 }

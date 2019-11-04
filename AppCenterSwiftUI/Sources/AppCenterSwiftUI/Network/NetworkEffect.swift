@@ -37,7 +37,7 @@ func createNetworkEffect() -> Effect<AppState, AppAction> {
                         dispatch(.authenticated(user: user))
                         dispatch(.loadApps)
                     case .failure(let error):
-                        dispatch(.authenticationFailed(error))
+                        dispatch(.authenticationFailed(AppError(error: error)))
                     }
                 }
             }
@@ -52,7 +52,7 @@ func createNetworkEffect() -> Effect<AppState, AppAction> {
                             dispatch(.appSelected(firstApp))
                         }
                     case .failure(let error):
-                        dispatch(.appsLoadingFailed(error))
+                        dispatch(.appsLoadingFailed(AppError(error: error)))
                     }
                 }
             }
@@ -63,7 +63,7 @@ func createNetworkEffect() -> Effect<AppState, AppAction> {
                     case .success(let releases):
                         dispatch(.releasesLoaded(app, releases))
                     case .failure(let error):
-                        dispatch(.releasesLoadingFailed(app, error))
+                        dispatch(.releasesLoadingFailed(app, AppError(error: error)))
                     }
                 }
             }
