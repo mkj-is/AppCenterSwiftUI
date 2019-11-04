@@ -8,22 +8,19 @@
 
 import AppKit
 import Elementary
+import ElementaryEffectBuilder
 
-func createAppEffect() -> Effect<AppState, AppAction> {
-    let networkEffect = createNetworkEffect()
-    let persistenceEffect = createPersistenceEffect()
-    return { state, action, dispatch in
-        persistenceEffect(state, action, dispatch)
-        networkEffect(state, action, dispatch)
+let appEffect: Effect<AppState, AppAction> = build {
+    createNetworkEffect()
+    createPersistenceEffect()
+    createUrlEffect()
+}
 
-
-        switch action {
-        case .openAuthentication:
-            NSWorkspace.shared.open(URL(string: "https://appcenter.ms/cli-login?hostname=AppCenter-macOS.local")!)
-        default:
-            break
-        }
-    }
+private func createUrlEffect(workspace: NSWorkspace = .shared) -> Effect<AppState, AppAction> {
+    return take(
+        AppAction.openAuthentication,
+        execute: { workspace.open(URL(string: "https://appcenter.ms/cli-login?hostname=AppCenter-macOS.local")!) }
+    )
 }
 
 private func createPersistenceEffect(defaults: UserDefaults = .standard) -> Effect<AppState, AppAction> {

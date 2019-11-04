@@ -12,7 +12,7 @@ public struct AppView: View {
     @ObservedObject var store = ObservableStore<AppState, AppAction>(
         state: AppState(),
         update: appUpdate,
-        effect: createAppEffect(),
+        effect: appEffect,
         initialAction: .appStarted
     )
 
