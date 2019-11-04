@@ -17,8 +17,6 @@ private final class APIDelegate: APIAdapterDelegate {
 
         completion(.success(updatedRequest))
     }
-
-
 }
 
 func createNetworkEffect() -> Effect<AppState, AppAction> {

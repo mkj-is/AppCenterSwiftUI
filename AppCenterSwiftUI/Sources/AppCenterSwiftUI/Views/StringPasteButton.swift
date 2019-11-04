@@ -24,7 +24,7 @@ struct StringPasteButton: View {
 
     private func payloadAction(providers: [NSItemProvider]) {
         providers.forEach { provider in
-            provider.loadItem(forTypeIdentifier: kUTTypeUTF8PlainText as String, options: nil) { (coding, error) in
+            provider.loadItem(forTypeIdentifier: kUTTypeUTF8PlainText as String, options: nil) { (coding, _) in
                 if let data = coding as? Data, let string = String(data: data, encoding: .utf8) {
                     self.paste(string)
                 }

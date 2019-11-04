@@ -9,7 +9,6 @@ enum OperationSystem: String, Decodable {
     case custom = "Custom"
 }
 
-
 enum Platform: String, Decodable {
     case java = "Java"
     case apple = "Objective-C-Swift"
@@ -24,7 +23,6 @@ enum Platform: String, Decodable {
     case unknown = "Unknown"
     case custom = "Custom"
 }
-
 
 enum Origin: String, Decodable {
     case appcenter, hockeyapp, codepush

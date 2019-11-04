@@ -9,7 +9,7 @@ let package = Package(
     products: [
         .library(
             name: "AppCenterSwiftUI",
-            targets: ["AppCenterSwiftUI"]),
+            targets: ["AppCenterSwiftUI"])
     ],
     dependencies: [
         .package(url: "https://github.com/thefuntasty/FTAPIKit.git", from: "0.5.0"),
@@ -22,6 +22,6 @@ let package = Package(
             dependencies: ["FTAPIKit", "Elementary", "ElementaryEffectBuilder"]),
         .testTarget(
             name: "AppCenterSwiftUITests",
-            dependencies: ["AppCenterSwiftUI"]),
+            dependencies: ["AppCenterSwiftUI"])
     ]
 )
