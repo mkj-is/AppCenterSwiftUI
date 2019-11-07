@@ -14,12 +14,12 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/thefuntasty/FTAPIKit.git", from: "0.5.0"),
         .package(path: "../../ElementaryEffectBuilder"),
-        .package(path: "../../Elementary")
+        .package(path: "../../ElementaryCombine"),
     ],
     targets: [
         .target(
             name: "AppCenterSwiftUI",
-            dependencies: ["FTAPIKit", "Elementary", "ElementaryEffectBuilder"]),
+            dependencies: ["FTAPIKit", "ElementaryCombine", "ElementaryEffectBuilder"]),
         .testTarget(
             name: "AppCenterSwiftUITests",
             dependencies: ["AppCenterSwiftUI"])

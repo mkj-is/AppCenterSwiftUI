@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import ElementaryCombine
 
 public struct AppView: View {
     @ObservedObject var store = ObservableStore<AppState, AppAction>(
