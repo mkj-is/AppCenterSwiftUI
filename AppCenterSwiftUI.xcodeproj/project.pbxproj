@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E72158E923704BD500675238 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72158E823704BD500675238 /* AppDelegate.swift */; };
+		E72158EB23704BD500675238 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72158EA23704BD500675238 /* SceneDelegate.swift */; };
+		E72158EF23704BD700675238 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E72158EE23704BD700675238 /* Assets.xcassets */; };
+		E72158F223704BD700675238 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E72158F123704BD700675238 /* Preview Assets.xcassets */; };
+		E72158F523704BD700675238 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E72158F323704BD700675238 /* LaunchScreen.storyboard */; };
+		E72158FD23704C7B00675238 /* AppCenterSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = E72158FC23704C7B00675238 /* AppCenterSwiftUI */; };
 		E7254C1A23526148001D7FDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7254C1923526148001D7FDB /* AppDelegate.swift */; };
 		E7254C1E23526149001D7FDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7254C1D23526149001D7FDB /* Assets.xcassets */; };
 		E7254C2123526149001D7FDB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7254C2023526149001D7FDB /* Preview Assets.xcassets */; };
@@ -15,6 +21,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E72158E623704BD500675238 /* AppCenteriOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppCenteriOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E72158E823704BD500675238 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E72158EA23704BD500675238 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		E72158EE23704BD700675238 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E72158F123704BD700675238 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E72158F423704BD700675238 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E72158F623704BD700675238 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7254C1623526148001D7FDB /* AppCenterMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppCenterMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7254C1923526148001D7FDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7254C1D23526149001D7FDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -26,6 +39,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E72158E323704BD500675238 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E72158FD23704C7B00675238 /* AppCenterSwiftUI in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E7254C1323526148001D7FDB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -37,11 +58,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E72158E723704BD500675238 /* AppCenteriOS */ = {
+			isa = PBXGroup;
+			children = (
+				E72158E823704BD500675238 /* AppDelegate.swift */,
+				E72158EA23704BD500675238 /* SceneDelegate.swift */,
+				E72158EE23704BD700675238 /* Assets.xcassets */,
+				E72158F323704BD700675238 /* LaunchScreen.storyboard */,
+				E72158F623704BD700675238 /* Info.plist */,
+				E72158F023704BD700675238 /* Preview Content */,
+			);
+			path = AppCenteriOS;
+			sourceTree = "<group>";
+		};
+		E72158F023704BD700675238 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				E72158F123704BD700675238 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		E7254C0D23526148001D7FDB = {
 			isa = PBXGroup;
 			children = (
 				E728C09E236F7FCA0065449C /* AppCenterSwiftUI */,
 				E7254C1823526148001D7FDB /* AppCenterMac */,
+				E72158E723704BD500675238 /* AppCenteriOS */,
 				E7254C1723526148001D7FDB /* Products */,
 				E76B6F6E2353A5FC007DD31D /* Frameworks */,
 			);
@@ -51,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				E7254C1623526148001D7FDB /* AppCenterMac.app */,
+				E72158E623704BD500675238 /* AppCenteriOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -86,6 +130,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		E72158E523704BD500675238 /* AppCenteriOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E72158F923704BD700675238 /* Build configuration list for PBXNativeTarget "AppCenteriOS" */;
+			buildPhases = (
+				E72158E223704BD500675238 /* Sources */,
+				E72158E323704BD500675238 /* Frameworks */,
+				E72158E423704BD500675238 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E72158FB23704C5700675238 /* PBXTargetDependency */,
+			);
+			name = AppCenteriOS;
+			packageProductDependencies = (
+				E72158FC23704C7B00675238 /* AppCenterSwiftUI */,
+			);
+			productName = AppCenteriOS;
+			productReference = E72158E623704BD500675238 /* AppCenteriOS.app */;
+			productType = "com.apple.product-type.application";
+		};
 		E7254C1523526148001D7FDB /* AppCenterMac */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E7254C2923526149001D7FDB /* Build configuration list for PBXNativeTarget "AppCenterMac" */;
@@ -113,10 +178,13 @@
 		E7254C0E23526148001D7FDB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1110;
+				LastSwiftUpdateCheck = 1120;
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = "FUNTASTY Digital s.r.o.";
 				TargetAttributes = {
+					E72158E523704BD500675238 = {
+						CreatedOnToolsVersion = 11.2;
+					};
 					E7254C1523526148001D7FDB = {
 						CreatedOnToolsVersion = 11.1;
 					};
@@ -138,11 +206,22 @@
 			projectRoot = "";
 			targets = (
 				E7254C1523526148001D7FDB /* AppCenterMac */,
+				E72158E523704BD500675238 /* AppCenteriOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E72158E423704BD500675238 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E72158F523704BD700675238 /* LaunchScreen.storyboard in Resources */,
+				E72158F223704BD700675238 /* Preview Assets.xcassets in Resources */,
+				E72158EF23704BD700675238 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E7254C1423526148001D7FDB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -156,6 +235,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E72158E223704BD500675238 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E72158E923704BD500675238 /* AppDelegate.swift in Sources */,
+				E72158EB23704BD500675238 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E7254C1223526148001D7FDB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -167,6 +255,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		E72158FB23704C5700675238 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = E72158FA23704C5700675238 /* AppCenterSwiftUI */;
+		};
 		E728C0A0236F83440065449C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			productRef = E728C09F236F83440065449C /* AppCenterSwiftUI */;
@@ -174,6 +266,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		E72158F323704BD700675238 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E72158F423704BD700675238 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		E7254C2223526149001D7FDB /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -185,6 +285,49 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		E72158F723704BD700675238 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"AppCenteriOS/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = AppCenteriOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = is.mkj.AppCenteriOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E72158F823704BD700675238 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"AppCenteriOS/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = AppCenteriOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = is.mkj.AppCenteriOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		E7254C2723526149001D7FDB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -349,6 +492,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E72158F923704BD700675238 /* Build configuration list for PBXNativeTarget "AppCenteriOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E72158F723704BD700675238 /* Debug */,
+				E72158F823704BD700675238 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E7254C1123526148001D7FDB /* Build configuration list for PBXProject "AppCenterSwiftUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -370,6 +522,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		E72158FA23704C5700675238 /* AppCenterSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AppCenterSwiftUI;
+		};
+		E72158FC23704C7B00675238 /* AppCenterSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AppCenterSwiftUI;
+		};
 		E728C09F236F83440065449C /* AppCenterSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = AppCenterSwiftUI;

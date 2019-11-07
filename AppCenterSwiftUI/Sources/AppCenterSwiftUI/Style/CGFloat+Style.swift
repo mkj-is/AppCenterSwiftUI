@@ -7,6 +7,9 @@
 //
 
 import Foundation
+#if os(iOS)
+import CoreGraphics
+#endif
 
 extension CGFloat {
     static let standardPadding: CGFloat = 20.0

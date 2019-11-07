@@ -6,7 +6,7 @@
 //  Copyright © 2019 FUNTASTY Digital s.r.o. All rights reserved.
 //
 
-import AppKit
+import Foundation
 import Elementary
 import ElementaryEffectBuilder
 
@@ -14,13 +14,6 @@ let appEffect: Effect<AppState, AppAction> = build {
     createNetworkEffect()
     createPersistenceEffect()
     createUrlEffect()
-}
-
-private func createUrlEffect(workspace: NSWorkspace = .shared) -> Effect<AppState, AppAction> {
-    return take(
-        AppAction.openAuthentication,
-        execute: { workspace.open(URL(string: "https://appcenter.ms/cli-login?hostname=AppCenter-macOS.local")!) }
-    )
 }
 
 private func createPersistenceEffect(defaults: UserDefaults = .standard) -> Effect<AppState, AppAction> {

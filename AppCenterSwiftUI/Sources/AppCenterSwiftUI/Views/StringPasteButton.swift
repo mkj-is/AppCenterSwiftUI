@@ -18,10 +18,15 @@ struct StringPasteButton: View {
     let paste: (String) -> Void
 
     var body: some View {
-        PasteButton(supportedTypes: [kUTTypeUTF8PlainText as String], payloadAction: payloadAction)
-            .buttonStyle(PasteButtonStyle())
+        #if os(macOS)
+            return PasteButton(supportedTypes: [kUTTypeUTF8PlainText as String], payloadAction: payloadAction)
+                .buttonStyle(PasteButtonStyle())
+        #else
+            return EmptyView()
+        #endif
     }
 
+    #if os(macOS)
     private func payloadAction(providers: [NSItemProvider]) {
         providers.forEach { provider in
             provider.loadItem(forTypeIdentifier: kUTTypeUTF8PlainText as String, options: nil) { (coding, _) in
@@ -31,6 +36,7 @@ struct StringPasteButton: View {
             }
         }
     }
+    #endif
 }
 
 struct StringPasteButton_Previews: PreviewProvider {

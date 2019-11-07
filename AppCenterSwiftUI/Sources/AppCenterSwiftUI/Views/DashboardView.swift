@@ -15,10 +15,15 @@ struct DashboardView: View {
     let appSelected: (App) -> Void
 
     var body: some View {
-        HSplitView {
-            AppListView(apps: apps, selectedApp: selectedApp, appSelected: appSelected)
-            ReleaseListView(releases: releases)
-        }
+        #if os(OSX)
+            return HSplitView {
+                AppListView(apps: apps, selectedApp: selectedApp, appSelected: appSelected)
+                ReleaseListView(releases: releases)
+            }
+        #else
+            return AppListView(apps: apps, selectedApp: selectedApp, appSelected: appSelected)
+                .navigationViewStyle(DoubleColumnNavigationViewStyle())
+        #endif
     }
 }
 
