@@ -6,7 +6,6 @@ private final class APIDelegate: APIAdapterDelegate {
     var token: String?
 
     func apiAdapter(_ apiAdapter: APIAdapter, didUpdateRunningRequestCount runningRequestCount: UInt) {
-        print("Runnning API tasks: \(runningRequestCount)")
     }
 
     func apiAdapter(_ apiAdapter: APIAdapter, willRequest request: URLRequest, to endpoint: APIEndpoint, completion: @escaping (Result<URLRequest, Error>) -> Void) {

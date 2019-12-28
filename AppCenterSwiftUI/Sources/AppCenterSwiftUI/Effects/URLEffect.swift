@@ -1,10 +1,3 @@
-//
-//  File.swift
-//  
-//
-//  Created by Matěj Kašpar Jirásek on 04/11/2019.
-//
-
 import Elementary
 import ElementaryEffectBuilder
 
