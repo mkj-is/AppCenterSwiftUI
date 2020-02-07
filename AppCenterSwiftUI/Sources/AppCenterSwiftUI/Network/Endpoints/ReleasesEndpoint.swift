@@ -1,7 +1,7 @@
 import Foundation
 import FTAPIKit
 
-struct ReleasesEnpoint: APIResponseEndpoint {
+struct ReleasesEnpoint: ResponseEndpoint, AuthorizedEndpoint {
     typealias Response = [Release]
     let path: String
 

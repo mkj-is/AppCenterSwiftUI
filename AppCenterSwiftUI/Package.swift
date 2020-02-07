@@ -12,7 +12,7 @@ let package = Package(
             targets: ["AppCenterSwiftUI"])
     ],
     dependencies: [
-        .package(url: "https://github.com/thefuntasty/FTAPIKit.git", from: "0.5.0"),
+        .package(url: "https://github.com/thefuntasty/FTAPIKit.git", .branch("feature/adapter-removal-rewrite")),
         .package(path: "../../ElementaryEffectBuilder"),
         .package(path: "../../ElementaryCombine"),
     ],

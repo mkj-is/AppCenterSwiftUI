@@ -2,32 +2,13 @@ import Foundation
 import FTAPIKit
 import Elementary
 
-private final class APIDelegate: APIAdapterDelegate {
-    var token: String?
-
-    func apiAdapter(_ apiAdapter: APIAdapter, didUpdateRunningRequestCount runningRequestCount: UInt) {
-    }
-
-    func apiAdapter(_ apiAdapter: APIAdapter, willRequest request: URLRequest, to endpoint: APIEndpoint, completion: @escaping (Result<URLRequest, Error>) -> Void) {
-        var updatedRequest = request
-        if let token = token {
-            updatedRequest.addValue(token, forHTTPHeaderField: "X-API-Token")
-        }
-
-        completion(.success(updatedRequest))
-    }
-}
-
 func createNetworkEffect() -> Effect<AppState, AppAction> {
-    let server = AppCenterServer()
-    let delegate = APIDelegate()
-    let adapter = URLSessionAPIAdapter(baseUrl: server.baseUri, jsonEncoder: server.jsonEncoder, jsonDecoder: server.jsonDecoder, errorType: server.errorType, urlSession: server.urlSession)
-    adapter.delegate = delegate
+    var server = AppCenterServer()
     return { state, action, dispatch in
         switch action {
         case .authenticate(let token):
-            delegate.token = token
-            adapter.request(response: UserEndpoint()) { result in
+            server.token = token
+            server.call(response: UserEndpoint()) { result in
                 DispatchQueue.main.async {
                     switch result {
                     case .success(let user):
@@ -39,7 +20,7 @@ func createNetworkEffect() -> Effect<AppState, AppAction> {
                 }
             }
         case .loadApps:
-            adapter.request(response: AppsEndpoint()) { result in
+            server.call(response: AppsEndpoint()) { result in
                 DispatchQueue.main.async {
                     switch result {
                     case .success(let apps):
@@ -54,7 +35,7 @@ func createNetworkEffect() -> Effect<AppState, AppAction> {
                 }
             }
         case .appSelected(let app):
-            adapter.request(response: ReleasesEnpoint(ownerName: app.owner.name, appName: app.name)) { result in
+            server.call(response: ReleasesEnpoint(ownerName: app.owner.name, appName: app.name)) { result in
                 DispatchQueue.main.async {
                     switch result {
                     case .success(let releases):

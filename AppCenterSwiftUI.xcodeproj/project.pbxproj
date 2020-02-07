@@ -12,12 +12,11 @@
 		E72158EF23704BD700675238 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E72158EE23704BD700675238 /* Assets.xcassets */; };
 		E72158F223704BD700675238 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E72158F123704BD700675238 /* Preview Assets.xcassets */; };
 		E72158F523704BD700675238 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E72158F323704BD700675238 /* LaunchScreen.storyboard */; };
-		E72158FD23704C7B00675238 /* AppCenterSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = E72158FC23704C7B00675238 /* AppCenterSwiftUI */; };
 		E7254C1A23526148001D7FDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7254C1923526148001D7FDB /* AppDelegate.swift */; };
 		E7254C1E23526149001D7FDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7254C1D23526149001D7FDB /* Assets.xcassets */; };
 		E7254C2123526149001D7FDB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7254C2023526149001D7FDB /* Preview Assets.xcassets */; };
 		E7254C2423526149001D7FDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7254C2223526149001D7FDB /* Main.storyboard */; };
-		E728C0A2236F83D50065449C /* AppCenterSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = E728C0A1236F83D50065449C /* AppCenterSwiftUI */; };
+		E75D688023ED6C0700CF6AAA /* AppCenterSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = E75D687F23ED6C0700CF6AAA /* AppCenterSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +35,7 @@
 		E7254C2523526149001D7FDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7254C2623526149001D7FDB /* AppCenterMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppCenterMac.entitlements; sourceTree = "<group>"; };
 		E728C09E236F7FCA0065449C /* AppCenterSwiftUI */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AppCenterSwiftUI; sourceTree = "<group>"; };
+		E748793A23CF918D0009CB6A /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Package.swift; path = AppCenterSwiftUI/Package.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,7 +43,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E72158FD23704C7B00675238 /* AppCenterSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,7 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E728C0A2236F83D50065449C /* AppCenterSwiftUI in Frameworks */,
+				E75D688023ED6C0700CF6AAA /* AppCenterSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +122,7 @@
 		E76B6F6E2353A5FC007DD31D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E748793A23CF918D0009CB6A /* Package.swift */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -145,7 +145,6 @@
 			);
 			name = AppCenteriOS;
 			packageProductDependencies = (
-				E72158FC23704C7B00675238 /* AppCenterSwiftUI */,
 			);
 			productName = AppCenteriOS;
 			productReference = E72158E623704BD500675238 /* AppCenteriOS.app */;
@@ -166,7 +165,7 @@
 			);
 			name = AppCenterMac;
 			packageProductDependencies = (
-				E728C0A1236F83D50065449C /* AppCenterSwiftUI */,
+				E75D687F23ED6C0700CF6AAA /* AppCenterSwiftUI */,
 			);
 			productName = AppCenterSwiftUI;
 			productReference = E7254C1623526148001D7FDB /* AppCenterMac.app */;
@@ -178,7 +177,7 @@
 		E7254C0E23526148001D7FDB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1120;
+				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = "FUNTASTY Digital s.r.o.";
 				TargetAttributes = {
@@ -298,7 +297,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = is.mkj.AppCenteriOS;
+				PRODUCT_BUNDLE_IDENTIFIER = is.mkj.AppCenter.iOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
@@ -319,7 +318,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = is.mkj.AppCenteriOS;
+				PRODUCT_BUNDLE_IDENTIFIER = is.mkj.AppCenter.iOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
@@ -458,7 +457,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_BUNDLE_IDENTIFIER = com.thefuntasty.AppCenterSwiftUI;
+				PRODUCT_BUNDLE_IDENTIFIER = is.mkj.AppCenter.macOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -482,7 +481,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_BUNDLE_IDENTIFIER = com.thefuntasty.AppCenterSwiftUI;
+				PRODUCT_BUNDLE_IDENTIFIER = is.mkj.AppCenter.macOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -526,15 +525,11 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = AppCenterSwiftUI;
 		};
-		E72158FC23704C7B00675238 /* AppCenterSwiftUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = AppCenterSwiftUI;
-		};
 		E728C09F236F83440065449C /* AppCenterSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = AppCenterSwiftUI;
 		};
-		E728C0A1236F83D50065449C /* AppCenterSwiftUI */ = {
+		E75D687F23ED6C0700CF6AAA /* AppCenterSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = AppCenterSwiftUI;
 		};
