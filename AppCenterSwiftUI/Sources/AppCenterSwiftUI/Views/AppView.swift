@@ -26,7 +26,9 @@ public struct AppView: View {
                     apps: store.state.apps,
                     selectedApp: store.state.selectedApp,
                     releases: store.state.selectedApp.flatMap { store.state.releases[$0] },
-                    appSelected: { self.store.dispatch(.appSelected($0)) }
+                    appSelected: { self.store.dispatch(.appSelected($0)) },
+                    logout: ^self.store.dispatch(.logout),
+                    reload: ^self.store.dispatch(.loadApps)
                 )
             } else {
                 LoginView(

@@ -8,7 +8,7 @@ func appUpdate(state: inout AppState, action: AppAction) {
         state.apiToken = token
     case .authenticated(let user):
         state.user = user
-    case .authenticationFailed:
+    case .authenticationFailed, .logout:
         state.apiToken = nil
         state.user = nil
     case .openAuthentication:

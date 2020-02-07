@@ -7,19 +7,21 @@
 //
 
 import SwiftUI
+import Elementary
 
 struct DashboardView: View {
     let apps: [App]
     let selectedApp: App?
     let releases: [Release]?
     let appSelected: (App) -> Void
+    let logout, reload: Call
 
     var body: some View {
         #if os(OSX)
             return HSplitView {
                 AppListView(apps: apps, selectedApp: selectedApp, appSelected: appSelected)
                 ReleaseListView(releases: releases)
-            }
+            }.touchBar(content: ^DashboardTouchBarView(logout: self.logout, reload: self.reload))
         #else
             return AppListView(apps: apps, selectedApp: selectedApp, appSelected: appSelected)
                 .navigationViewStyle(DoubleColumnNavigationViewStyle())
@@ -29,6 +31,6 @@ struct DashboardView: View {
 
 struct DashboardView_Previews: PreviewProvider {
     static var previews: some View {
-        DashboardView(apps: [], selectedApp: nil, releases: nil, appSelected: { print($0) })
+        DashboardView(apps: [], selectedApp: nil, releases: nil, appSelected: { print($0) }, logout: {}, reload: {})
     }
 }

@@ -9,6 +9,8 @@ func createPersistenceEffect(defaults: UserDefaults = .standard) -> Effect<AppSt
             defaults.string(forKey: tokenKey).flatMap { dispatch(.authenticate(token: $0)) }
         case .authenticate(let token):
             defaults.set(token, forKey: tokenKey)
+        case .logout:
+            defaults.removeObject(forKey: tokenKey)
         default:
             break
         }
