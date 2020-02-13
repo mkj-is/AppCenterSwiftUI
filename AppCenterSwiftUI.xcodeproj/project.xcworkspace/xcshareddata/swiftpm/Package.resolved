@@ -2,12 +2,39 @@
   "object": {
     "pins": [
       {
-        "package": "FTAPIKit",
-        "repositoryURL": "https://github.com/thefuntasty/FTAPIKit.git",
+        "package": "Elementary",
+        "repositoryURL": "https://github.com/mkj-is/Elementary.git",
         "state": {
-          "branch": "feature/adapter-removal-rewrite",
-          "revision": "3853a34afd4763e019204f1862133ba6bc9c1d48",
-          "version": null
+          "branch": null,
+          "revision": "35732b75b1e3c214a1c17cb20c28b332445577cb",
+          "version": "0.1.0"
+        }
+      },
+      {
+        "package": "ElementaryCombine",
+        "repositoryURL": "https://github.com/mkj-is/ElementaryCombine.git",
+        "state": {
+          "branch": null,
+          "revision": "2987e15e75fdbdca8086ffcccc069fb87cd875d7",
+          "version": "0.1.0"
+        }
+      },
+      {
+        "package": "ElementaryEffectBuilder",
+        "repositoryURL": "https://github.com/mkj-is/ElementaryEffectBuilder.git",
+        "state": {
+          "branch": null,
+          "revision": "5a6c61927ea1f5bb73a3fc534ecf2551ecabb2d7",
+          "version": "0.1.0"
+        }
+      },
+      {
+        "package": "FTAPIKit",
+        "repositoryURL": "https://github.com/futuredapp/FTAPIKit.git",
+        "state": {
+          "branch": null,
+          "revision": "f3d8334ae73261c72459098f35ad030f32337064",
+          "version": "1.0.0"
         }
       }
     ]
