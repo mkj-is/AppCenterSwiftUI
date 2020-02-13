@@ -2,17 +2,15 @@ import Foundation
 
 func appUpdate(state: inout AppState, action: AppAction) {
     switch action {
-    case .goBack:
-        state.loginBrowserOpened = false
+    case .login(let auth):
+        state.auth = .basic(auth)
     case .authenticate(let token):
-        state.apiToken = token
+        state.auth = .token(token)
     case .authenticated(let user):
         state.user = user
     case .authenticationFailed, .logout:
-        state.apiToken = nil
+        state.auth = nil
         state.user = nil
-    case .openAuthentication:
-        state.loginBrowserOpened = true
     case .appsLoaded(let apps):
         state.apps = apps
     case .appSelected(let app):
