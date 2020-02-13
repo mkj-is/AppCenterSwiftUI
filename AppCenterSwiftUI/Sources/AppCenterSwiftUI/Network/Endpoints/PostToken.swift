@@ -1,8 +1,8 @@
 import FTAPIKit
 
 struct TokenRequest: Encodable {
-    let description: String
-    let scope: [Scope]
+    let description = "AppCenterSwiftUIClient"
+    let scope: [Scope] = [.viewer]
 }
 
 struct TokenResponse: Decodable {
@@ -14,6 +14,6 @@ struct TokenResponse: Decodable {
 struct PostTokenEndpoint: RequestResponseEndpoint {
     typealias Response = TokenResponse
 
-    let request: TokenRequest
+    let request = TokenRequest()
     let path = "api_tokens"
 }

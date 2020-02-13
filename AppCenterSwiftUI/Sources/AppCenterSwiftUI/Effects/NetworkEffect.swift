@@ -6,6 +6,18 @@ func createNetworkEffect() -> Effect<AppState, AppAction> {
     var server = AppCenterServer()
     return { state, action, dispatch in
         switch action {
+        case .login(let auth):
+            server.authentication = .basic(auth)
+            server.call(response: PostTokenEndpoint()) { result in
+                DispatchQueue.main.async {
+                    switch result {
+                    case .success(let response):
+                        dispatch(.authenticate(token: response.apiToken))
+                    case .failure(let error):
+                        dispatch(.authenticationFailed(AppError(error: error)))
+                    }
+                }
+            }
         case .authenticate(let token):
             server.authentication = .token(token)
             server.call(response: UserEndpoint()) { result in

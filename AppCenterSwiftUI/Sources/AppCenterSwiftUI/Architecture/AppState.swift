@@ -1,6 +1,5 @@
 struct AppState {
-    var loginBrowserOpened = false
-    var apiToken: String?
+    var auth: AppCenterAuthentication?
     var user: User?
     var selectedApp: App?
     var apps: [App] = []

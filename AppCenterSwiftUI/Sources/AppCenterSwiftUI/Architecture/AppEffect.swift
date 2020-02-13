@@ -13,5 +13,4 @@ import ElementaryEffectBuilder
 let appEffect: Effect<AppState, AppAction> = buildEffect {
     createNetworkEffect()
     createPersistenceEffect()
-    createUrlEffect()
 }

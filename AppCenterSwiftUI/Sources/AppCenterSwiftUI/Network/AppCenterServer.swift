@@ -17,19 +17,18 @@ struct AppCenterServer: URLServer {
 
     var authentication: AppCenterAuthentication?
 
-    var baseUri: URL {
-        var components = URLComponents(string: "https://api.appcenter.ms/v0.1/")!
-        if case .basic(let authentication) = authentication {
-            components.user = authentication.user
-            components.password = authentication.password
-        }
-        return components.url!
-    }
+    let baseUri = URL(string: "https://api.appcenter.ms/v0.1/")!
 
     func buildRequest(endpoint: Endpoint) throws -> URLRequest {
         var request = try buildStandardRequest(endpoint: endpoint)
-        if case .token(let token) = authentication {
+        switch authentication {
+        case .token(let token):
             request.addValue(token, forHTTPHeaderField: "X-API-Token")
+        case .basic(let auth):
+            let data = Data(auth.description.utf8).base64EncodedString()
+            request.addValue("Basic \(data)", forHTTPHeaderField: "Authorization")
+        case nil:
+            break
         }
         return request
     }

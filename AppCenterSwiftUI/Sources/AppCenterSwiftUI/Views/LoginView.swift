@@ -10,27 +10,22 @@ import SwiftUI
 import Elementary
 
 struct LoginView: View {
-    let showSecondStep, isLoading: Bool
-    let openAuthentication, goBack: Call
-    let authenticate: (String) -> Void
+    let isLoading: Bool
+    let authenticate: (BasicAuthentication) -> Void
 
     var body: some View {
-        Form {
-            VStack(alignment: .center, spacing: .standardSpacing) {
-                Text("􀑋􀌁")
-                    .font(.largeTitle)
-                    .foregroundColor(.appPrimary)
-                Text("AppCenter")
-                    .font(.headline)
-                    .foregroundColor(.appPrimary)
+        VStack(alignment: .center, spacing: .standardSpacing) {
+            Text("􀑋􀌁")
+                .font(.largeTitle)
+                .foregroundColor(.appPrimary)
+            Text("AppCenter")
+                .font(.headline)
+                .foregroundColor(.appPrimary)
 
-                if isLoading {
-                    LoadingView()
-                } else if showSecondStep {
-                    TokenInputView(goBack: goBack, authenticate: authenticate)
-                } else {
-                    BrowserView(openAuthentication: openAuthentication)
-                }
+            if isLoading {
+                LoadingView()
+            } else {
+                LoginFormView(authenticate: authenticate)
             }
         }
             .padding(.standardSpacing)
@@ -38,37 +33,24 @@ struct LoginView: View {
     }
 }
 
-private struct BrowserView: View {
-    let openAuthentication: Call
+private struct LoginFormView: View {
+    let authenticate: (BasicAuthentication) -> Void
+
+    @State private var user: String = ""
+    @State private var password: String = ""
 
     var body: some View {
-        VStack(alignment: .center, spacing: .standardSpacing) {
-            Text("Open following address, login if needed and copy the API token:")
-            Button(action: openAuthentication, label: { Text("Login using browser") })
-        }
-    }
-}
-
-private struct TokenInputView: View {
-    let goBack: Call
-    let authenticate: (String) -> Void
-
-    @State private var token: String = ""
-
-    var body: some View {
-        VStack {
-            HStack {
-                TextField("API token", text: $token)
-                StringPasteButton { self.token = $0 }
+        Form {
+            Section {
+                TextField("E-mail", text: $user)
             }
-            HStack {
+            Section {
+                SecureField("Password", text: $password)
+            }
+            Section {
                 Button(
-                    action: goBack,
-                    label: ^Text("Go back")
-                )
-                Button(
-                    action: ^self.authenticate(self.token),
-                    label: ^Text("Authenticate")
+                    action: ^self.authenticate(BasicAuthentication(user: self.user, password: self.password)),
+                    label: ^Text("Log in")
                 )
             }
         }
@@ -78,10 +60,7 @@ private struct TokenInputView: View {
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
         LoginView(
-            showSecondStep: false,
             isLoading: false,
-            openAuthentication: { print("Open authentication called") },
-            goBack: { print("Go back called") },
             authenticate: { print($0) }
         )
     }

@@ -1,7 +1,6 @@
 enum AppAction: Equatable {
     case appStarted
-    case openAuthentication
-    case goBack
+    case login(BasicAuthentication)
     case authenticate(token: String)
     case authenticated(user: User)
     case authenticationFailed(AppError)
