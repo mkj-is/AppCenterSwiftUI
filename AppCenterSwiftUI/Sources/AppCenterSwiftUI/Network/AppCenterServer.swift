@@ -20,7 +20,7 @@ struct AppCenterServer: URLServer {
 
     func buildRequest(endpoint: Endpoint) throws -> URLRequest {
         var request = try buildStandardRequest(endpoint: endpoint)
-        if endpoint is AuthorizedEndpoint, let token = token {
+        if case .token(let token) = authentication {
             request.addValue(token, forHTTPHeaderField: "X-API-Token")
         }
         return request
