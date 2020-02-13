@@ -5,7 +5,6 @@ import Foundation
 struct AppCenterServer: URLServer {
     typealias ErrorType = AppCenterAPIError
 
-    let baseUri = URL(string: "https://api.appcenter.ms/v0.1/")!
     let urlSession: URLSession = URLSession(configuration: .default)
     let decoding: Decoding = JSONDecoding { decoder in
         decoder.keyDecodingStrategy = .convertFromSnakeCase
@@ -16,7 +15,16 @@ struct AppCenterServer: URLServer {
         encoder.dateEncodingStrategy = .formatted(.api)
     }
 
-    var token: String?
+    var authentication: AppCenterAuthentication?
+
+    var baseUri: URL {
+        var components = URLComponents(string: "https://api.appcenter.ms/v0.1/")!
+        if case .basic(let authentication) = authentication {
+            components.user = authentication.user
+            components.password = authentication.password
+        }
+        return components.url!
+    }
 
     func buildRequest(endpoint: Endpoint) throws -> URLRequest {
         var request = try buildStandardRequest(endpoint: endpoint)

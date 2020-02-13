@@ -7,7 +7,7 @@ func createNetworkEffect() -> Effect<AppState, AppAction> {
     return { state, action, dispatch in
         switch action {
         case .authenticate(let token):
-            server.token = token
+            server.authentication = .token(token)
             server.call(response: UserEndpoint()) { result in
                 DispatchQueue.main.async {
                     switch result {
@@ -45,6 +45,8 @@ func createNetworkEffect() -> Effect<AppState, AppAction> {
                     }
                 }
             }
+        case .logout:
+            server.authentication = nil
         default:
             break
         }
