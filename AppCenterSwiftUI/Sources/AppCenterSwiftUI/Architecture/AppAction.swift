@@ -1,3 +1,5 @@
+import struct Foundation.URL
+
 enum AppAction: Equatable {
     case appStarted
     case login(BasicAuthentication)
@@ -11,6 +13,10 @@ enum AppAction: Equatable {
     case appSelected(App)
     case releasesLoaded(App, [Release])
     case releasesLoadingFailed(App, AppError)
+    case loadReleaseDetail(Release)
+    case releaseDetailLoaded(ReleaseDetail)
+    case releaseDetailLoadingFailed(Release, AppError)
+    case open(url: URL)
 }
 
 struct AppError: Equatable {

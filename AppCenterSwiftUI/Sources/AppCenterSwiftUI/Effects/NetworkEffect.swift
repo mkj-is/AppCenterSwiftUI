@@ -57,6 +57,24 @@ func createNetworkEffect() -> Effect<AppState, AppAction> {
                     }
                 }
             }
+        case .loadReleaseDetail(let release):
+            guard let app = state().selectedApp else {
+                return
+            }
+            let endpoint = ReleaseEnpoint(ownerName: app.owner.name, appName: app.name, releaseId: release.id)
+            server.call(response: endpoint) { result in
+                DispatchQueue.main.async {
+                    switch result {
+                    case .success(let release):
+                        dispatch(.releaseDetailLoaded(release))
+                        if let downloadUrl = release.downloadUrl {
+                            dispatch(.open(url: downloadUrl))
+                        }
+                    case .failure(let error):
+                        dispatch(.releaseDetailLoadingFailed(release, AppError(error: error)))
+                    }
+                }
+            }
         case .logout:
             server.authentication = nil
         default:

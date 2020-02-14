@@ -44,3 +44,7 @@ enum DestinationType: String, Decodable {
 enum DistributionStore: String, Decodable {
     case intune, googleplay, apple, none
 }
+
+enum ProvisioningProfileType: String, Decodable {
+    case adhoc, enterprise, other
+}
