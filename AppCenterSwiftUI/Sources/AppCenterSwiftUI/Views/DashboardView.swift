@@ -33,6 +33,6 @@ struct DashboardView: View {
 
 struct DashboardView_Previews: PreviewProvider {
     static var previews: some View {
-        DashboardView(apps: [], selectedApp: nil, releases: nil, downloadingReleases: [], appSelected: { print($0) }, download: { print($0) }, logout: {}, reload: {})
+        DashboardView(apps: [], selectedApp: nil, releases: nil, downloadingReleases: [], appSelected: noop, download: noop, logout: noop, reload: noop)
     }
 }

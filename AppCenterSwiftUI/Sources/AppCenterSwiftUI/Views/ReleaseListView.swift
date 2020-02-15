@@ -57,6 +57,6 @@ struct ReleaseListView_Previews: PreviewProvider {
     static var previews: some View {
         ReleaseListView(app: nil, releases: (0 as UInt...30).map { i in
             Release(origin: .appcenter, id: i, shortVersion: "\(i)", version: "1.0.0", uploadedAt: Date(), enabled: true, destinations: nil, build: nil)
-        }, downloadingReleases: [], download: { print("download", $0) })
+        }, downloadingReleases: [], download: noop)
     }
 }

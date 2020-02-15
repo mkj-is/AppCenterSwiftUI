@@ -61,7 +61,7 @@ struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
         LoginView(
             isLoading: false,
-            authenticate: { print($0) }
+            authenticate: noop
         )
     }
 }

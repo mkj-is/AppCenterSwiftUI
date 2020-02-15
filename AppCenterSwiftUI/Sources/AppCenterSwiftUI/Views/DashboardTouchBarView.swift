@@ -14,6 +14,6 @@ struct DashboardTouchBarView: View {
 
 struct DashboardTouchBarView_Previews: PreviewProvider {
     static var previews: some View {
-        DashboardTouchBarView(logout: {}, reload: {})
+        DashboardTouchBarView(logout: noop, reload: noop)
     }
 }
