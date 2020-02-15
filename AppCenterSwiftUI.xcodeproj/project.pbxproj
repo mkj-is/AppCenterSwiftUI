@@ -17,6 +17,7 @@
 		E7254C2123526149001D7FDB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7254C2023526149001D7FDB /* Preview Assets.xcassets */; };
 		E7254C2423526149001D7FDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7254C2223526149001D7FDB /* Main.storyboard */; };
 		E75D688023ED6C0700CF6AAA /* AppCenterSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = E75D687F23ED6C0700CF6AAA /* AppCenterSwiftUI */; };
+		E797D3E123F8865300751180 /* AppCenterSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = E797D3E023F8865300751180 /* AppCenterSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E797D3E123F8865300751180 /* AppCenterSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +147,7 @@
 			);
 			name = AppCenteriOS;
 			packageProductDependencies = (
+				E797D3E023F8865300751180 /* AppCenterSwiftUI */,
 			);
 			productName = AppCenteriOS;
 			productReference = E72158E623704BD500675238 /* AppCenteriOS.app */;
@@ -290,6 +293,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"AppCenteriOS/Preview Content\"";
+				DEVELOPMENT_TEAM = QLPB86L68N;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = AppCenteriOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
@@ -311,6 +315,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"AppCenteriOS/Preview Content\"";
+				DEVELOPMENT_TEAM = QLPB86L68N;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = AppCenteriOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
@@ -530,6 +535,10 @@
 			productName = AppCenterSwiftUI;
 		};
 		E75D687F23ED6C0700CF6AAA /* AppCenterSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AppCenterSwiftUI;
+		};
+		E797D3E023F8865300751180 /* AppCenterSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = AppCenterSwiftUI;
 		};
