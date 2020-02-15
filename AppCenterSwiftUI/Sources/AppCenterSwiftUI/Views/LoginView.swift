@@ -15,10 +15,10 @@ struct LoginView: View {
 
     var body: some View {
         VStack(alignment: .center, spacing: .standardSpacing) {
-            Text("􀑋􀌁")
+            Symbol.appBadge
                 .font(.largeTitle)
                 .foregroundColor(.appPrimary)
-            Text("AppCenter")
+            Text("App Center")
                 .font(.headline)
                 .foregroundColor(.appPrimary)
 
@@ -29,7 +29,6 @@ struct LoginView: View {
             }
         }
             .padding(.standardSpacing)
-            .frame(minWidth: 450, idealWidth: 500, maxWidth: 550, minHeight: 200, idealHeight: 220, maxHeight: 240, alignment: .center)
     }
 }
 
@@ -40,20 +39,14 @@ private struct LoginFormView: View {
     @State private var password: String = ""
 
     var body: some View {
-        Form {
-            Section {
-                TextField("E-mail", text: $user)
-            }
-            Section {
-                SecureField("Password", text: $password)
-            }
-            Section {
-                Button(
-                    action: ^self.authenticate(BasicAuthentication(user: self.user, password: self.password)),
-                    label: ^Text("Log in")
-                )
-            }
-        }
+        VStack(spacing: .standardSpacing) {
+            TextField("E-mail", text: $user)
+            SecureField("Password", text: $password)
+            Button(
+                action: ^self.authenticate(BasicAuthentication(user: self.user, password: self.password)),
+                label: ^Text("Log in")
+            )
+        }.frame(minWidth: 240, idealWidth: 350, maxWidth: 500, alignment: .center)
     }
 }
 
