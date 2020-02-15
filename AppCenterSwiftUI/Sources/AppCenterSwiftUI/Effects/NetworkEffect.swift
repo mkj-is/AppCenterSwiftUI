@@ -57,16 +57,13 @@ func createNetworkEffect() -> Effect<AppState, AppAction> {
                     }
                 }
             }
-        case .loadReleaseDetail(let release):
-            guard let app = state().selectedApp else {
-                return
-            }
-            let endpoint = ReleaseEnpoint(ownerName: app.owner.name, appName: app.name, releaseId: release.id)
+        case .loadReleaseDetail(let info):
+            let endpoint = ReleaseEnpoint(ownerName: info.app.owner.name, appName: info.app.name, releaseId: info.release.id)
             server.call(response: endpoint) { result in
                 DispatchQueue.main.async {
                     switch result {
                     case .success(let releaseDetail):
-                        dispatch(.releaseDetailLoaded(releaseDetail))
+                        dispatch(.releaseDetailLoaded(info.app, releaseDetail))
                         if let downloadUrl = releaseDetail.downloadUrl {
                             server.urlSession.downloadTask(with: downloadUrl) { url, reponse, error in
                                 if let url = url {
@@ -77,13 +74,13 @@ func createNetworkEffect() -> Effect<AppState, AppAction> {
                                     try! manager.moveItem(at: url, to: downloadsUrl)
                                 } else {
                                     DispatchQueue.main.async {
-                                        dispatch(.releaseDetailLoadingFailed(release, AppError(error: error ?? AppCenterAPIError.unhandled)))
+                                        dispatch(.releaseDetailLoadingFailed(info, AppError(error: error ?? AppCenterAPIError.unhandled)))
                                     }
                                 }
                             }.resume()
                         }
                     case .failure(let error):
-                        dispatch(.releaseDetailLoadingFailed(release, AppError(error: error)))
+                        dispatch(.releaseDetailLoadingFailed(info, AppError(error: error)))
                     }
                 }
             }

@@ -35,6 +35,16 @@ struct Release: Decodable, Identifiable, Hashable {
     }
 }
 
+struct AppRelease: Hashable {
+    let app: App
+    let release: Release
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(app)
+        hasher.combine(release)
+    }
+}
+
 struct ReleaseDetail: Decodable, Identifiable, Equatable {
     let id: UInt
     let appName, appDisplayName, version, shortVersion: String

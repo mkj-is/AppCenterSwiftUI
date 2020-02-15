@@ -13,16 +13,16 @@ struct DashboardView: View {
     let apps: [App]
     let selectedApp: App?
     let releases: [Release]?
-    let downloadingReleases: Set<Release>
+    let downloadingReleases: Set<AppRelease>
     let appSelected: (App) -> Void
-    let download: (Release) -> Void
+    let download: (AppRelease) -> Void
     let logout, reload: Call
 
     var body: some View {
         #if os(OSX)
             return HSplitView {
                 AppListView(apps: apps, selectedApp: selectedApp, appSelected: appSelected)
-                ReleaseListView(releases: releases, downloadingReleases: downloadingReleases, download: download)
+                ReleaseListView(app: selectedApp, releases: releases, downloadingReleases: downloadingReleases, download: download)
             }.touchBar(content: ^DashboardTouchBarView(logout: self.logout, reload: self.reload))
         #else
             return AppListView(apps: apps, selectedApp: selectedApp, appSelected: appSelected)

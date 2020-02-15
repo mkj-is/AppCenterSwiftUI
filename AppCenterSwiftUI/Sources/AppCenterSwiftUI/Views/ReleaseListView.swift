@@ -9,9 +9,10 @@
 import SwiftUI
 
 struct ReleaseListView: View {
+    let app: App?
     let releases: [Release]?
-    let downloadingReleases: Set<Release>
-    let download: (Release) -> Void
+    let downloadingReleases: Set<AppRelease>
+    let download: (AppRelease) -> Void
 
     var body: some View {
         ZStack {
@@ -31,10 +32,10 @@ struct ReleaseListView: View {
                             Text(release.shortVersion)
                             Spacer()
                             Text(release.uploadedAt.flatMap(DateFormatter.standard.string) ?? "Empty date")
-                            if self.downloadingReleases.contains(release) {
+                            if !self.downloadingReleases.filter({ $0.app == self.app && $0.release == release }).isEmpty {
                                 LoadingView()
                             } else {
-                                Button(action: ^self.download(release), label: ^Text("􀈄"))
+                                Button(action: ^self.download(release: release), label: ^Text("􀈄"))
                             }
                         }
                         Divider()
@@ -43,11 +44,18 @@ struct ReleaseListView: View {
             }
         }.frame(minWidth: 300, idealWidth: 400)
     }
+
+    private func download(release: Release) {
+        guard let app = app else {
+            return
+        }
+        download(AppRelease(app: app, release: release))
+    }
 }
 
 struct ReleaseListView_Previews: PreviewProvider {
     static var previews: some View {
-        ReleaseListView(releases: (0 as UInt...30).map { i in
+        ReleaseListView(app: nil, releases: (0 as UInt...30).map { i in
             Release(origin: .appcenter, id: i, shortVersion: "\(i)", version: "1.0.0", uploadedAt: Date(), enabled: true, destinations: nil, build: nil)
         }, downloadingReleases: [], download: { print("download", $0) })
     }
