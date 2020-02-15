@@ -10,14 +10,16 @@ import SwiftUI
 import ElementaryCombine
 
 public struct AppView: View {
-    @ObservedObject var store = ObservableStore<AppState, AppAction>(
-        state: AppState(),
-        update: appUpdate,
-        effect: appEffect,
-        initialAction: .appStarted
-    )
+    @ObservedObject var store: ObservableStore<AppState, AppAction>
 
-    public init() {}
+    public init() {
+        self.store = ObservableStore<AppState, AppAction>(
+            state: AppState(),
+            update: appUpdate,
+            effect: createAppEffect(),
+            initialAction: .appStarted
+        )
+    }
 
     public var body: some View {
         ZStack {
@@ -26,6 +28,7 @@ public struct AppView: View {
                     apps: store.state.apps,
                     selectedApp: store.state.selectedApp,
                     releases: store.state.selectedApp.flatMap { store.state.releases[$0] },
+                    downloadingReleases: store.state.downloadingReleases,
                     appSelected: { self.store.dispatch(.appSelected($0)) },
                     download: { self.store.dispatch(.loadReleaseDetail($0)) },
                     logout: ^self.store.dispatch(.logout),

@@ -17,11 +17,11 @@ struct DistributionGroup: Decodable {
     let id, name: String
 }
 
-struct Release: Decodable, Identifiable, Equatable {
+struct Release: Decodable, Identifiable, Hashable {
     let origin: Origin?
     let id: UInt
     let shortVersion, version: String
-    let uploadedAt: Date
+    let uploadedAt: Date?
     let enabled: Bool
     let destinations: [Destination]?
     let build: Build?
@@ -29,10 +29,14 @@ struct Release: Decodable, Identifiable, Equatable {
     static func == (lhs: Release, rhs: Release) -> Bool {
         lhs.id == rhs.id
     }
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
 }
 
 struct ReleaseDetail: Decodable, Identifiable, Equatable {
-    let id: Int
+    let id: UInt
     let appName, appDisplayName, version, shortVersion: String
     let appOs, releaseNotes: String?
     let origin: Origin?
@@ -52,6 +56,10 @@ struct ReleaseDetail: Decodable, Identifiable, Equatable {
     let enabled: Bool
     let status: String?
     let isExternalBuild: Bool
+
+    var release: Release {
+        Release(origin: origin, id: id, shortVersion: shortVersion, version: version, uploadedAt: uploadedAt, enabled: enabled, destinations: destinations, build: build)
+    }
 
     static func == (lhs: ReleaseDetail, rhs: ReleaseDetail) -> Bool {
         lhs.id == rhs.id

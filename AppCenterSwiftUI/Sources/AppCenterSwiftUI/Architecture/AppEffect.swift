@@ -10,8 +10,10 @@ import Foundation
 import Elementary
 import ElementaryEffectBuilder
 
-let appEffect: Effect<AppState, AppAction> = buildEffect {
-    createNetworkEffect()
-    createPersistenceEffect()
-    createUrlEffect()
+func createAppEffect() -> Effect<AppState, AppAction> {
+    buildEffect {
+        createNetworkEffect()
+        createPersistenceEffect()
+        createUrlEffect()
+    }
 }

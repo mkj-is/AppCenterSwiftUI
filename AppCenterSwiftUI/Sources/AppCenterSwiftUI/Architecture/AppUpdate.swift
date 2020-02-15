@@ -17,9 +17,13 @@ func appUpdate(state: inout AppState, action: AppAction) {
         state.selectedApp = app
     case let .releasesLoaded(app, releases):
         state.releases[app] = releases
-    case .appStarted, .loadApps, .appsLoadingFailed, .releasesLoadingFailed,
-         .loadReleaseDetail, .releaseDetailLoaded, .releaseDetailLoadingFailed,
-         .open:
+    case .loadReleaseDetail(let release):
+        state.downloadingReleases.insert(release)
+    case .releaseDetailLoadingFailed(let info):
+        state.downloadingReleases.remove(info.0)
+    case .releaseDetailLoaded(let detail):
+        state.downloadingReleases.remove(detail.release)
+    case .appStarted, .loadApps, .appsLoadingFailed, .releasesLoadingFailed, .open:
             break
     }
 }
