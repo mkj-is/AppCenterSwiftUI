@@ -10,9 +10,7 @@ func download(server: AppCenterServer, app: App, releaseDetail: ReleaseDetail, d
     if let downloadUrl = releaseDetail.downloadUrl {
         server.urlSession.downloadTask(with: downloadUrl) { url, response, error in
             func dispatchMain(_ action: AppAction) {
-                DispatchQueue.main.async {
-                    dispatch(action)
-                }
+                DispatchQueue.main.async(execute: ^dispatch(action))
             }
             guard let url = url else {
                 let error = AppCenterAPIError(data: nil, response: response, error: error, decoding: server.decoding)
@@ -36,7 +34,8 @@ func download(server: AppCenterServer, app: App, releaseDetail: ReleaseDetail, d
     }
     #elseif os(iOS)
     if let installUrl = releaseDetail.installUrl {
-        dispatch(.open(installUrl))
+        dispatch(.open(url: installUrl))
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: ^dispatch(.downloaded(info)))
     }
     #endif
 }
