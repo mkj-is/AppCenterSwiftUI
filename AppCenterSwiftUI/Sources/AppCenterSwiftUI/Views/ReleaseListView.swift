@@ -38,11 +38,9 @@ struct ReleaseListView: View {
                                 Button(action: ^self.download(release: release), label: ^Symbol.download)
                             }
                         }
-                        System(.macOS) {
-                            Divider()
-                        }
+                        System(.macOS, content: Divider.init)
                     }
-                }
+                }.navigationBarTitle("Releases", displayMode: .inline)
             }
         }.frame(minWidth: 300, idealWidth: 400)
     }
