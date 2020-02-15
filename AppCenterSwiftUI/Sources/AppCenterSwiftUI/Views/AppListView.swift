@@ -7,17 +7,10 @@ struct AppListView: View {
 
     var body: some View {
         List(apps) { app in
-            Button(action: { self.appSelected(app) }) {
-                HStack(alignment: .center, spacing: .standardSpacing) {
-                    Text(app.displayName )
-                    Spacer()
-                    Text(app.os.rawValue)
-                        .foregroundColor(.white)
-                        .padding(EdgeInsets(top: 0, leading: .smallPadding, bottom: 0, trailing: .smallPadding))
-                        .background(Capsule().foregroundColor(.secondary))
-                    }.padding(0)
-                }
-            .buttonStyle(PlainButtonStyle())
+            System(.macOS, content:
+                ^Button(action: ^self.appSelected(app), label: ^AppDisclosureView(app: app))
+                    .buttonStyle(PlainButtonStyle())
+            )
         }
         .sidebarListStyleIfAvailable()
         .frame(minWidth: 200, idealWidth: 250, maxWidth: 400, minHeight: 300, idealHeight: 400)
