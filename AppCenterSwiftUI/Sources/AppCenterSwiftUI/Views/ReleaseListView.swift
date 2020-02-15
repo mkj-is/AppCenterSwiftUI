@@ -38,7 +38,9 @@ struct ReleaseListView: View {
                                 Button(action: ^self.download(release: release), label: ^Symbol.download)
                             }
                         }
-                        Divider()
+                        System(.macOS) {
+                            Divider()
+                        }
                     }
                 }
             }
