@@ -9,25 +9,29 @@ func download(server: AppCenterServer, app: App, releaseDetail: ReleaseDetail, d
     #if os(macOS)
     if let downloadUrl = releaseDetail.downloadUrl {
         server.urlSession.downloadTask(with: downloadUrl) { url, response, error in
-            guard let url = url else {
+            func dispatchMain(_ action: AppAction) {
                 DispatchQueue.main.async {
-                    let error = AppCenterAPIError(data: nil, response: response, error: error, decoding: server.decoding)
-                        ?? AppCenterAPIError.unhandled
-                    dispatch(.downloadFailed(info, EquatableError(error: error)))
+                    dispatch(action)
                 }
+            }
+            guard let url = url else {
+                let error = AppCenterAPIError(data: nil, response: response, error: error, decoding: server.decoding)
+                    ?? AppCenterAPIError.unhandled
+                dispatchMain(.downloadFailed(info, EquatableError(error: error)))
                 return
             }
             let manager = FileManager.default
             let downloadsUrl = manager.homeDirectoryForCurrentUser
                 .appendingPathComponent("Downloads")
                 .appendingPathComponent(releaseDetail.downloadUrl?.lastPathComponent ?? url.lastPathComponent)
+
             do {
                 try manager.moveItem(at: url, to: downloadsUrl)
             } catch {
-                dispatch(.downloadFailed(info, EquatableError(error: error)))
+                dispatchMain(.downloadFailed(info, EquatableError(error: error)))
                 return
             }
-            dispatch(.downloaded(info))
+            dispatchMain(.downloaded(info))
         }.resume()
     }
     #elseif os(iOS)
