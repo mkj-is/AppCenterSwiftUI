@@ -14,7 +14,7 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/futuredapp/FTAPIKit.git", from: "1.0.0"),
         .package(url: "https://github.com/mkj-is/ElementaryEffectBuilder.git", from: "0.1.0"),
-        .package(url: "https://github.com/mkj-is/ElementaryCombine.git", from: "0.1.0"),
+        .package(url: "https://github.com/mkj-is/ElementaryCombine.git", from: "0.1.0")
     ],
     targets: [
         .target(

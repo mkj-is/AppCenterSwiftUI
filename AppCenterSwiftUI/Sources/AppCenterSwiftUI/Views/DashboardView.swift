@@ -10,7 +10,7 @@ import SwiftUI
 import Elementary
 
 struct DashboardView: View {
-    
+
     let apps: [App]
     let selectedApp: App?
     let releases: [App: [Release]]

@@ -8,4 +8,3 @@ struct ReleaseEnpoint: ResponseEndpoint {
         self.path = "apps/\(ownerName)/\(appName)/releases/\(releaseId)"
     }
 }
-
