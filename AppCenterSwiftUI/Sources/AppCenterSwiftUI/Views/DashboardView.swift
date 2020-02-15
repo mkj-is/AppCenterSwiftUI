@@ -19,14 +19,20 @@ struct DashboardView: View {
     let logout, reload: Call
 
     var body: some View {
-        #if os(OSX)
+        #if os(macOS)
             return HSplitView {
                 AppListView(apps: apps, selectedApp: selectedApp, appSelected: appSelected)
                 ReleaseListView(app: selectedApp, releases: releases, downloadingReleases: downloadingReleases, download: download)
             }.touchBar(content: ^DashboardTouchBarView(logout: self.logout, reload: self.reload))
-        #else
-            return AppListView(apps: apps, selectedApp: selectedApp, appSelected: appSelected)
-                .navigationViewStyle(DoubleColumnNavigationViewStyle())
+        #elseif os(iOS)
+        return NavigationView {
+            AppListView(apps: apps, selectedApp: selectedApp, appSelected: appSelected)
+                .navigationBarTitle("Apps")
+            NavigationView {
+                ReleaseListView(app: selectedApp, releases: releases, downloadingReleases: downloadingReleases, download: download)
+                    .navigationBarTitle("Releases", displayMode: .inline)
+            }.navigationViewStyle(StackNavigationViewStyle())
+        }
         #endif
     }
 }
