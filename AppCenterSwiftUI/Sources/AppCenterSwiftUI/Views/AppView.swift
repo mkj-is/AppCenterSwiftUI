@@ -27,7 +27,7 @@ public struct AppView: View {
                 DashboardView(
                     apps: store.state.apps,
                     selectedApp: store.state.selectedApp,
-                    releases: store.state.selectedApp.flatMap { store.state.releases[$0] },
+                    releases: store.state.releases,
                     downloadingReleases: store.state.downloadingReleases,
                     appSelected: { self.store.dispatch(.appSelected($0)) },
                     download: { self.store.dispatch(.loadReleaseDetail($0)) },

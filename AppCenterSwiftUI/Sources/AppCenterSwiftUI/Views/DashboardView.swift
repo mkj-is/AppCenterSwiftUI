@@ -10,9 +10,10 @@ import SwiftUI
 import Elementary
 
 struct DashboardView: View {
+    
     let apps: [App]
     let selectedApp: App?
-    let releases: [Release]?
+    let releases: [App: [Release]]
     let downloadingReleases: Set<AppRelease>
     let appSelected: (App) -> Void
     let download: (AppRelease) -> Void
@@ -26,11 +27,14 @@ struct DashboardView: View {
             }.touchBar(content: ^DashboardTouchBarView(logout: self.logout, reload: self.reload))
         #elseif os(iOS)
         return NavigationView {
-            AppListView(apps: apps, selectedApp: selectedApp, appSelected: appSelected)
+            AppListView(
+                apps: apps,
+                selectedApp: selectedApp, releases: releases, downloadingReleases: downloadingReleases,
+                appSelected: appSelected, download: download
+            )
                 .navigationBarTitle("Apps")
             NavigationView {
-                ReleaseListView(app: selectedApp, releases: releases, downloadingReleases: downloadingReleases, download: download)
-                    .navigationBarTitle("Releases", displayMode: .inline)
+                ReleaseListView(app: selectedApp, releases: selectedApp.flatMap { releases[$0] }, downloadingReleases: downloadingReleases, download: download)
             }.navigationViewStyle(StackNavigationViewStyle())
         }
         #endif
@@ -39,6 +43,6 @@ struct DashboardView: View {
 
 struct DashboardView_Previews: PreviewProvider {
     static var previews: some View {
-        DashboardView(apps: [], selectedApp: nil, releases: nil, downloadingReleases: [], appSelected: noop, download: noop, logout: noop, reload: noop)
+        DashboardView(apps: [], selectedApp: nil, releases: [:], downloadingReleases: [], appSelected: noop, download: noop, logout: noop, reload: noop)
     }
 }
