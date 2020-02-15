@@ -22,7 +22,7 @@ struct ReleaseListView: View {
                 List(releases ?? []) { release in
                     VStack(alignment: .center, spacing: .smallPadding) {
                         HStack(alignment: .center, spacing: .smallPadding) {
-                            Text("􀐛")
+                            Symbol.box
                                 .font(.title)
                                 .foregroundColor(.appPrimary)
                             Text("\(release.id)")
@@ -35,7 +35,7 @@ struct ReleaseListView: View {
                             if !self.downloadingReleases.filter({ $0.app == self.app && $0.release == release }).isEmpty {
                                 LoadingView()
                             } else {
-                                Button(action: ^self.download(release: release), label: ^Text("􀈄"))
+                                Button(action: ^self.download(release: release), label: ^Symbol.download)
                             }
                         }
                         Divider()
