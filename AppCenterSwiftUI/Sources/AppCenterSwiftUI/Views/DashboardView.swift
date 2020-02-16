@@ -14,6 +14,7 @@ struct DashboardView: View {
     let apps: [App]
     let selectedApp: App?
     let releases: [App: [Release]]
+    let user: User
     let downloadingReleases: Set<AppRelease>
     let appSelected: (App) -> Void
     let download: (AppRelease) -> Void
@@ -33,16 +34,28 @@ struct DashboardView: View {
                 appSelected: appSelected, download: download
             )
                 .navigationBarTitle("Apps")
-            NavigationView {
-                ReleaseListView(app: selectedApp, releases: selectedApp.flatMap { releases[$0] }, downloadingReleases: downloadingReleases, download: download)
-            }.navigationViewStyle(StackNavigationViewStyle())
+                .navigationBarItems(leading: Modal(
+                    label: ^Symbol.account,
+                    content: { presentation in
+                        UserView(user: self.user, logout: {
+                            presentation(false)
+                            self.logout()
+                        })
+                }))
+            ReleaseListView(app: selectedApp, releases: selectedApp.flatMap { releases[$0] }, downloadingReleases: downloadingReleases, download: download)
+            .navigationViewStyle(StackNavigationViewStyle())
         }
         #endif
+    }
+
+    private func logout(presentation: (Bool) -> Void) {
+        presentation(false)
+        logout()
     }
 }
 
 struct DashboardView_Previews: PreviewProvider {
     static var previews: some View {
-        DashboardView(apps: [], selectedApp: nil, releases: [:], downloadingReleases: [], appSelected: noop, download: noop, logout: noop, reload: noop)
+        DashboardView(apps: [], selectedApp: nil, releases: [:], user: User(id: UUID(), avatarUrl: nil, canChangePassword: false, displayName: "Mockup user", email: "user@example.com", name: "mockup.user", origin: "appcenter", permissions: nil), downloadingReleases: [], appSelected: noop, download: noop, logout: noop, reload: noop)
     }
 }

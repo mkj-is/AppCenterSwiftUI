@@ -28,6 +28,7 @@ public struct AppView: View {
                     apps: store.state.apps,
                     selectedApp: store.state.selectedApp,
                     releases: store.state.releases,
+                    user: store.state.user!,
                     downloadingReleases: store.state.downloadingReleases,
                     appSelected: { self.store.dispatch(.appSelected($0)) },
                     download: { self.store.dispatch(.loadReleaseDetail($0)) },
@@ -40,7 +41,7 @@ public struct AppView: View {
                     authenticate: { self.store.dispatch(.login($0))}
                 )
             }
-        }
+        }.accentColor(Color.appPrimary)
     }
 }
 

@@ -4,6 +4,7 @@ enum Symbol: String, View {
     case appBadge = "app.badge"
     case box = "cube.box.fill"
     case download = "square.and.arrow.down"
+    case account = "person.crop.circle"
 
     private var symbol: Character {
         switch self {
@@ -13,6 +14,8 @@ enum Symbol: String, View {
             return "􀐛"
         case .download:
             return "􀈄"
+        case .account:
+            return "􀉭"
         }
     }
 
