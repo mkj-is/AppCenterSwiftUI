@@ -22,7 +22,7 @@ public struct AppView: View {
     }
 
     public var body: some View {
-        ZStack {
+        Group {
             if store.state.user != nil {
                 DashboardView(
                     apps: store.state.apps,
@@ -41,7 +41,7 @@ public struct AppView: View {
                     authenticate: { self.store.dispatch(.login($0))}
                 )
             }
-        }.accentColor(Color.appPrimary)
+        }.accentColorIfAvailable(.appPrimary)
     }
 }
 

@@ -15,7 +15,7 @@ struct ReleaseListView: View {
     let download: (AppRelease) -> Void
 
     var body: some View {
-        ZStack {
+        Group {
             if releases == nil {
                 LoadingView()
             } else {
@@ -40,9 +40,9 @@ struct ReleaseListView: View {
                         }
                         System(.macOS, content: Divider.init)
                     }
-                }.navigationBarTitleIfAvailable("Releases")
+                }
             }
-        }.frame(minWidth: 300, idealWidth: 400)
+        }.navigationBarTitleIfAvailable("Releases")
     }
 
     private func download(release: Release) {

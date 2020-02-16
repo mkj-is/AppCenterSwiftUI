@@ -1,6 +1,7 @@
 import SwiftUI
 import Elementary
 
+#if os(iOS)
 struct UserView: View {
     let user: User
     let logout, close: Call
@@ -20,7 +21,7 @@ struct UserView: View {
                 .navigationBarItems(trailing: Button(action: self.close, label: ^Symbol.close))
         }
             .navigationViewStyle(StackNavigationViewStyle())
-        .accentColor(.appPrimary)
+            .accentColor(.appPrimary)
     }
 }
 
@@ -29,3 +30,4 @@ private struct UserView_Previews: PreviewProvider {
         UserView(user: User(id: UUID(), avatarUrl: nil, canChangePassword: true, displayName: "Matěj Kašpar Jirásek", email: "matej.jirasek@me.com", name: "matej.jirasek", origin: "appcenter", permissions: nil), logout: noop, close: noop)
     }
 }
+#endif
