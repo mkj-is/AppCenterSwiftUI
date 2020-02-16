@@ -40,10 +40,9 @@ struct DashboardView: View {
                         UserView(user: self.user, logout: {
                             presentation(false)
                             self.logout()
-                        })
+                        }, close: ^presentation(false))
                 }))
             ReleaseListView(app: selectedApp, releases: selectedApp.flatMap { releases[$0] }, downloadingReleases: downloadingReleases, download: download)
-            .navigationViewStyle(StackNavigationViewStyle())
         }
         #endif
     }
