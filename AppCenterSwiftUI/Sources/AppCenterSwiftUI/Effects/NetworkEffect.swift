@@ -36,7 +36,8 @@ func createNetworkEffect() -> Effect<AppState, AppAction> {
                 DispatchQueue.main.async {
                     switch result {
                     case .success(let apps):
-                        dispatch(.appsLoaded(apps))
+                        let sortedApps = apps.sorted { $0.displayName < $1.displayName }
+                        dispatch(.appsLoaded(sortedApps))
                         let currentState = state()
                         if currentState.selectedApp == nil, let firstApp = apps.first {
                             dispatch(.appSelected(firstApp))
