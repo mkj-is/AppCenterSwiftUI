@@ -22,8 +22,8 @@ struct DashboardView: View {
     var body: some View {
         #if os(macOS)
             return HSplitView {
-                AppListView(apps: apps, selectedApp: selectedApp, appSelected: appSelected)
-                ReleaseListView(app: selectedApp, releases: releases, downloadingReleases: downloadingReleases, download: download)
+                AppListView(apps: apps, selectedApp: selectedApp, releases: releases, downloadingReleases: downloadingReleases, appSelected: appSelected, download: download)
+                ReleaseListView(app: selectedApp, releases: selectedApp.flatMap { releases[$0] }, downloadingReleases: downloadingReleases, download: download)
             }.touchBar(content: ^DashboardTouchBarView(logout: self.logout, reload: self.reload))
         #elseif os(iOS)
         return NavigationView {

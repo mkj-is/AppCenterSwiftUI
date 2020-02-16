@@ -40,7 +40,7 @@ struct ReleaseListView: View {
                         }
                         System(.macOS, content: Divider.init)
                     }
-                }.navigationBarTitle("Releases", displayMode: .inline)
+                }.navigationBarTitleIfAvailable("Releases")
             }
         }.frame(minWidth: 300, idealWidth: 400)
     }
