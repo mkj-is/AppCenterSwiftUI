@@ -18,6 +18,12 @@
 		E7254C2423526149001D7FDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7254C2223526149001D7FDB /* Main.storyboard */; };
 		E75D688023ED6C0700CF6AAA /* AppCenterSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = E75D687F23ED6C0700CF6AAA /* AppCenterSwiftUI */; };
 		E797D3E123F8865300751180 /* AppCenterSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = E797D3E023F8865300751180 /* AppCenterSwiftUI */; };
+		E7C7522A23FEB23900A137DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C7522923FEB23900A137DC /* AppDelegate.swift */; };
+		E7C7522C23FEB23900A137DC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C7522B23FEB23900A137DC /* ContentView.swift */; };
+		E7C7522E23FEB23B00A137DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7C7522D23FEB23B00A137DC /* Assets.xcassets */; };
+		E7C7523123FEB23B00A137DC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7C7523023FEB23B00A137DC /* Preview Assets.xcassets */; };
+		E7C7523423FEB23B00A137DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7C7523223FEB23B00A137DC /* LaunchScreen.storyboard */; };
+		E7C7523C23FEB24700A137DC /* AppCenterSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = E7C7523B23FEB24700A137DC /* AppCenterSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +43,13 @@
 		E7254C2623526149001D7FDB /* AppCenterMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppCenterMac.entitlements; sourceTree = "<group>"; };
 		E728C09E236F7FCA0065449C /* AppCenterSwiftUI */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AppCenterSwiftUI; sourceTree = "<group>"; };
 		E748793A23CF918D0009CB6A /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Package.swift; path = AppCenterSwiftUI/Package.swift; sourceTree = "<group>"; };
+		E7C7522723FEB23900A137DC /* AppCentertvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppCentertvOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7C7522923FEB23900A137DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E7C7522B23FEB23900A137DC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E7C7522D23FEB23B00A137DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E7C7523023FEB23B00A137DC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E7C7523323FEB23B00A137DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E7C7523523FEB23B00A137DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +66,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E75D688023ED6C0700CF6AAA /* AppCenterSwiftUI in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7C7522423FEB23900A137DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7C7523C23FEB24700A137DC /* AppCenterSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +107,7 @@
 				E728C09E236F7FCA0065449C /* AppCenterSwiftUI */,
 				E7254C1823526148001D7FDB /* AppCenterMac */,
 				E72158E723704BD500675238 /* AppCenteriOS */,
+				E7C7522823FEB23900A137DC /* AppCentertvOS */,
 				E7254C1723526148001D7FDB /* Products */,
 				E76B6F6E2353A5FC007DD31D /* Frameworks */,
 			);
@@ -96,6 +118,7 @@
 			children = (
 				E7254C1623526148001D7FDB /* AppCenterMac.app */,
 				E72158E623704BD500675238 /* AppCenteriOS.app */,
+				E7C7522723FEB23900A137DC /* AppCentertvOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -127,6 +150,27 @@
 				E748793A23CF918D0009CB6A /* Package.swift */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E7C7522823FEB23900A137DC /* AppCentertvOS */ = {
+			isa = PBXGroup;
+			children = (
+				E7C7522923FEB23900A137DC /* AppDelegate.swift */,
+				E7C7522B23FEB23900A137DC /* ContentView.swift */,
+				E7C7522D23FEB23B00A137DC /* Assets.xcassets */,
+				E7C7523223FEB23B00A137DC /* LaunchScreen.storyboard */,
+				E7C7523523FEB23B00A137DC /* Info.plist */,
+				E7C7522F23FEB23B00A137DC /* Preview Content */,
+			);
+			path = AppCentertvOS;
+			sourceTree = "<group>";
+		};
+		E7C7522F23FEB23B00A137DC /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				E7C7523023FEB23B00A137DC /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,6 +218,27 @@
 			productReference = E7254C1623526148001D7FDB /* AppCenterMac.app */;
 			productType = "com.apple.product-type.application";
 		};
+		E7C7522623FEB23900A137DC /* AppCentertvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7C7523823FEB23B00A137DC /* Build configuration list for PBXNativeTarget "AppCentertvOS" */;
+			buildPhases = (
+				E7C7522323FEB23900A137DC /* Sources */,
+				E7C7522423FEB23900A137DC /* Frameworks */,
+				E7C7522523FEB23900A137DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E7C7523A23FEB24300A137DC /* PBXTargetDependency */,
+			);
+			name = AppCentertvOS;
+			packageProductDependencies = (
+				E7C7523B23FEB24700A137DC /* AppCenterSwiftUI */,
+			);
+			productName = AppCentertvOS;
+			productReference = E7C7522723FEB23900A137DC /* AppCentertvOS.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -189,6 +254,9 @@
 					};
 					E7254C1523526148001D7FDB = {
 						CreatedOnToolsVersion = 11.1;
+					};
+					E7C7522623FEB23900A137DC = {
+						CreatedOnToolsVersion = 11.3.1;
 					};
 				};
 			};
@@ -209,6 +277,7 @@
 			targets = (
 				E7254C1523526148001D7FDB /* AppCenterMac */,
 				E72158E523704BD500675238 /* AppCenteriOS */,
+				E7C7522623FEB23900A137DC /* AppCentertvOS */,
 			);
 		};
 /* End PBXProject section */
@@ -234,6 +303,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E7C7522523FEB23900A137DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7C7523423FEB23B00A137DC /* LaunchScreen.storyboard in Resources */,
+				E7C7523123FEB23B00A137DC /* Preview Assets.xcassets in Resources */,
+				E7C7522E23FEB23B00A137DC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -254,6 +333,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E7C7522323FEB23900A137DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7C7522C23FEB23900A137DC /* ContentView.swift in Sources */,
+				E7C7522A23FEB23900A137DC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -264,6 +352,10 @@
 		E728C0A0236F83440065449C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			productRef = E728C09F236F83440065449C /* AppCenterSwiftUI */;
+		};
+		E7C7523A23FEB24300A137DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = E7C7523923FEB24300A137DC /* AppCenterSwiftUI */;
 		};
 /* End PBXTargetDependency section */
 
@@ -282,6 +374,14 @@
 				E7254C2323526149001D7FDB /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E7C7523223FEB23B00A137DC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E7C7523323FEB23B00A137DC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -493,6 +593,51 @@
 			};
 			name = Release;
 		};
+		E7C7523623FEB23B00A137DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"AppCentertvOS/Preview Content\"";
+				DEVELOPMENT_TEAM = QLPB86L68N;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = AppCentertvOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = is.mkj.AppCentertvOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 13.2;
+			};
+			name = Debug;
+		};
+		E7C7523723FEB23B00A137DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"AppCentertvOS/Preview Content\"";
+				DEVELOPMENT_TEAM = QLPB86L68N;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = AppCentertvOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = is.mkj.AppCentertvOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 13.2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -523,6 +668,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		E7C7523823FEB23B00A137DC /* Build configuration list for PBXNativeTarget "AppCentertvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7C7523623FEB23B00A137DC /* Debug */,
+				E7C7523723FEB23B00A137DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -539,6 +693,14 @@
 			productName = AppCenterSwiftUI;
 		};
 		E797D3E023F8865300751180 /* AppCenterSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AppCenterSwiftUI;
+		};
+		E7C7523923FEB24300A137DC /* AppCenterSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AppCenterSwiftUI;
+		};
+		E7C7523B23FEB24700A137DC /* AppCenterSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = AppCenterSwiftUI;
 		};
