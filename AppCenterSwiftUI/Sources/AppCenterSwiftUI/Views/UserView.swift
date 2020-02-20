@@ -1,7 +1,7 @@
 import SwiftUI
 import Elementary
 
-#if os(iOS)
+#if os(iOS) || os(tvOS)
 struct UserView: View {
     let user: User
     let logout, close: Call
@@ -17,7 +17,7 @@ struct UserView: View {
                     Button(action: logout, label: ^Text("Logout"))
                 }
             }
-                .navigationBarTitle("Account", displayMode: .inline)
+                .navigationBarTitleIfAvailable("Account")
                 .navigationBarItems(trailing: Button(action: self.close, label: ^Symbol.close))
         }
             .navigationViewStyle(StackNavigationViewStyle())

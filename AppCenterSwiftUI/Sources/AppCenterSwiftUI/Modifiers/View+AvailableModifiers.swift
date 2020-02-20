@@ -10,7 +10,7 @@ extension View {
     }
 
     func navigationBarTitleIfAvailable(_ key: LocalizedStringKey) -> some View {
-        #if os(macOS)
+        #if os(macOS) || os(tvOS)
         return self
         #else
         return navigationBarTitle(key, displayMode: .inline)

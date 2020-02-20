@@ -26,7 +26,7 @@ struct DashboardView: View {
                 AppListView(apps: apps, selectedApp: selectedApp, releases: releases, downloadingReleases: downloadingReleases, appSelected: appSelected, download: download)
                 ReleaseListView(app: selectedApp, releases: selectedApp.flatMap { releases[$0] }, downloadingReleases: downloadingReleases, download: download)
             }.touchBar(content: ^DashboardTouchBarView(logout: self.logout, reload: self.reload))
-        #elseif os(iOS)
+        #elseif os(iOS) || os(tvOS)
         return NavigationView {
             AppListView(
                 apps: apps,
