@@ -42,6 +42,7 @@ public struct AppView: View {
                 )
             }
         }.accentColorIfAvailable(.appPrimary)
+            .alert(error: store.state.lastError)
     }
 }
 

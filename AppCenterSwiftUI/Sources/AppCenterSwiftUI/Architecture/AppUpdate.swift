@@ -8,7 +8,11 @@ func appUpdate(state: inout AppState, action: AppAction) {
         state.auth = .token(token)
     case .authenticated(let user):
         state.user = user
-    case .authenticationFailed, .logout:
+    case .authenticationFailed(let error):
+        state.lastError = error.error
+        state.auth = nil
+        state.user = nil
+    case .logout:
         state.auth = nil
         state.user = nil
     case .appsLoaded(let apps):
@@ -21,10 +25,12 @@ func appUpdate(state: inout AppState, action: AppAction) {
         state.downloadingReleases.insert(detail)
     case .downloaded(let info):
         state.downloadingReleases.remove(info)
-    case let .downloadFailed(info, _):
+    case let .downloadFailed(info, error):
         state.downloadingReleases.remove(info)
-    case .appStarted, .loadApps, .appsLoadingFailed,
-         .releasesLoadingFailed, .open:
+        state.lastError = error.error
+    case .appsLoadingFailed(let error), .releasesLoadingFailed(_, let error):
+        state.lastError = error.error
+    case .appStarted, .loadApps, .open:
         break
     }
 }

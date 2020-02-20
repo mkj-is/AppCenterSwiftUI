@@ -24,3 +24,9 @@ struct EquatableError: Equatable {
 
     static func == (lhs: EquatableError, rhs: EquatableError) -> Bool { true }
 }
+
+extension EquatableError: CustomStringConvertible {
+    var description: String {
+        error.localizedDescription
+    }
+}
