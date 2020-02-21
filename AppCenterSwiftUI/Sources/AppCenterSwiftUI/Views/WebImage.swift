@@ -59,7 +59,7 @@ struct WebImage<Placeholder: View>: View {
             } else {
                 placeholder
                     .onReceive(dataPublisher()) { output in
-                        self.image = output.flatMap(PlatformImage.init)
+                        self.image = output.flatMap(PlatformImage.init(data:))
                     }
             }
         }
