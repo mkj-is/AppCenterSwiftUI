@@ -23,10 +23,12 @@ enum Symbol: String, View {
     }
 
     var body: some View {
-        #if os(iOS)
-        return Image(systemName: rawValue)
-        #else
+        #if os(macOS)
         return Text(String(symbol))
+        #else
+        return Image(systemName: rawValue)
+            .resizable()
+            .aspectRatio(1, contentMode: .fit)
         #endif
     }
 }
