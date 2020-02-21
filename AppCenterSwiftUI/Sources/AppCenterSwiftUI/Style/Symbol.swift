@@ -28,7 +28,7 @@ enum Symbol: String, View {
         #else
         return Image(systemName: rawValue)
             .resizable()
-            .aspectRatio(1, contentMode: .fit)
+            .aspectRatio(contentMode: .fit)
         #endif
     }
 }

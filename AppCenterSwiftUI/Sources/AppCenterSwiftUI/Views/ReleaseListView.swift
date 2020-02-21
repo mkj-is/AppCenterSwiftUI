@@ -23,19 +23,18 @@ struct ReleaseListView: View {
                     VStack(alignment: .center, spacing: .smallPadding) {
                         HStack(alignment: .center, spacing: .smallPadding) {
                             Symbol.box
+                                .frame(width: 30, height: 30)
                                 .font(.title)
-                                .foregroundColor(.appPrimary)
-                            Text("\(release.id)")
+                            VStack(alignment: .leading) {
+                                Text("\(release.shortVersion) (\(release.shortVersion))")
+                                Text(release.uploadedAt.flatMap(DateFormatter.standard.string) ?? "Empty date")
+                                    .foregroundColor(Color.gray)
+                            }.padding(.horizontal, .standardPadding)
                             Spacer()
-                            Text(release.version)
-                            Spacer()
-                            Text(release.shortVersion)
-                            Spacer()
-                            Text(release.uploadedAt.flatMap(DateFormatter.standard.string) ?? "Empty date")
                             if !self.downloadingReleases.filter({ $0.app == self.app && $0.release == release }).isEmpty {
                                 LoadingView()
                             } else {
-                                Button(action: ^self.download(release: release), label: ^Symbol.download)
+                                Button(action: ^self.download(release: release), label: self.downloadSymbol)
                             }
                         }
                         System(.macOS, content: Divider.init)
@@ -43,6 +42,13 @@ struct ReleaseListView: View {
                 }
             }
         }.navigationBarTitleIfAvailable("Releases")
+    }
+
+    private func downloadSymbol() -> some View {
+        Symbol.download
+            .foregroundColor(.appPrimary)
+            .frame(width: 30, height: 30)
+            .fixedSize()
     }
 
     private func download(release: Release) {

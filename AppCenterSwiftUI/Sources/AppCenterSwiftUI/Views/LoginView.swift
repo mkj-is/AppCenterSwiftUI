@@ -16,6 +16,7 @@ struct LoginView: View {
     var body: some View {
         VStack(alignment: .center, spacing: .standardSpacing) {
             Symbol.appBadge
+                .frame(maxWidth: 100, maxHeight: 100)
                 .font(.largeTitle)
                 .foregroundColor(.appPrimary)
             Text("App Center")

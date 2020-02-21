@@ -20,7 +20,6 @@ struct AppListView: View {
                     label: ^AppDisclosureView(app: app)))
         }
         .sidebarListStyleIfAvailable()
-        .frame(minWidth: 200, idealWidth: 250, maxWidth: 400, minHeight: 300, idealHeight: 400)
     }
 }
 
