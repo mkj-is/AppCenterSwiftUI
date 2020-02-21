@@ -26,7 +26,7 @@ struct ReleaseListView: View {
                                 .frame(width: 30, height: 30)
                                 .font(.title)
                             VStack(alignment: .leading) {
-                                Text("\(release.shortVersion) (\(release.shortVersion))")
+                                Text("\(release.shortVersion) (\(release.version))")
                                 Text(release.uploadedAt.flatMap(DateFormatter.standard.string) ?? "Empty date")
                                     .foregroundColor(Color.gray)
                             }.padding(.horizontal, .standardPadding)

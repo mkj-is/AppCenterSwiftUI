@@ -18,12 +18,12 @@ func download(server: AppCenterServer, app: App, releaseDetail: ReleaseDetail, d
                 return
             }
             let manager = FileManager.default
-            let downloadsUrl = manager.homeDirectoryForCurrentUser
+            let folder = manager.homeDirectoryForCurrentUser
                 .appendingPathComponent("Downloads")
-                .appendingPathComponent(releaseDetail.downloadUrl?.lastPathComponent ?? url.lastPathComponent)
+            let nextFreeName = DownloadName(app: app, releaseDetail: releaseDetail, folder: folder, manager: manager).url
 
             do {
-                try manager.moveItem(at: url, to: downloadsUrl)
+                try manager.moveItem(at: url, to: nextFreeName)
             } catch {
                 dispatchMain(.downloadFailed(info, EquatableError(error: error)))
                 return
@@ -37,4 +37,37 @@ func download(server: AppCenterServer, app: App, releaseDetail: ReleaseDetail, d
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: ^dispatch(.downloaded(info)))
     }
     #endif
+}
+
+private struct DownloadName {
+    let app: App
+    let releaseDetail: ReleaseDetail
+    let folder: URL
+    let manager: FileManager
+
+    var fileExtension: String {
+        switch app.os {
+        case .android:
+            return "apk"
+        case .iOS:
+            return "zip"
+        default:
+            return "unknown"
+        }
+    }
+
+    var url: URL {
+        for i in 0... {
+            let generatedUrl = folder.appendingPathComponent(name(app: app, release: releaseDetail, index: i))
+            if !manager.fileExists(atPath: generatedUrl.absoluteString) {
+                return generatedUrl
+            }
+        }
+        fatalError("Not accesible code path")
+    }
+
+    private func name(app: App, release: ReleaseDetail, index: Int) -> String {
+        let build = index == 0 ? "\(release.version)" : "\(release.version)-\(index)"
+        return "\(app.displayName) - \(releaseDetail.shortVersion) (\(build)).\(fileExtension)"
+    }
 }
