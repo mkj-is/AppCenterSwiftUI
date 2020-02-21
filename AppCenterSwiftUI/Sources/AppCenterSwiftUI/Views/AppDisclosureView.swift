@@ -5,6 +5,9 @@ struct AppDisclosureView: View {
 
     var body: some View {
         HStack(alignment: .center, spacing: .standardSpacing) {
+            WebImage(placeholder: Color.gray, url: app.iconUrl)
+                .frame(width: 40, height: 40)
+                .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
             Text(app.displayName)
             Spacer()
             Text(app.os.rawValue)
