@@ -6,6 +6,8 @@ enum Symbol: String, View {
     case download = "square.and.arrow.down"
     case account = "person.crop.circle"
     case close = "xmark"
+    case reload = "arrow.2.circlepath"
+    case logout = "person.badge.minus"
 
     private var symbol: Character {
         switch self {
@@ -19,6 +21,10 @@ enum Symbol: String, View {
             return "􀉭"
         case .close:
             return "􀆄"
+        case .reload:
+            return "􀊯"
+        case .logout:
+            return "􀜗"
         }
     }
 

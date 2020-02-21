@@ -6,8 +6,14 @@ struct DashboardTouchBarView: View {
 
     var body: some View {
         HStack {
-            Button(action: logout, label: ^Text("􀜗 Logout"))
-            Button(action: reload, label: ^Text("􀊯 Reload"))
+            Button(action: logout, label: ^HStack {
+                Symbol.logout
+                Text("Logout")
+            })
+            Button(action: reload, label: ^HStack {
+                Symbol.reload
+                Text("Reload")
+            })
         }
     }
 }

@@ -41,7 +41,7 @@ struct DashboardView: View {
                             presentation(false)
                             self.logout()
                         }, close: ^presentation(false))
-                }))
+                }), trailing: Button(action: reload, label: ^Symbol.reload))
             ReleaseListView(app: selectedApp, releases: selectedApp.flatMap { releases[$0] }, downloadingReleases: downloadingReleases, download: download)
         }
         #endif
