@@ -1,4 +1,3 @@
-
 import Elementary
 
 func createRetryEffect() -> Effect<AppState, AppAction> {

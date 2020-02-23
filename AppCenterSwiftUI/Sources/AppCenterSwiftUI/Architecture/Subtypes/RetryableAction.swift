@@ -1,4 +1,3 @@
-
 enum RetryableAction: Equatable {
     case loadApps
     case loadReleases(App)

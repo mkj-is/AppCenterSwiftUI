@@ -1,4 +1,3 @@
-
 import SwiftUI
 import Combine
 
@@ -31,7 +30,6 @@ private extension URLSession {
         return session
     }()
 }
-
 
 struct WebImage<Placeholder: View>: View {
     let placeholder: Placeholder
