@@ -41,7 +41,9 @@ public struct AppView: View {
                     authenticate: { self.store.dispatch(.login($0))}
                 )
             }
-        }.accentColorIfAvailable(.appPrimary)
+        }
+        .error(self.store.state.lastError, dismiss: ^self.store.dispatch(.dismissError))
+        .accentColorIfAvailable(.appPrimary)
     }
 }
 

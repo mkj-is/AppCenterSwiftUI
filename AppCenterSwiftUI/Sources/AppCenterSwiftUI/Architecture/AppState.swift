@@ -5,4 +5,5 @@ struct AppState {
     var apps: [App] = []
     var releases: [App: [Release]] = [:]
     var downloadingReleases: Set<AppRelease> = []
+    var lastError: Error?
 }

@@ -17,6 +17,7 @@ enum AppAction: Equatable {
     case downloadFailed(AppRelease, EquatableError)
     case downloaded(AppRelease)
     case open(url: URL)
+    case dismissError
 }
 
 struct EquatableError: Equatable {
