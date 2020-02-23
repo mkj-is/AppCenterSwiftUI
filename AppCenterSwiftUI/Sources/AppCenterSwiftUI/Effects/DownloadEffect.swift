@@ -14,7 +14,7 @@ func download(server: AppCenterServer, app: App, releaseDetail: ReleaseDetail, d
             guard let url = url else {
                 let error = AppCenterAPIError(data: nil, response: response, error: error, decoding: server.decoding)
                     ?? AppCenterAPIError.unhandled
-                dispatchMain(.downloadFailed(info, EquatableError(error: error)))
+                dispatchMain(.downloadFailed(info, EqualError(error: error)))
                 return
             }
             let manager = FileManager.default
@@ -25,7 +25,7 @@ func download(server: AppCenterServer, app: App, releaseDetail: ReleaseDetail, d
             do {
                 try manager.moveItem(at: url, to: nextFreeName)
             } catch {
-                dispatchMain(.downloadFailed(info, EquatableError(error: error)))
+                dispatchMain(.downloadFailed(info, EqualError(error: error)))
                 return
             }
             dispatchMain(.downloaded(info))

@@ -24,4 +24,12 @@ extension View {
         return accentColor(color)
         #endif
     }
+
+    func backgroundColorIfAvailable() -> some View {
+        #if os(iOS)
+        return background(Color(UIColor.secondarySystemBackground))
+        #else
+        return self
+        #endif
+    }
 }

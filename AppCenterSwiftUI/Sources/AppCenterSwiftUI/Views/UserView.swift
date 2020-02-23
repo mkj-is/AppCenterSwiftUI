@@ -23,7 +23,7 @@ struct UserView: View {
                     }
                 }
             }
-                .background(Color(UIColor.secondarySystemBackground))
+                .backgroundColorIfAvailable()
                 .navigationBarTitleIfAvailable("Account")
                 .navigationBarItems(trailing: Button(action: self.close, label: ^Symbol.close))
         }
