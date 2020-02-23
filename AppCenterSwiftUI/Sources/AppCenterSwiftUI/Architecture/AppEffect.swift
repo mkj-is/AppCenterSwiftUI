@@ -15,5 +15,6 @@ func createAppEffect() -> Effect<AppState, AppAction> {
         createNetworkEffect()
         createPersistenceEffect()
         createUrlEffect()
+        createRetryEffect()
     }
 }

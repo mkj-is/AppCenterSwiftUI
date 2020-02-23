@@ -18,4 +18,6 @@ enum AppAction: Equatable {
     case downloaded(AppRelease)
     case open(url: URL)
     case dismissError
+    case retry
+    case retried
 }

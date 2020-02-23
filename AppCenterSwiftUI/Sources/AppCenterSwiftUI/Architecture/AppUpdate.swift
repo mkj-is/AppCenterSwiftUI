@@ -27,12 +27,19 @@ func appUpdate(state: inout AppState, action: AppAction) {
         state.downloadingReleases.remove(info)
     case let .downloadFailed(info, error):
         state.lastError = error.error
+        state.retryableAction = .loadReleaseDetail(info)
         state.downloadingReleases.remove(info)
-    case .appsLoadingFailed(let error), .releasesLoadingFailed(_, let error):
+    case .appsLoadingFailed(let error):
         state.lastError = error.error
+        state.retryableAction = .loadApps
+    case let .releasesLoadingFailed(app, error):
+        state.lastError = error.error
+        state.retryableAction = .loadReleases(app)
     case .dismissError:
         state.lastError = nil
-    case .appStarted, .loadApps, .open:
+    case .retried:
+        state.retryableAction = nil
+    case .appStarted, .loadApps, .open, .retry:
         break
     }
 }

@@ -42,7 +42,11 @@ public struct AppView: View {
                 )
             }
         }
-        .error(self.store.state.lastError, dismiss: ^self.store.dispatch(.dismissError))
+        .error(
+            self.store.state.lastError,
+            dismiss: ^self.store.dispatch(.dismissError),
+            retry: self.store.state.retryableAction != nil ? ^self.store.dispatch(.retry) : nil
+        )
         .accentColorIfAvailable(.appPrimary)
     }
 }

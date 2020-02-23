@@ -6,4 +6,5 @@ struct AppState {
     var releases: [App: [Release]] = [:]
     var downloadingReleases: Set<AppRelease> = []
     var lastError: Error?
+    var retryableAction: RetryableAction?
 }
