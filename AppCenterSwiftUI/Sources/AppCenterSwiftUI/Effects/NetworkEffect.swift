@@ -14,7 +14,7 @@ func createNetworkEffect() -> Effect<AppState, AppAction> {
                     case .success(let response):
                         dispatch(.authenticate(token: response.apiToken))
                     case .failure(let error):
-                        dispatch(.authenticationFailed(EquatableError(error: error)))
+                        dispatch(.authenticationFailed(EqualError(error: error)))
                     }
                 }
             }
@@ -27,7 +27,7 @@ func createNetworkEffect() -> Effect<AppState, AppAction> {
                         dispatch(.authenticated(user: user))
                         dispatch(.loadApps)
                     case .failure(let error):
-                        dispatch(.authenticationFailed(EquatableError(error: error)))
+                        dispatch(.authenticationFailed(EqualError(error: error)))
                     }
                 }
             }
@@ -43,7 +43,7 @@ func createNetworkEffect() -> Effect<AppState, AppAction> {
                             dispatch(.appSelected(firstApp))
                         }
                     case .failure(let error):
-                        dispatch(.appsLoadingFailed(EquatableError(error: error)))
+                        dispatch(.appsLoadingFailed(EqualError(error: error)))
                     }
                 }
             }
@@ -54,7 +54,7 @@ func createNetworkEffect() -> Effect<AppState, AppAction> {
                     case .success(let releases):
                         dispatch(.releasesLoaded(app, releases))
                     case .failure(let error):
-                        dispatch(.releasesLoadingFailed(app, EquatableError(error: error)))
+                        dispatch(.releasesLoadingFailed(app, EqualError(error: error)))
                     }
                 }
             }
@@ -66,7 +66,7 @@ func createNetworkEffect() -> Effect<AppState, AppAction> {
                     case .success(let releaseDetail):
                         download(server: server, app: info.app, releaseDetail: releaseDetail, dispatch: dispatch)
                     case .failure(let error):
-                        dispatch(.downloadFailed(info, EquatableError(error: error)))
+                        dispatch(.downloadFailed(info, EqualError(error: error)))
                     }
                 }
             }

@@ -5,23 +5,17 @@ enum AppAction: Equatable {
     case login(BasicAuthentication)
     case authenticate(token: String)
     case authenticated(user: User)
-    case authenticationFailed(EquatableError)
+    case authenticationFailed(EqualError)
     case logout
     case loadApps
     case appsLoaded([App])
-    case appsLoadingFailed(EquatableError)
+    case appsLoadingFailed(EqualError)
     case appSelected(App)
     case releasesLoaded(App, [Release])
-    case releasesLoadingFailed(App, EquatableError)
+    case releasesLoadingFailed(App, EqualError)
     case loadReleaseDetail(AppRelease)
-    case downloadFailed(AppRelease, EquatableError)
+    case downloadFailed(AppRelease, EqualError)
     case downloaded(AppRelease)
     case open(url: URL)
     case dismissError
-}
-
-struct EquatableError: Equatable {
-    let error: Error
-
-    static func == (lhs: EquatableError, rhs: EquatableError) -> Bool { true }
 }
