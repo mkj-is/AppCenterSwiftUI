@@ -25,7 +25,18 @@
 		E7C7523C23FEB24700A137DC /* AppCenterSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = E7C7523B23FEB24700A137DC /* AppCenterSwiftUI */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		E702CC2D240576B500F33E8F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E7254C0E23526148001D7FDB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E7254C1523526148001D7FDB;
+			remoteInfo = AppCenterMac;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		E702CC28240576B500F33E8F /* AppCenterMacUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppCenterMacUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E72158E623704BD500675238 /* AppCenteriOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppCenteriOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E72158E823704BD500675238 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E72158EA23704BD500675238 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +52,8 @@
 		E7254C2523526149001D7FDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7254C2623526149001D7FDB /* AppCenterMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppCenterMac.entitlements; sourceTree = "<group>"; };
 		E728C09E236F7FCA0065449C /* AppCenterSwiftUI */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AppCenterSwiftUI; sourceTree = "<group>"; };
+		E7392EE1240307EB0026CA53 /* AppCenterMacUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCenterMacUITests.swift; sourceTree = "<group>"; };
+		E7392EE3240307EB0026CA53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E748793A23CF918D0009CB6A /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Package.swift; path = AppCenterSwiftUI/Package.swift; sourceTree = "<group>"; };
 		E7C7522723FEB23900A137DC /* AppCentertvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppCentertvOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7C7522923FEB23900A137DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +64,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E702CC25240576B500F33E8F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E72158E323704BD500675238 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -106,6 +126,7 @@
 				E7254C1823526148001D7FDB /* AppCenterMac */,
 				E72158E723704BD500675238 /* AppCenteriOS */,
 				E7C7522823FEB23900A137DC /* AppCentertvOS */,
+				E7392EE0240307EB0026CA53 /* AppCenterMacUITests */,
 				E7254C1723526148001D7FDB /* Products */,
 				E76B6F6E2353A5FC007DD31D /* Frameworks */,
 			);
@@ -117,6 +138,7 @@
 				E7254C1623526148001D7FDB /* AppCenterMac.app */,
 				E72158E623704BD500675238 /* AppCenteriOS.app */,
 				E7C7522723FEB23900A137DC /* AppCentertvOS.app */,
+				E702CC28240576B500F33E8F /* AppCenterMacUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -140,6 +162,15 @@
 				E7254C2023526149001D7FDB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E7392EE0240307EB0026CA53 /* AppCenterMacUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E7392EE1240307EB0026CA53 /* AppCenterMacUITests.swift */,
+				E7392EE3240307EB0026CA53 /* Info.plist */,
+			);
+			path = AppCenterMacUITests;
 			sourceTree = "<group>";
 		};
 		E76B6F6E2353A5FC007DD31D /* Frameworks */ = {
@@ -173,6 +204,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		E702CC27240576B500F33E8F /* AppCenterMacUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E702CC2F240576B500F33E8F /* Build configuration list for PBXNativeTarget "AppCenterMacUITests" */;
+			buildPhases = (
+				E702CC24240576B500F33E8F /* Sources */,
+				E702CC25240576B500F33E8F /* Frameworks */,
+				E702CC26240576B500F33E8F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E702CC2E240576B500F33E8F /* PBXTargetDependency */,
+			);
+			name = AppCenterMacUITests;
+			productName = AppCenterMacUITests;
+			productReference = E702CC28240576B500F33E8F /* AppCenterMacUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		E72158E523704BD500675238 /* AppCenteriOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E72158F923704BD700675238 /* Build configuration list for PBXNativeTarget "AppCenteriOS" */;
@@ -246,6 +295,10 @@
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = "FUNTASTY Digital s.r.o.";
 				TargetAttributes = {
+					E702CC27240576B500F33E8F = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = E7254C1523526148001D7FDB;
+					};
 					E72158E523704BD500675238 = {
 						CreatedOnToolsVersion = 11.2;
 					};
@@ -275,11 +328,19 @@
 				E7254C1523526148001D7FDB /* AppCenterMac */,
 				E72158E523704BD500675238 /* AppCenteriOS */,
 				E7C7522623FEB23900A137DC /* AppCentertvOS */,
+				E702CC27240576B500F33E8F /* AppCenterMacUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E702CC26240576B500F33E8F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E72158E423704BD500675238 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -313,6 +374,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E702CC24240576B500F33E8F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E72158E223704BD500675238 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -341,6 +409,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		E702CC2E240576B500F33E8F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E7254C1523526148001D7FDB /* AppCenterMac */;
+			targetProxy = E702CC2D240576B500F33E8F /* PBXContainerItemProxy */;
+		};
 		E72158FB23704C5700675238 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			productRef = E72158FA23704C5700675238 /* AppCenterSwiftUI */;
@@ -383,6 +456,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		E702CC30240576B500F33E8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = AppCenterMacUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = is.mkj.AppCenterMacUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = AppCenterMac;
+			};
+			name = Debug;
+		};
+		E702CC31240576B500F33E8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = AppCenterMacUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = is.mkj.AppCenterMacUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = AppCenterMac;
+			};
+			name = Release;
+		};
 		E72158F723704BD700675238 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -643,6 +752,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E702CC2F240576B500F33E8F /* Build configuration list for PBXNativeTarget "AppCenterMacUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E702CC30240576B500F33E8F /* Debug */,
+				E702CC31240576B500F33E8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E72158F923704BD700675238 /* Build configuration list for PBXNativeTarget "AppCenteriOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

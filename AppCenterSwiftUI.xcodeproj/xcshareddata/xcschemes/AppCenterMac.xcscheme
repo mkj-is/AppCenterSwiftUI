@@ -38,6 +38,16 @@
                ReferencedContainer = "container:../Elementary">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "E7392EDE240307EB0026CA53"
+               BuildableName = "AppCenterMacUITests.xctest"
+               BlueprintName = "AppCenterMacUITests"
+               ReferencedContainer = "container:AppCenterSwiftUI.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
