@@ -1,11 +1,3 @@
-//
-//  ReleaseListView.swift
-//  AppCenterSwiftUI
-//
-//  Created by Matěj Kašpar Jirásek on 20/10/2019.
-//  Copyright © 2019 FUNTASTY Digital s.r.o. All rights reserved.
-//
-
 import SwiftUI
 
 struct ReleaseListView: View {
