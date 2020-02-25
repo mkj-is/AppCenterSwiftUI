@@ -1,0 +1,13 @@
+name: Build package
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: macOS-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build Swift package
+      run: swift build --package-path AppCenterSwiftUI
