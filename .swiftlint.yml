@@ -1,0 +1,78 @@
+disabled_rules:
+  - line_length
+excluded:
+  - .build
+  - Pods
+  - vendor
+opt_in_rules:
+  - anyobject_protocol
+  - array_init
+  - attributes
+  - closure_end_indentation
+  - closure_spacing
+  - collection_alignment
+  - conditional_returns_on_newline
+  - contains_over_first_not_nil
+  - discouraged_direct_init
+  - empty_count
+  - empty_string
+  - empty_xctest_method
+  - explicit_init
+  - fallthrough
+  - fatal_error_message
+  - first_where
+  - identical_operands
+  - implicit_return
+  - joined_default_parameter
+  - last_where
+  - legacy_random
+  - let_var_whitespace
+  - literal_expression_end_indentation
+  - modifier_order
+  - multiline_parameters
+  - nimble_operator
+  - number_separator
+  - object_literal
+  - operator_usage_whitespace
+  - overridden_super_call
+  - override_in_extension
+  - pattern_matching_keywords
+  - private_action
+  - private_outlet
+  - private_over_fileprivate
+  - prohibited_super_call
+  - redundant_nil_coalescing
+  - required_enum_case
+  - single_test_class
+  - sorted_first_last
+  - sorted_imports
+  - strict_fileprivate
+  - switch_case_on_newline
+  - toggle_bool
+  - unneeded_parentheses_in_closure_argument
+  - untyped_error_in_catch
+  - unused_declaration
+  - unused_import
+  - vertical_parameter_alignment_on_call
+  - vertical_whitespace
+  - yoda_condition
+
+# Rule configurations
+identifier_name:
+  excluded:
+    - id
+    - x
+    - y
+    - z
+
+# Disable errors, allow only warnings
+cyclomatic_complexity:
+  warning: 10
+type_name:
+  max_length: 50
+force_cast: warning
+force_try: warning
+function_parameter_count: 5
+large_tuple:
+  warning: 3
+  error: 4
