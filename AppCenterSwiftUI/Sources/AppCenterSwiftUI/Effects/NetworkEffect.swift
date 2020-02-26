@@ -1,6 +1,6 @@
+import Elementary
 import Foundation
 import FTAPIKit
-import Elementary
 
 func createNetworkEffect() -> Effect<AppState, AppAction> {
     var server = AppCenterServer()

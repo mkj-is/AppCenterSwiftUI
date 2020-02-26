@@ -6,9 +6,9 @@
 //  Copyright © 2019 FUNTASTY Digital s.r.o. All rights reserved.
 //
 
-import UIKit
-import SwiftUI
 import AppCenterSwiftUI
+import SwiftUI
+import UIKit
 
 final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 

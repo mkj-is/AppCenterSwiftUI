@@ -57,8 +57,8 @@ private struct DownloadName {
     }
 
     var url: URL {
-        for i in 0... {
-            let generatedUrl = folder.appendingPathComponent(name(app: app, release: releaseDetail, index: i))
+        for index in 0... {
+            let generatedUrl = folder.appendingPathComponent(name(app: app, release: releaseDetail, index: index))
             if !manager.fileExists(atPath: generatedUrl.absoluteString) {
                 return generatedUrl
             }

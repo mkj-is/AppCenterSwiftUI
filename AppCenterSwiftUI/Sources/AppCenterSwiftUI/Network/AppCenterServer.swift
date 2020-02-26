@@ -1,5 +1,5 @@
-import FTAPIKit
 import Foundation
+import FTAPIKit
 
 /// https://openapi.appcenter.ms
 struct AppCenterServer: URLServer {

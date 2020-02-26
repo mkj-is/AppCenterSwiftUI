@@ -1,5 +1,5 @@
-import Foundation
 import Elementary
+import Foundation
 
 func createPersistenceEffect(defaults: UserDefaults = .standard) -> Effect<AppState, AppAction> {
     let tokenKey = "tokenKey"

@@ -6,9 +6,9 @@
 //  Copyright © 2019 FUNTASTY Digital s.r.o. All rights reserved.
 //
 
+import AppCenterSwiftUI
 import Cocoa
 import SwiftUI
-import AppCenterSwiftUI
 
 @NSApplicationMain
 final class AppDelegate: NSObject, NSApplicationDelegate {

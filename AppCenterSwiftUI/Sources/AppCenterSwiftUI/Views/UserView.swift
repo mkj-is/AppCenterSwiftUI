@@ -1,5 +1,5 @@
-import SwiftUI
 import Elementary
+import SwiftUI
 
 #if os(iOS) || os(tvOS)
 struct UserView: View {
@@ -34,7 +34,16 @@ struct UserView: View {
 
 private struct UserView_Previews: PreviewProvider {
     static var previews: some View {
-        UserView(user: User(id: UUID(), avatarUrl: nil, canChangePassword: true, displayName: "Matěj Kašpar Jirásek", email: "matej.jirasek@me.com", name: "matej.jirasek", origin: "appcenter", permissions: nil), logout: noop, close: noop)
+        UserView(user: User(
+            id: UUID(),
+            avatarUrl: nil,
+            canChangePassword: true,
+            displayName: "Matěj Kašpar Jirásek",
+            email: "matej.jirasek@me.com",
+            name: "matej.jirasek",
+            origin: "appcenter",
+            permissions: nil
+        ), logout: noop, close: noop)
     }
 }
 #endif

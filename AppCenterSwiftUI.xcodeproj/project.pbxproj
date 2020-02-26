@@ -302,6 +302,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E72158F923704BD700675238 /* Build configuration list for PBXNativeTarget "AppCenteriOS" */;
 			buildPhases = (
+				E7FFCA53240699C30081CD9B /* Run SwiftLint */,
 				E72158E223704BD500675238 /* Sources */,
 				E72158E323704BD500675238 /* Frameworks */,
 				E72158E423704BD500675238 /* Resources */,
@@ -323,6 +324,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E7254C2923526149001D7FDB /* Build configuration list for PBXNativeTarget "AppCenterMac" */;
 			buildPhases = (
+				E7FFCA5424069F6F0081CD9B /* Run SwiftLint */,
 				E7254C1223526148001D7FDB /* Sources */,
 				E7254C1323526148001D7FDB /* Frameworks */,
 				E7254C1423526148001D7FDB /* Resources */,
@@ -347,6 +349,7 @@
 				E7C7522323FEB23900A137DC /* Sources */,
 				E7C7522423FEB23900A137DC /* Frameworks */,
 				E7C7522523FEB23900A137DC /* Resources */,
+				E7FFCA5524069F840081CD9B /* Run SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -490,6 +493,63 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E7FFCA53240699C30081CD9B /* Run SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		E7FFCA5424069F6F0081CD9B /* Run SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		E7FFCA5524069F840081CD9B /* Run SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E702CC24240576B500F33E8F /* Sources */ = {

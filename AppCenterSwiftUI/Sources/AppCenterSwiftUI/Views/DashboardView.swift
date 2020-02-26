@@ -1,5 +1,5 @@
-import SwiftUI
 import Elementary
+import SwiftUI
 
 struct DashboardView: View {
 
@@ -33,7 +33,7 @@ struct DashboardView: View {
                             presentation(false)
                             self.logout()
                         }, close: ^presentation(false))
-                }), trailing: Button(action: reload, label: ^Symbol.reload))
+                    }), trailing: Button(action: reload, label: ^Symbol.reload))
             ReleaseListView(app: selectedApp, releases: selectedApp.flatMap { releases[$0] }, downloadingReleases: downloadingReleases, download: download)
         }
         #endif
@@ -47,6 +47,15 @@ struct DashboardView: View {
 
 struct DashboardView_Previews: PreviewProvider {
     static var previews: some View {
-        DashboardView(apps: [], selectedApp: nil, releases: [:], user: User(id: UUID(), avatarUrl: nil, canChangePassword: false, displayName: "Mockup user", email: "user@example.com", name: "mockup.user", origin: "appcenter", permissions: nil), downloadingReleases: [], appSelected: noop, download: noop, logout: noop, reload: noop)
+        DashboardView(apps: [], selectedApp: nil, releases: [:], user: User(
+            id: UUID(),
+            avatarUrl: nil,
+            canChangePassword: false,
+            displayName: "Mockup user",
+            email: "user@example.com",
+            name: "mockup.user",
+            origin: "appcenter",
+            permissions: nil
+        ), downloadingReleases: [], appSelected: noop, download: noop, logout: noop, reload: noop)
     }
 }

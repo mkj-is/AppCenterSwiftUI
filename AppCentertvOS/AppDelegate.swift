@@ -6,9 +6,9 @@
 //  Copyright © 2020 FUNTASTY Digital s.r.o. All rights reserved.
 //
 
-import UIKit
-import SwiftUI
 import AppCenterSwiftUI
+import SwiftUI
+import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

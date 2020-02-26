@@ -1,5 +1,5 @@
-import SwiftUI
 import Elementary
+import SwiftUI
 
 struct LoginView: View {
     let isLoading: Bool

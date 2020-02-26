@@ -1,5 +1,5 @@
-import SwiftUI
 import Elementary
+import SwiftUI
 
 extension View {
     func error(_ error: Error?, dismiss: @escaping Call, retry: Call?) -> some View {

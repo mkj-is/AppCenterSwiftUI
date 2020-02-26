@@ -1,5 +1,5 @@
-import SwiftUI
 import Elementary
+import SwiftUI
 
 struct DashboardTouchBarView: View {
     let logout, reload: Call

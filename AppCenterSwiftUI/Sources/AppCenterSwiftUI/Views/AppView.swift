@@ -1,5 +1,5 @@
-import SwiftUI
 import ElementaryCombine
+import SwiftUI
 
 public struct AppView: View {
     @ObservedObject var store: ObservableStore<AppState, AppAction>
@@ -30,7 +30,7 @@ public struct AppView: View {
             } else {
                 LoginView(
                     isLoading: store.state.user == nil && store.state.auth != nil,
-                    authenticate: { self.store.dispatch(.login($0))}
+                    authenticate: { self.store.dispatch(.login($0)) }
                 )
             }
         }

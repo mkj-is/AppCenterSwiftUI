@@ -4,6 +4,7 @@ struct App: Decodable, Identifiable, Hashable {
     let id: UUID
     let description, releaseType, iconSource: String?
     let displayName, name: String
+    // swiftlint:disable:next identifier_name
     let os: OperationSystem
     let iconUrl: URL?
     let owner: Owner
