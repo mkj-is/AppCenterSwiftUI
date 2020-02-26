@@ -1,0 +1,104 @@
+fastlane_require "fastlane-plugin-appcenter"
+fastlane_require "fastlane-plugin-brew"
+
+app_identifier = "app.futured.app-center"
+
+desc "Runs tests for all platforms"
+lane :test do
+  dependencies
+  run_tests(
+    destination: "platform=macOS",
+    scheme: "AppCenterMac",
+    code_coverage: true,
+    formatter: "xcpretty-json-formatter"
+  )
+  run_tests(
+    scheme: "AppCenteriOS",
+    code_coverage: true,
+    formatter: "xcpretty-json-formatter"
+  )
+  run_tests(
+    scheme: "AppCentertvOS",
+    code_coverage: true,
+    formatter: "xcpretty-json-formatter"
+  )
+  danger if is_ci?
+end
+
+desc "Do an enterprise builds and submit them to App Center"
+lane :enterprise do
+  dependencies
+  create_keychain(
+    name: "MatchKeychain",
+    password: "MatchKeychain",
+    unlock: true
+  )
+
+  enterprise_ios
+  enterprise_tvos
+
+  delete_keychain(
+    name: keychain_name,
+  )
+end
+
+desc "Increment build number and bump version (pass `type` options with bump type)"
+lane :bump do |options|
+  bump_type = options[:type] || "patch"
+  increment_build_number
+  increment_version_number(bump_type: bump_type)
+end
+
+private_lane :dependencies do
+  brew(command: "bundle")
+end
+
+private_lane :enterprise_ios do
+  sync_code_signing(
+    git_url: "git@github.com:futuredapp/apple-certificates.git",
+    shallow_clone: true,
+    clone_branch_directly: true,
+    type: "enterprise",
+    app_identifier: app_identifier,
+    keychain_name: "MatchKeychain",
+    platform: "ios"
+  )
+  build_ios_app(
+    output_name: "Build",
+    output_directory: "./build_output/",
+    export_method: "enterprise",
+    scheme: "AppCenteriOS"
+  )
+  appcenter_upload(
+    owner_name: "futured",
+    app_name: "App-Center",
+    dsym: "./build_output/Build.app.dSYM.zip",
+    ipa: "./build_output/Build.ipa",
+    notify_testers: false
+  )
+end
+
+private_lane :enterprise_tvos do
+  sync_code_signing(
+    git_url: "git@github.com:futuredapp/apple-certificates.git",
+    shallow_clone: true,
+    clone_branch_directly: true,
+    type: "enterprise",
+    app_identifier: app_identifier,
+    keychain_name: "MatchKeychain",
+    platform: "tvos"
+  )
+  build_ios_app(
+    output_name: "Build",
+    output_directory: "./build_output/",
+    export_method: "enterprise",
+    scheme: "AppCentertvOS"
+  )
+  appcenter_upload(
+    owner_name: "futured",
+    app_name: "App-Center-2",
+    dsym: "./build_output/Build.app.dSYM.zip",
+    ipa: "./build_output/Build.ipa",
+    notify_testers: false
+  )
+end
