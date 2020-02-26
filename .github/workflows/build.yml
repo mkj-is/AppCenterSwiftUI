@@ -1,0 +1,49 @@
+name: Build
+
+on:
+  push:
+    branches:
+    - develop
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Setup SSH key
+      uses: webfactory/ssh-agent@v0.2.0
+      with:
+        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+    - name: Setup Ruby
+      uses: actions/setup-ruby@v1
+      with:
+        ruby-version: 2.6.x
+    - name: Cache Ruby gems
+      uses: actions/cache@v1
+      with:
+        path: vendor/bundle
+        key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-gems-
+    - name: Fastlane Enterprise
+      run: |
+        gem install bundler
+        bundle config path vendor/bundle
+        bundle install --jobs 4 --retry 3
+        bundle exec fastlane enterprise
+      env:
+        FASTLANE_PASSWORD: ${{ secrets.FASTLANE_PASSWORD }}
+        MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
+        APPCENTER_API_TOKEN: ${{ secrets.APPCENTER_API_TOKEN }}
+    - name: Upload IPA
+      uses: actions/upload-artifact@v1
+      with:
+        name: Build.ipa
+        path: build_output/Build.ipa
+    - name: Upload dSYM
+      uses: actions/upload-artifact@v1
+      with:
+        name: Build.app.dSYM.zip
+        path: build_output/Build.app.dSYM.zip
