@@ -30,7 +30,8 @@ lane :enterprise do
   dependencies
   create_keychain(
     name: "MatchKeychain",
-    password: "MatchKeychain",
+    password: "MatchPassword",
+    default_keychain: true,
     unlock: true
   )
 
@@ -38,7 +39,7 @@ lane :enterprise do
   enterprise_tvos
 
   delete_keychain(
-    name: keychain_name,
+    name: "MatchKeychain",
   )
 end
 
@@ -61,6 +62,7 @@ private_lane :enterprise_ios do
     type: "enterprise",
     app_identifier: app_identifier,
     keychain_name: "MatchKeychain",
+    keychain_password: "MatchPassword",
     platform: "ios"
   )
   build_ios_app(
