@@ -12,6 +12,10 @@ This app was made as an experiment for learning SwiftUI and testing [my implemen
 - List of apps and their releases.
 - Ability to install/download those releases.
 
+![Mac screenshot](Documentation/Screenshots/Mac.png)
+
+![iPad screenshot](Documentation/Screenshots/iPad.png)
+
 ## Points of interest for a curious developer
 
 - Architecture & functional programming
