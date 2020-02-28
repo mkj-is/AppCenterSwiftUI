@@ -56,7 +56,7 @@
 		E702CC36240578F700F33E8F /* AppCenteriOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppCenteriOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E702CC38240578F700F33E8F /* AppCenteriOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCenteriOSUITests.swift; sourceTree = "<group>"; };
 		E702CC3A240578F700F33E8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E72158E623704BD500675238 /* AppCenteriOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppCenteriOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E72158E623704BD500675238 /* App Center.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "App Center.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E72158E823704BD500675238 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E72158EA23704BD500675238 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E72158EE23704BD700675238 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -74,7 +74,7 @@
 		E7392EE1240307EB0026CA53 /* AppCenterMacUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCenterMacUITests.swift; sourceTree = "<group>"; };
 		E7392EE3240307EB0026CA53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E748793A23CF918D0009CB6A /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Package.swift; path = AppCenterSwiftUI/Package.swift; sourceTree = "<group>"; };
-		E7C7522723FEB23900A137DC /* AppCentertvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppCentertvOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7C7522723FEB23900A137DC /* App Center.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "App Center.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7C7522923FEB23900A137DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7C7522D23FEB23B00A137DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E7C7523023FEB23B00A137DC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -183,8 +183,8 @@
 			isa = PBXGroup;
 			children = (
 				E7254C1623526148001D7FDB /* AppCenterMac.app */,
-				E72158E623704BD500675238 /* AppCenteriOS.app */,
-				E7C7522723FEB23900A137DC /* AppCentertvOS.app */,
+				E72158E623704BD500675238 /* App Center.app */,
+				E7C7522723FEB23900A137DC /* App Center.app */,
 				E702CC28240576B500F33E8F /* AppCenterMacUITests.xctest */,
 				E702CC36240578F700F33E8F /* AppCenteriOSUITests.xctest */,
 				E7FFCA49240675620081CD9B /* AppCentertvOSUITests.xctest */,
@@ -317,7 +317,7 @@
 				E797D3E023F8865300751180 /* AppCenterSwiftUI */,
 			);
 			productName = AppCenteriOS;
-			productReference = E72158E623704BD500675238 /* AppCenteriOS.app */;
+			productReference = E72158E623704BD500675238 /* App Center.app */;
 			productType = "com.apple.product-type.application";
 		};
 		E7254C1523526148001D7FDB /* AppCenterMac */ = {
@@ -361,7 +361,7 @@
 				E7C7523B23FEB24700A137DC /* AppCenterSwiftUI */,
 			);
 			productName = AppCentertvOS;
-			productReference = E7C7522723FEB23900A137DC /* AppCentertvOS.app */;
+			productReference = E7C7522723FEB23900A137DC /* App Center.app */;
 			productType = "com.apple.product-type.application";
 		};
 		E7FFCA48240675620081CD9B /* AppCentertvOSUITests */ = {
@@ -752,7 +752,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = is.mkj.appcenter;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "App Center";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -775,7 +775,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "app.futured.app-center";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "App Center";
 				PROVISIONING_PROFILE_SPECIFIER = "match InHouse app.futured.app-center";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
@@ -965,7 +965,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = is.mkj.appcenter;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "App Center";
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -988,7 +988,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "app.futured.app-center";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "App Center";
 				PROVISIONING_PROFILE_SPECIFIER = "match InHouse app.futured.app-center tvos";
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 5.0;
