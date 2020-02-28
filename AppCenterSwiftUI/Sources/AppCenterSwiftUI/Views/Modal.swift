@@ -4,11 +4,11 @@ struct Modal<L: View, C: View>: View {
     @State private var isPresented: Bool = false
 
     let label: () -> L
-    let content: (@escaping (Bool) -> Void) -> C
+    let content: (@escaping () -> Void) -> C
 
     init(
         @ViewBuilder label: @escaping () -> L,
-        @ViewBuilder content: @escaping (@escaping (Bool) -> Void) -> C
+        @ViewBuilder content: @escaping (@escaping () -> Void) -> C
     ) {
         self.label = label
         self.content = content
@@ -18,6 +18,6 @@ struct Modal<L: View, C: View>: View {
         Button(action: { self.isPresented = true }, label: self.label)
             .sheet(
                 isPresented: $isPresented,
-                content: ^self.content({ self.isPresented = $0 }))
+                content: ^self.content({ self.isPresented = false }))
     }
 }

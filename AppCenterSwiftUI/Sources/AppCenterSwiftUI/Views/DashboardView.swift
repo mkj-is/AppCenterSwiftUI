@@ -28,11 +28,11 @@ struct DashboardView: View {
                 .navigationBarTitle("Apps")
                 .navigationBarItems(leading: Modal(
                     label: ^Symbol.account,
-                    content: { presentation in
+                    content: { close in
                         UserView(user: self.user, logout: {
-                            presentation(false)
+                            close()
                             self.logout()
-                        }, close: ^presentation(false))
+                        }, close: close)
                     }), trailing: Button(action: reload, label: ^Symbol.reload))
             ReleaseListView(app: selectedApp, releases: selectedApp.flatMap { releases[$0] }, downloadingReleases: downloadingReleases, download: download)
         }
