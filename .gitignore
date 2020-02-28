@@ -3,3 +3,4 @@ fastlane/report.xml
 fastlane/test_output
 fastlane/README.md
 build_output
+build/reports
