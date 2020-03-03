@@ -7,14 +7,23 @@ import AppKit
 import UIKit
 #endif
 
+private func open(url: URL) {
+    #if os(macOS)
+    NSWorkspace.shared.open(url)
+    #else
+    UIApplication.shared.open(url)
+    #endif
+}
+
 func createUrlEffect() -> Effect<AppState, AppAction> {
     { _, action, _ in
-        if case .open(let url) = action {
-            #if os(macOS)
-            NSWorkspace.shared.open(url)
-            #else
-            UIApplication.shared.open(url)
-            #endif
+        switch action {
+        case .open(let url):
+            open(url: url)
+        case .select(.token):
+            open(url: "https://appcenter.ms/cli-login?hostname=AppCenterSwiftUI")
+        default:
+            break
         }
     }
 }
