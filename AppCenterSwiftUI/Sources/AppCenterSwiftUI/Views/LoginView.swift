@@ -33,6 +33,11 @@ private struct LoginFormView: View {
 
     var body: some View {
         VStack(spacing: .standardSpacing) {
+            Text("Login using e-mail and password is only available to account created on App Center.")
+                .font(.footnote)
+                .lineLimit(3)
+                .multilineTextAlignment(.center)
+                .fixedSize(horizontal: false, vertical: true)
             TextField("E-mail", text: $user)
                 .emailFieldIfAvailable()
             SecureField("Password", text: $password)
