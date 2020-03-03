@@ -1,4 +1,5 @@
 struct AppState {
+    var loginMethod: LoginMethod?
     var auth: AppCenterAuthentication?
     var user: User?
     var selectedApp: App?
@@ -7,4 +8,8 @@ struct AppState {
     var downloadingReleases: Set<AppRelease> = []
     var lastError: Error?
     var retryableAction: RetryableAction?
+}
+
+enum LoginMethod {
+    case email, token
 }

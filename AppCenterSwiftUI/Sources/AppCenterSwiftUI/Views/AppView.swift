@@ -30,7 +30,10 @@ public struct AppView: View {
             } else {
                 LoginView(
                     isLoading: store.state.user == nil && store.state.auth != nil,
-                    authenticate: { self.store.dispatch(.login($0)) }
+                    loginMethod: store.state.loginMethod,
+                    select: { self.store.dispatch(.select($0)) },
+                    authenticateToken: { self.store.dispatch(.authenticate(token: $0)) },
+                    authenticateUser: { self.store.dispatch(.login($0)) }
                 )
             }
         }

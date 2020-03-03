@@ -2,6 +2,8 @@ import Foundation
 
 func appUpdate(state: inout AppState, action: AppAction) {
     switch action {
+    case .select(let loginMethod):
+        state.loginMethod = loginMethod
     case .login(let auth):
         state.auth = .basic(auth)
     case .authenticate(let token):

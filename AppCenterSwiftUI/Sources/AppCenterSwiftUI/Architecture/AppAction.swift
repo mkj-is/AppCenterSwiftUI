@@ -2,6 +2,7 @@ import struct Foundation.URL
 
 enum AppAction: Equatable {
     case appStarted
+    case select(LoginMethod?)
     case login(BasicAuthentication)
     case authenticate(token: String)
     case authenticated(user: User)
