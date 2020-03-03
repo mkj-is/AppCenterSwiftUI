@@ -49,7 +49,7 @@ private struct DownloadName {
         switch app.os {
         case .android:
             return "apk"
-        case .iOS:
+        case .iOS, .tvOS, .macOS:
             return "zip"
         default:
             return "unknown"
