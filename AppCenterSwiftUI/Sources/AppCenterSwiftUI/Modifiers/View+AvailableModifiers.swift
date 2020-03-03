@@ -32,4 +32,13 @@ extension View {
         return self
         #endif
     }
+
+    func emailFieldIfAvailable() -> some View {
+        #if os(iOS)
+        return keyboardType(.emailAddress)
+            .autocapitalization(.none)
+        #else
+        return self
+        #endif
+    }
 }

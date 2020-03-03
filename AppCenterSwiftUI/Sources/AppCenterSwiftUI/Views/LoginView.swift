@@ -34,6 +34,7 @@ private struct LoginFormView: View {
     var body: some View {
         VStack(spacing: .standardSpacing) {
             TextField("E-mail", text: $user)
+                .emailFieldIfAvailable()
             SecureField("Password", text: $password)
             Button(
                 action: ^self.authenticate(BasicAuthentication(user: self.user, password: self.password)),
