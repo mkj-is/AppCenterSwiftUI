@@ -1,5 +1,6 @@
 import Elementary
 import SwiftUI
+import KeyboardObserving
 
 struct LoginView: View {
     let isLoading: Bool
@@ -14,9 +15,7 @@ struct LoginView: View {
                 .frame(maxWidth: 100, maxHeight: 100)
                 .font(.largeTitle)
                 .foregroundColor(.appPrimary)
-            Text("App Center")
-                .font(.headline)
-                .foregroundColor(.appPrimary)
+                .hideOnKeyboard(transition: .offset(x: 0, y: -350))
 
             if isLoading {
                 LoadingView()

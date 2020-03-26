@@ -36,6 +36,15 @@
           "revision": "f3d8334ae73261c72459098f35ad030f32337064",
           "version": "1.0.0"
         }
+      },
+      {
+        "package": "KeyboardObserving",
+        "repositoryURL": "https://github.com/mkj-is/KeyboardObserving.git",
+        "state": {
+          "branch": "feature/hiding-modifier",
+          "revision": "12d9cc893dbae580bbe56eba0d80ce3751bc2a6f",
+          "version": null
+        }
       }
     ]
   },

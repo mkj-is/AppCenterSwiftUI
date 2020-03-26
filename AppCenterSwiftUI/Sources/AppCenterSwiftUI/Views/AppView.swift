@@ -1,5 +1,6 @@
 import ElementaryCombine
 import SwiftUI
+import KeyboardObserving
 
 public struct AppView: View {
     @ObservedObject var store: ObservableStore<AppState, AppAction>
@@ -42,6 +43,8 @@ public struct AppView: View {
             dismiss: ^self.store.dispatch(.dismissError),
             retry: self.store.state.retryableAction != nil ? ^self.store.dispatch(.retry) : nil
         )
+        .environmentObject(Keyboard())
+        .keyboardObserving()
         .accentColorIfAvailable(.appPrimary)
     }
 }
