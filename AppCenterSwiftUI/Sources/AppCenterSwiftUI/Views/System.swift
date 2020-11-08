@@ -1,8 +1,21 @@
 import SwiftUI
 
 enum OperatingSystem {
-    case macOS
-    case iOS
+    case macOS, iOS, tvOS, watchOS
+
+    static var current: OperatingSystem {
+        #if os(macOS)
+        return .macOS
+        #elseif os(iOS)
+        return .iOS
+        #elseif os(tvOS)
+        return .tvOS
+        #elseif os(watchOS)
+        return .watchOS
+        #else
+        #error("Compiling for unknown operating system.")
+        #endif
+    }
 }
 
 struct System<Content: View>: View {
@@ -16,19 +29,11 @@ struct System<Content: View>: View {
 
     var body: some View {
         Group {
-            #if os(macOS)
-            if operatingSystem == .macOS {
+            if operatingSystem == .current {
                 content()
             } else {
                 EmptyView()
             }
-            #elseif os(iOS)
-            if operatingSystem == .iOS {
-                content()
-            } else {
-                EmptyView()
-            }
-            #endif
         }
     }
 }
