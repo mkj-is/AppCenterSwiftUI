@@ -1,3 +1,4 @@
+import NoopKit
 import SwiftUI
 
 struct ReleaseListView: View {

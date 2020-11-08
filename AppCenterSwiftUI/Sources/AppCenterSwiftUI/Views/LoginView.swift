@@ -1,5 +1,6 @@
 import Elementary
 import SwiftUI
+import NoopKit
 
 struct LoginView: View {
     let isLoading: Bool

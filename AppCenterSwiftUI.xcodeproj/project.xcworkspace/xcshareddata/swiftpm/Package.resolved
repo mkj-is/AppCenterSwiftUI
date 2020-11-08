@@ -36,6 +36,15 @@
           "revision": "f3d8334ae73261c72459098f35ad030f32337064",
           "version": "1.0.0"
         }
+      },
+      {
+        "package": "NoopKit",
+        "repositoryURL": "https://github.com/mkj-is/NoopKit.git",
+        "state": {
+          "branch": null,
+          "revision": "66844ff03ec1a8007f92065e06d6f76c6baaa552",
+          "version": "0.1.1"
+        }
       }
     ]
   },

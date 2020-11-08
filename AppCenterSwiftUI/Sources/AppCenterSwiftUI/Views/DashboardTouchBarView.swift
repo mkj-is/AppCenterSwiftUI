@@ -1,4 +1,5 @@
 import Elementary
+import NoopKit
 import SwiftUI
 
 struct DashboardTouchBarView: View {
