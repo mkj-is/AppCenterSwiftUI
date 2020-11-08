@@ -1,5 +1,6 @@
 import Elementary
 import SwiftUI
+import NoopKit
 
 #if os(iOS) || os(tvOS)
 struct UserView: View {
