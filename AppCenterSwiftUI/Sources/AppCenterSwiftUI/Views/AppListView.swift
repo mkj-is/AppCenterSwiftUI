@@ -1,5 +1,5 @@
-import SwiftUI
 import NoopKit
+import SwiftUI
 
 struct AppListView: View {
     let apps: [App]

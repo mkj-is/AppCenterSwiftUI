@@ -3,7 +3,7 @@ import Foundation
 
 func createPersistenceEffect(defaults: UserDefaults = .standard) -> Effect<AppState, AppAction> {
     let tokenKey = "tokenKey"
-    return { state, action, dispatch in
+    return { _, action, dispatch in
         switch action {
         case .appStarted:
             defaults.string(forKey: tokenKey).flatMap { dispatch(.authenticate(token: $0)) }

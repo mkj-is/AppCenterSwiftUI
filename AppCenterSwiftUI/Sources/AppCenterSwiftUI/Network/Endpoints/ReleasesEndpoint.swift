@@ -3,6 +3,7 @@ import FTAPIKit
 
 struct ReleasesEnpoint: ResponseEndpoint {
     typealias Response = [Release]
+
     let path: String
 
     init(ownerName: String, appName: String) {
