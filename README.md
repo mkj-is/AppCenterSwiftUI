@@ -21,7 +21,7 @@ This app was made as an experiment for learning SwiftUI and testing [my implemen
 - Architecture & functional programming
     - Uni-directional architecture using [Elementary](https://github.com/mkj-is/Elementary) framework.
     - Cross-platform core Swift package instead of a using Xcode framework target.
-    - [No-op functions](AppCenterSwiftUI/Sources/AppCenterSwiftUI/Functional/NoopFunctions.swift) for providing previews with no-op functions as callbacks instead of using many braces and underlines.
+    - [No-op functions](https://github.com/mkj-is/NoopKit) for providing previews with no-op functions as callbacks instead of using many braces and underlines.
     - [Lift operator](AppCenterSwiftUI/Sources/AppCenterSwiftUI/Functional/LiftOperator.swift) to simplify passing of views as closures where no auto-closure annotation is present, to remove braces count in SwiftUI. Typical use-case is `Button` and its label.
 - SwiftUI
     - [WebImage](AppCenterSwiftUI/Sources/AppCenterSwiftUI/Views/WebImage.swift) cross-platform view for loading and presenting image using URLSession and Combine.
