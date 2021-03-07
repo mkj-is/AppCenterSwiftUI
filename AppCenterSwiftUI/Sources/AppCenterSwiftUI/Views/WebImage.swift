@@ -50,16 +50,14 @@ struct WebImage<Placeholder: View>: View {
     }
 
     var body: some View {
-        Group {
-            if image != nil {
-                Image(platformImage: image!)
-                    .resizable()
-            } else {
-                placeholder
-                    .onReceive(dataPublisher()) { output in
-                        self.image = output.flatMap(PlatformImage.init(data:))
-                    }
-            }
+        if image != nil {
+            Image(platformImage: image!)
+                .resizable()
+        } else {
+            placeholder
+                .onReceive(dataPublisher()) { output in
+                    self.image = output.flatMap(PlatformImage.init(data:))
+                }
         }
     }
 }

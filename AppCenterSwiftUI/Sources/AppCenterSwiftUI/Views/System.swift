@@ -20,20 +20,16 @@ enum OperatingSystem {
 
 struct System<Content: View>: View {
     let operatingSystem: OperatingSystem
-    let content: () -> Content
+    let content: Content
 
-    init(_ operatingSystem: OperatingSystem, @ViewBuilder content: @escaping () -> Content) {
+    init(_ operatingSystem: OperatingSystem, @ViewBuilder content: () -> Content) {
         self.operatingSystem = operatingSystem
-        self.content = content
+        self.content = content()
     }
 
     var body: some View {
-        Group {
-            if operatingSystem == .current {
-                content()
-            } else {
-                EmptyView()
-            }
+        if operatingSystem == .current {
+            content
         }
     }
 }
