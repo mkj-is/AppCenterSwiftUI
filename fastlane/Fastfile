@@ -27,7 +27,6 @@ end
 
 desc "Do an enterprise builds and submit them to App Center"
 lane :enterprise do
-  dependencies
   create_keychain(
     name: "MatchKeychain",
     password: "MatchPassword",
@@ -48,10 +47,6 @@ lane :bump do |options|
   bump_type = options[:type] || "patch"
   increment_build_number
   increment_version_number(bump_type: bump_type)
-end
-
-private_lane :dependencies do
-  brew(command: "bundle")
 end
 
 private_lane :enterprise_ios do
