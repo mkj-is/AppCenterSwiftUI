@@ -33,12 +33,14 @@ struct ActivityIndicator: UIViewRepresentable {
         case .medium:
             view.style = .medium
         }
-        if view.isAnimating != isAnimating {
-            if isAnimating {
-                view.startAnimating()
-            } else {
-                view.stopAnimating()
-            }
+        guard view.isAnimating != isAnimating else {
+            return
+        }
+
+        if isAnimating {
+            view.startAnimating()
+        } else {
+            view.stopAnimating()
         }
     }
 }
