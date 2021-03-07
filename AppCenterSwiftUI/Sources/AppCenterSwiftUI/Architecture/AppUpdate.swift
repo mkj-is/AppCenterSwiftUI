@@ -14,7 +14,7 @@ func appUpdate(state: inout AppState, action: AppAction) {
         state.auth = nil
         state.user = nil
     case .authenticationFailed(let error):
-        state.lastError = error.error
+        state.lastError = error.value
         state.auth = nil
         state.user = nil
     case .appsLoaded(let apps):
@@ -28,14 +28,14 @@ func appUpdate(state: inout AppState, action: AppAction) {
     case .downloaded(let info):
         state.downloadingReleases.remove(info)
     case let .downloadFailed(info, error):
-        state.lastError = error.error
+        state.lastError = error.value
         state.retryableAction = .loadReleaseDetail(info)
         state.downloadingReleases.remove(info)
     case .appsLoadingFailed(let error):
-        state.lastError = error.error
+        state.lastError = error.value
         state.retryableAction = .loadApps
     case let .releasesLoadingFailed(app, error):
-        state.lastError = error.error
+        state.lastError = error.value
         state.retryableAction = .loadReleases(app)
     case .dismissError:
         state.lastError = nil

@@ -6,16 +6,16 @@ enum AppAction: Equatable {
     case login(BasicAuthentication)
     case authenticate(token: String)
     case authenticated(user: User)
-    case authenticationFailed(EqualError)
+    case authenticationFailed(Equalized<Error>)
     case logout
     case loadApps
     case appsLoaded([App])
-    case appsLoadingFailed(EqualError)
+    case appsLoadingFailed(Equalized<Error>)
     case appSelected(App)
     case releasesLoaded(App, [Release])
-    case releasesLoadingFailed(App, EqualError)
+    case releasesLoadingFailed(App, Equalized<Error>)
     case loadReleaseDetail(AppRelease)
-    case downloadFailed(AppRelease, EqualError)
+    case downloadFailed(AppRelease, Equalized<Error>)
     case downloaded(AppRelease)
     case open(url: URL)
     case dismissError
