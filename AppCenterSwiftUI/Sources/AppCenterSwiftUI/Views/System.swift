@@ -2,12 +2,12 @@ import SwiftUI
 
 struct OperatingSystem: OptionSet {
     let rawValue: UInt8
-    
+
     static let macOS = OperatingSystem(rawValue: 1 << 0)
     static let iOS = OperatingSystem(rawValue: 1 << 1)
     static let tvOS = OperatingSystem(rawValue: 1 << 2)
     static let watchOS = OperatingSystem(rawValue: 1 << 3)
-    
+
     var isCurrent: Bool {
         #if os(macOS)
         return contains(.macOS)

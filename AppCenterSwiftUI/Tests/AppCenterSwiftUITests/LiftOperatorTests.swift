@@ -1,6 +1,6 @@
 @testable import AppCenterSwiftUI
-import XCTest
 import SwiftUI
+import XCTest
 
 @available(macOS 11.0, *)
 private struct ClosureView: View {
@@ -19,7 +19,6 @@ private struct ClosureView: View {
     }
 }
 
-
 @available(macOS 11.0, *)
 private struct LiftView: View {
     var body: some View {
@@ -37,7 +36,7 @@ final class LiftOperatorTests: XCTestCase {
             }
         }
     }
-    
+
     func testOperatorPerformance() {
         let view = LiftView()
         measure(metrics: [XCTCPUMetric(), XCTMemoryMetric()]) {
