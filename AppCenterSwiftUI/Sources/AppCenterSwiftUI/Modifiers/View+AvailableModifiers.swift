@@ -9,11 +9,11 @@ extension View {
         #endif
     }
 
-    func navigationBarTitleIfAvailable(_ key: LocalizedStringKey) -> some View {
+    func navigationBarTitleIfAvailable(_ text: Text) -> some View {
         #if os(macOS) || os(tvOS)
         return self
         #else
-        return navigationBarTitle(key, displayMode: .inline)
+        return navigationBarTitle(text, displayMode: .inline)
         #endif
     }
 

@@ -9,6 +9,8 @@ struct AppDisclosureView: View {
                 .frame(width: 40, height: 40)
                 .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
             Text(app.displayName)
+                .lineLimit(1)
+                .truncationMode(.middle)
             Spacer()
             Text(app.os.rawValue)
                 .foregroundColor(.white)

@@ -34,7 +34,14 @@ struct ReleaseListView: View {
                     }
                 }
             }
-        }.navigationBarTitleIfAvailable("Releases")
+        }.navigationBarTitleIfAvailable(title)
+    }
+
+    private var title: Text {
+        if let name = app?.displayName {
+            return Text(name)
+        }
+        return Text("Releases")
     }
 
     private func downloadSymbol() -> some View {

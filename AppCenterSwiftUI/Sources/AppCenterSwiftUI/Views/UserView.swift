@@ -25,7 +25,7 @@ struct UserView: View {
                 }
             }
             .backgroundColorIfAvailable()
-            .navigationBarTitleIfAvailable("Account")
+            .navigationBarTitleIfAvailable(Text("Account"))
             .navigationBarItems(trailing: Button(action: self.close, label: ^Symbol.close))
         }
             .navigationViewStyle(StackNavigationViewStyle())

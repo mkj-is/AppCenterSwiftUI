@@ -23,6 +23,7 @@ struct AppListView: View {
                     label: ^AppDisclosureView(app: app)))
         }
         .sidebarListStyleIfAvailable()
+        .listStyle(PlainListStyle())
     }
 }
 
