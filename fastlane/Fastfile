@@ -5,7 +5,6 @@ app_identifier = "app.futured.app-center"
 
 desc "Runs tests for all platforms"
 lane :test do
-  dependencies
   run_tests(
     destination: "platform=macOS",
     scheme: "AppCenterMac",
